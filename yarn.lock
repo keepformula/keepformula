@@ -1021,7 +1021,7 @@
     webpack-merge "^4.2.1"
     yorkie "^2.0.0"
 
-"@vue/cli-shared-utils@^3.5.1":
+"@vue/cli-shared-utils@^3.4.0", "@vue/cli-shared-utils@^3.5.1":
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-3.5.1.tgz#71d66f06fc619ba28df279bd7d37ba1ba29c9066"
   integrity sha512-hCB7UbKeeC41w2Q8+Q7jmw3gHdq+ltRqp80S3uDRRGxwiOhxrSmdBHMzKUjh01L8bXOBRgvLey+BERi1Nj9n6Q==
@@ -1835,7 +1835,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
-async@^1.5.2:
+async@^1.5.2, async@~1.5:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
@@ -3199,6 +3199,11 @@ copy-webpack-plugin@^4.6.0:
     minimatch "^3.0.4"
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
+
+cordova-plugin-device@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-device/-/cordova-plugin-device-2.0.2.tgz#fc08f3722e67eef7b6c67bfc99a83df6add0baba"
+  integrity sha1-/Ajzci5n7ve2xnv8mag99q3Quro=
 
 core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.5:
   version "2.6.5"
@@ -5588,6 +5593,13 @@ has@^1.0.0, has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hasbin@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/hasbin/-/hasbin-1.2.3.tgz#78c5926893c80215c2b568ae1fd3fcab7a2696b0"
+  integrity sha1-eMWSaJPIAhXCtWiuH9P8q3omlrA=
+  dependencies:
+    async "~1.5"
+
 hash-base@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/hash-base/-/hash-base-3.0.4.tgz#5fc8686847ecd73499403319a6b0a3f3f6ae4918"
@@ -5710,6 +5722,15 @@ html-tags@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
   integrity sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=
+
+html-webpack-include-assets-plugin@^1.0.4:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/html-webpack-include-assets-plugin/-/html-webpack-include-assets-plugin-1.0.7.tgz#654d7edb0de4ffde23c006b018aff95a205b8b88"
+  integrity sha512-cgldzFAQ/DfBgidL5e9JU0SO8ARyJolV4D9QFrqrTUsDE07VuCtH0ttxpF5YiUhQJf4zI/oQHMJr99giKvoRsA==
+  dependencies:
+    glob "^7.1.3"
+    minimatch "^3.0.4"
+    slash "^2.0.0"
 
 html-webpack-plugin@^3.2.0:
   version "3.2.0"
@@ -11885,6 +11906,19 @@ vue-class-component@^7.0.1:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.0.2.tgz#c5f35a91c0e9341532392b84d606a84911fb13bc"
   integrity sha512-8xw/wkZI2tgHcwvkSRC1ax7GeP1CG27wKhedvOAdjdASm05VU4RijGsCYti6s6CzBioBL5BQUmntQQTCsp1wnQ==
+
+vue-cli-plugin-cordova@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-cordova/-/vue-cli-plugin-cordova-2.1.3.tgz#6e6bbe43bca10a5d1ce72f847b5130706ae525b9"
+  integrity sha512-0jTKuW05zajIM0h6hW2bSDG9Pumi4z3skQAmfjLY84TxXKZpnsSmzee/pDYejeYN+TB2DpwsxTmovMXiWfNkOA==
+  dependencies:
+    "@vue/cli-shared-utils" "^3.4.0"
+    address "^1.0.3"
+    cordova-plugin-device "^2.0.1"
+    cross-spawn "^6.0.5"
+    hasbin "^1.2.3"
+    html-webpack-include-assets-plugin "^1.0.4"
+    portfinder "^1.0.20"
 
 vue-cli-plugin-electron-builder@^1.2.0:
   version "1.2.0"
