@@ -27,6 +27,7 @@
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
       <q-list
+class="navigation"
         no-border
         link
         inset-delimiter >
@@ -73,4 +74,9 @@ export default {
 </script>
 
 <style>
+.navigation{
+background-color:#2468a3;
+;
+height:100%;
+}
 </style>
