@@ -76,7 +76,6 @@ export default {
 <style>
 .navigation{
 background-color:#2468a3;
-;
 height:100%;
 }
 </style>
