@@ -7,8 +7,25 @@
           <q-input type="number" v-model="Height" float-label="Height (cm)" />
             <q-input type="number" v-model="Weight" float-label="Weight (Kg)" />
               <br>
-              <q-field class="field">Your BMI is {{BmiNumber}}</q-field>
-              <q-field class="field">You are {{ BmiCalculate}}</q-field>
+              <div>
+                <q-btn-toggle
+                                                    v-model="model"
+                                                    class="my-custom-toggle"
+                                                    no-caps
+                                                    rounded
+                                                    unelevated
+                                                    toggle-color="primary"
+                                                    color="white"
+                                                    text-color="primary"
+                                                    :options="[
+                                                    {label: 'Male', value: 'one'},
+                                                    {label: 'Female', value: 'two'}
+                                                    ]"
+                                                    />
+              </div>
+              <q-field class="field">{{BmiNumber}}</q-field>
+              <q-field class="field">{{ BmiCalculate}}</q-field>
+              <q-field class="field">{{ BestWeight}}</q-field>
         </div>
         <div class="btn-reset">
           <q-btn @click="Reset" style="background: #2468a3; color: white" label="Reset" size="22px"/>
@@ -23,6 +40,7 @@ export default {
   name: 'BMI',
   data () {
     return {
+      model: 'one',
       Height: null,
       Weight: null
     }
@@ -32,22 +50,29 @@ export default {
   computed: {
     BmiCalculate () {
       var bmi = (this.Weight / Math.pow(this.Height / 100, 2))
-      if (bmi < 18.5) {
-        return 'Under Weight'
+      if (bmi < 18.5 && (this.Height && this.Weight) !== null) {
+        return 'You are Under Weight'
       } else if (bmi >= 18.5 && bmi < 25) {
-        return 'Normal'
+        return 'You are Normal'
       } else if (bmi >= 25 && bmi < 30) {
-        return 'Overweight'
+        return 'You are Overweight'
       } else if (bmi >= 30 && bmi < 35) {
-        return 'Obesity'
+        return 'You are Obesity'
       } else if (bmi >= 35) {
-        return 'Severe obesity'
+        return 'You are Severe obesity'
       } else return null
     },
     BmiNumber () {
       if ((this.Height && this.Weight) !== null) {
-        return ((this.Weight / Math.pow(this.Height / 100, 2)).toFixed(2))
-      } else return ''
+        return 'Your BMI is ' + ((this.Weight / Math.pow(this.Height / 100, 2)).toFixed(2))
+      } else return null
+    },
+    BestWeight () {
+      var x = (18.5 * Math.pow(this.Height / 100, 2)).toFixed(1)
+      var y = (25 * Math.pow(this.Height / 100, 2)).toFixed(1)
+      if ((this.Height && this.Weight) !== null) {
+        return 'Your best weight is between ' + x + ' Kg ~ ' + y + ' Kg'
+      } else return null
     }
   },
   methods: {
