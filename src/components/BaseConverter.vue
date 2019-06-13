@@ -13,6 +13,16 @@
           <q-input type="number"  v-model="Binary" float-label="Binary Value" />
             <q-field class="field">Decimal is: {{BinaryToDecimal}} </q-field>
         </div>
+        <div id="input">
+          <div class="header"> Octal To Binary </div>
+          <q-input type="number" v-model="Octal" float-label="Octal Value" />
+            <q-field class="field">Binary is: {{OctalToBinary}} </q-field>
+        </div>
+        <div id="input">
+          <div class="header"> Binary to Octal </div>
+          <q-input type="number"  v-model="Binary" float-label="Binary Value" />
+            <q-field class="field">Octal is: {{BinaryToOctal}} </q-field>
+        </div>
         <div class="btn-reset">
           <q-btn @click="Reset" style="background: #2468a3; color: white" label="Reset" size="22px"/>
         </div>
@@ -27,7 +37,8 @@ export default {
   data () {
     return {
       Decimal: '',
-      Binary: ''
+      Binary: '',
+      Octal: '',
     }
   },
   props: {
@@ -43,6 +54,20 @@ export default {
     BinaryToDecimal () {
       if (this.Binary !== '') {
         return (parseInt(this.Binary, 2).toString(10))
+      } else {
+        return ('')
+      }
+    },
+    OctalToBinary () {
+      if (this.Octal == null) {
+        return ('')
+      } else {
+        return (this.Octal.toString(2))
+      }
+    },
+    BinaryToOctal () {
+      if (this.Binary !== '') {
+        return (parseInt(this.Binary, 2).toString(8))
       } else {
         return ('')
       }

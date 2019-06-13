@@ -10,43 +10,43 @@ import DataStorageConverter from './components/DataStorageConverter.vue'
 Vue.use(Router)
 
 export default new Router({
-mode: 'history',
-routes: [
-{
-path: '/',
-component: DefaultLayout,
-children: [
-{
-path: '',
-name: 'home',
-component: Home
-},
-{
-path: '/about',
-name: 'about',
-component: About
-},
-{
-path: '/GoldenRatio',
-name: 'GoldenRatio',
-component: GoldenRatio
-},
-{
-path: '/BMI',
-name: 'BMI',
-component: BMI
-},
-{
-path: '/BaseConverter',
-name: 'BaseConverter',
-component: BaseConverter
-},
-{
-path: 'DataStorageConverter',
-name:'DataStorageConverter',
-component: DataStorageConverter
-}
-]
-}
-]
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      component: DefaultLayout,
+      children: [
+        {
+          path: '',
+          name: 'home',
+          component: Home
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About
+        },
+        {
+          path: '/GoldenRatio',
+          name: 'GoldenRatio',
+          component: GoldenRatio
+        },
+        {
+          path: '/BMI',
+          name: 'BMI',
+          component: BMI
+        },
+        {
+          path: '/BaseConverter',
+          name: 'BaseConverter',
+          component: BaseConverter
+        },
+        {
+          path: 'DataStorageConverter',
+          name: 'DataStorageConverter',
+          component: DataStorageConverter
+        }
+      ]
+    }
+  ]
 })

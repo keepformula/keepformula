@@ -1,1 +1,1 @@
-declare module "quasar"
+declare module 'quasar'

@@ -4,15 +4,15 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
-        appId: "com.example.app",
+        appId: 'com.example.app',
         mac: {
-          "icon": "build/icons/icon.icns"
+          'icon': 'build/icons/icon.icns'
         },
         win: {
-          icon: "build/icons/icon.ico"
+          icon: 'build/icons/icon.ico'
         },
         linux: {
-          "icon": "build/icons"
+          'icon': 'build/icons'
         },
         snap: {},
         apk: {}
