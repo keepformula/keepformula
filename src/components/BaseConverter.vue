@@ -38,7 +38,7 @@ export default {
     return {
       Decimal: '',
       Binary: '',
-      Octal: '',
+      Octal: ''
     }
   },
   props: {
