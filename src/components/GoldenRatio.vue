@@ -1,21 +1,24 @@
 <template>
-  <q-page id="q-page">
-    <div class="container-main">
-      <h3 class="q-mb-lg">Golden Ratio</h3>
-      <div class="container-input">
-        <div id="input">
-          <q-input type="number" v-model="number" float-label="Number" />
-            <br>
-            <q-field class="field">Shorter is : {{ ShorterSection }}</q-field>
-            <br>
-            <q-field class="field">Longer is : {{ LongerSection }}</q-field>
-        </div>
-        <div class="btn-reset">
-          <q-btn @click="Reset" style="background: #2468a3; color: white" label="Reset" size="22px"/>
+  <q-page class="q-pa-lg">
+    <div>
+      <h3 class="q-mb-md">Golden Ratio</h3>
+      <div class="row">
+        <div class="col-6">
+          <q-card>
+            <q-card-separator />
+              <q-card-main>
+                <q-input type="number" v-model="number" float-label="Enter Number" />
+                  <q-field class="q-mt-sm q-headline">{{ shorterSection }}</q-field>
+                  <q-field class="q-mt-sm q-headline">{{ longerSection }}</q-field>
+                  <div class="q-mt-md">
+                    <q-btn @click="reset" label="Reset"/>
+                  </div>
+                    </q-card-main>
+                </q-card>
         </div>
       </div>
     </div>
-          </q-page>
+              </q-page>
 </template>
 
 <script>
@@ -23,41 +26,29 @@ export default {
   name: 'GoldenRatio',
   data () {
     return {
-      number: null,
-      counter: ''
+      number: null
     }
   },
   props: {
   },
   computed: {
-    ShorterSection () {
-      return this.number / 1.61803398875
+    shorterSection () {
+      if (this.number != null) {
+        let x = ('Shorter is :' + this.number / 1.61803398875)
+      }
+      return x
     },
-    LongerSection () {
-      return this.number * 1.61803398875
+    longerSection () {
+      if (this.number != null) {
+        let y = ('Longer is :' + this.number * 1.61803398875)
+      }
+      return y
     }
   },
   methods: {
-    Reset: function () {
-      this.number = ''
+    reset: function () {
+      this.number = null
     }
   }
 }
 </script>
-<style>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-</style>

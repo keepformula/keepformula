@@ -1,34 +1,41 @@
 <template>
-  <q-page id="q-page">
-    <div class="container-main">
-      <h3 class="q-mb-lg">Base Converter</h3>
-      <div class="container-input">
-        <div id="input">
-          <div class="header"> Decimal To Binary </div>
-          <q-input type="number" v-model="Decimal" float-label="Decimal Value" />
-            <q-field class="field">Binary is: {{DecimalToBinary}} </q-field>
-        </div>
-        <div id="input">
-          <div class="header"> Binary to Decimal </div>
-          <q-input type="number"  v-model="Binary" float-label="Binary Value" />
-            <q-field class="field">Decimal is: {{BinaryToDecimal}} </q-field>
-        </div>
-        <div id="input">
-          <div class="header"> Octal To Binary </div>
-          <q-input type="number" v-model="Octal" float-label="Octal Value" />
-            <q-field class="field">Binary is: {{OctalToBinary}} </q-field>
-        </div>
-        <div id="input">
-          <div class="header"> Binary to Octal </div>
-          <q-input type="number"  v-model="Binary" float-label="Binary Value" />
-            <q-field class="field">Octal is: {{BinaryToOctal}} </q-field>
-        </div>
-        <div class="btn-reset">
-          <q-btn @click="Reset" style="background: #2468a3; color: white" label="Reset" size="22px"/>
+  <q-page class="q-pa-lg">
+    <div>
+      <h3 class="q-mb-md">Base Converter</h3>
+      <div class="row">
+        <div class="col-6">
+          <q-card>
+            <q-card-separator />
+              <q-card-main>
+                <div>
+                  <div class="q-mt-md text-weight-bold q-headline"> Decimal To Binary </div>
+                  <q-input type="number" v-model="decimal" float-label="Decimal Value" />
+                    <q-field class="q-mt-sm q-title">Binary is: {{decimalToBinary}} </q-field>
+                </div>
+                <div>
+                  <div class="q-mt-md text-weight-bold  q-headline"> Binary to Decimal </div>
+                  <q-input type="number"  v-model="binary" float-label="Binary Value" />
+                    <q-field class="q-mt-sm q-title">Decimal is: {{binaryToDecimal}} </q-field>
+                </div>
+                <div>
+                  <div class="q-mt-md  text-weight-bold q-headline"> Octal To Binary </div>
+                  <q-input type="number" v-model="octal" float-label="Octal Value" />
+                    <q-field class="q-mt-sm q-title">Binary is: {{octalToBinary}} </q-field>
+                </div>
+                <div>
+                  <div class="q-mt-md text-weight-bold q-headline"> Binary to Octal </div>
+                  <q-input type="number"  v-model="binary" float-label="Binary Value" />
+                    <q-field class="q-mt-sm q-title">Octal is: {{binaryToOctal}} </q-field>
+                </div>
+                <div class="q-mt-md">
+                  <q-btn @click="reset" label="Reset"/>
+                </div>
+                  </q-card-main>
+                  </q-card>
         </div>
       </div>
     </div>
-          </q-page>
+                  </q-page>
 </template>
 
 <script>
@@ -36,101 +43,46 @@ export default {
   name: 'BaseConvrter',
   data () {
     return {
-      Decimal: '',
-      Binary: '',
-      Octal: ''
+      decimal: '',
+      binary: '',
+      octal: ''
     }
   },
-  props: {
-  },
   computed: {
-    DecimalToBinary () {
-      if (this.Decimal == null) {
+    decimalToBinary () {
+      if (this.decimal == null) {
         return ('')
       } else {
-        return (this.Decimal.toString(2))
+        return (this.decimal.toString(2))
       }
     },
-    BinaryToDecimal () {
-      if (this.Binary !== '') {
-        return (parseInt(this.Binary, 2).toString(10))
+    binaryToDecimal () {
+      if (this.binary !== '') {
+        return (parseInt(this.binary, 2).toString(10))
       } else {
         return ('')
       }
     },
-    OctalToBinary () {
-      if (this.Octal == null) {
+    octalToBinary () {
+      if (this.octal == null) {
         return ('')
       } else {
-        return (this.Octal.toString(2))
+        return (this.octal.toString(2))
       }
     },
-    BinaryToOctal () {
-      if (this.Binary !== '') {
-        return (parseInt(this.Binary, 2).toString(8))
+    binaryToOctal () {
+      if (this.binary !== '') {
+        return (parseInt(this.binary, 2).toString(8))
       } else {
         return ('')
       }
     }
   },
   methods: {
-    Reset: function () {
-      this.Binary = ''
-      this.Decimal = null
+    reset: function () {
+      this.binary = ''
+      this.decimal = null
     }
   }
 }
 </script>
-<style>
-.field{
-  white-space:nowrap;
-  padding:10px;
-}
-h3 {
-  color:#2468a3;
-  padding-bottom:2%;
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-#input {
-  border: 2px solid #F2F0F3;
-  padding:2%;
-  margin-bottom:3%
-}
-.header {
-  text-align:center;
-  font-weight:bold;
-  height:35px;
-  color:black;
-}
-.container-main {
-  margin: auto;
-  width: 80%;
-}
-.container-input{
-  width: 60%;
-  margin: left;
-  background-color:white;
-}
-#q-page {
-  font-family: 'Ubuntu';font-size: 22px;
-  background-image:url("../assets/bg-image.jpg");
-}
-*{
-  box-sizing:border-box;
-}
-.btn-reset{
-  color:#2468a3;
-  padding-left:0;
-}
-</style>

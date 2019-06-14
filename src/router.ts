@@ -27,7 +27,7 @@ export default new Router({
           component: About
         },
         {
-          path: '/GoldenRatio',
+          path: '/Golden.Ratio',
           name: 'GoldenRatio',
           component: GoldenRatio
         },
@@ -37,12 +37,12 @@ export default new Router({
           component: BMI
         },
         {
-          path: '/BaseConverter',
+          path: '/Base.Converter',
           name: 'BaseConverter',
           component: BaseConverter
         },
         {
-          path: 'DataStorageConverter',
+          path: 'Data.Storage.Converter',
           name: 'DataStorageConverter',
           component: DataStorageConverter
         }

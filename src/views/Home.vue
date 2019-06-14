@@ -17,12 +17,12 @@
             name="place" />
         </q-card-media>
         <q-card-title>
-          <router-link :to="{ name: item.name }" >
+          <router-link class="flex flex-center" :to="{ name: item.name }">
           {{ item.name }}
           </router-link>
         </q-card-title>
         <q-card-main>
-          <p class="text-faded">Small plates, salads & sandwiches in an intimate setting.</p>
+          <p class="text-faded flex flex-center"> {{ item.description }} </p>
         </q-card-main>
         </q-card>
   </q-page>
@@ -39,18 +39,18 @@ export default {
       calculators: [
         {
           name: 'BMI',
-          route: 'BMI'
-        }
-      ],
-      items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      selectOptions: [
-        {
-          label: 'Google',
-          value: 'goog'
+          route: 'BMI',
+          description: 'Calculate Body Mass Index'
         },
         {
-          label: 'Facebook',
-          value: 'fb'
+          name: 'GoldenRatio',
+          route: 'GoldenRatio',
+          description: 'Calculate Golden Ratio'
+        },
+        {
+          name: 'BaseConverter',
+          route: 'BaseConverter',
+          description: 'Number base conversion calculator'
         }
       ],
       search: null,
