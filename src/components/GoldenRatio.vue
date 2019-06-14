@@ -34,15 +34,13 @@ export default {
   computed: {
     shorterSection () {
       if (this.number != null) {
-        let x = ('Shorter is :' + this.number / 1.61803398875)
+        return ('Shorter is :' + this.number / 1.61803398875)
       }
-      return x
     },
     longerSection () {
       if (this.number != null) {
-        let y = ('Longer is :' + this.number * 1.61803398875)
+        return ('Longer is :' + this.number * 1.61803398875)
       }
-      return y
     }
   },
   methods: {
