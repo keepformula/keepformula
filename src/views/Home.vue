@@ -44,12 +44,12 @@ export default {
         },
         {
           name: 'GoldenRatio',
-          route: 'GoldenRatio',
+          route: 'Golden.Ratio',
           description: 'Calculate Golden Ratio'
         },
         {
           name: 'BaseConverter',
-          route: 'BaseConverter',
+          route: 'Base.Converter',
           description: 'Number base conversion calculator'
         }
       ],
