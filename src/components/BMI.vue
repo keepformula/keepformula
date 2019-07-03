@@ -74,7 +74,7 @@ export default {
         obesity: 'You are Obesity',
         severeObesity: 'You are Severe obesity'
       },
-      inputHeightUnit:[
+      inputHeightUnit: [
         {
           label: 'cm',
           value: 'cm'
@@ -88,7 +88,7 @@ export default {
           value: 'feet'
         }
       ],
-      inputWeightUnit:[
+      inputWeightUnit: [
         {
           label: 'gr',
           value: 'gr'
@@ -102,7 +102,7 @@ export default {
           value: 'pound'
         }
       ],
-      genderInput:[
+      genderInput: [
         {
           label: 'Male',
           value: 'male'
@@ -119,30 +119,30 @@ export default {
       if ((this.height && this.weight != null) && this.heightUnit === 'cm' &&
         this.weightUnit === 'kg') {
         return this.weight / Math.pow(this.height / 100, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'cm' &&
+      } else if (this.height && this.weight != null && this.heightUnit === 'cm' &&
         this.weightUnit === 'gr') {
-        return (this.weight / 1000 ) / Math.pow(this.height /100, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'cm' &&
+        return (this.weight / 1000) / Math.pow(this.height / 100, 2)
+      } else if (this.height && this.weight != null && this.heightUnit === 'cm' &&
         this.weightUnit === 'pound') {
-        return (this.weight / 2.2046) / Math.pow(this.height /100, 2)
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' &&
+        return (this.weight / 2.2046) / Math.pow(this.height / 100, 2)
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' &&
         this.weightUnit === 'kg') {
         return this.weight / Math.pow(this.height, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'm' &&
+      } else if (this.height && this.weight != null && this.heightUnit === 'm' &&
         this.weightUnit === 'gr') {
-        return (this.weight / 1000 ) / Math.pow(this.height, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'm' &&
+        return (this.weight / 1000) / Math.pow(this.height, 2)
+      } else if (this.height && this.weight != null && this.heightUnit === 'm' &&
         this.weightUnit === 'pound') {
         return (this.weight / 2.2046) / Math.pow(this.height, 2)
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' &&
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' &&
         this.weightUnit === 'kg') {
         return this.weight / Math.pow(this.height / 3.2808, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'feet' &&
+      } else if (this.height && this.weight != null && this.heightUnit === 'feet' &&
         this.weightUnit === 'gr') {
-        return (this.weight / 1000 ) / Math.pow(this.height /3.2808, 2)
-      } else if(this.height && this.weight != null && this.heightUnit === 'feet' &&
+        return (this.weight / 1000) / Math.pow(this.height / 3.2808, 2)
+      } else if (this.height && this.weight != null && this.heightUnit === 'feet' &&
         this.weightUnit === 'pound') {
-        return (this.weight / 2.2046) / Math.pow(this.height /3.2808, 2)
+        return (this.weight / 2.2046) / Math.pow(this.height / 3.2808, 2)
       }
     },
     bmiCalculate () {
@@ -170,129 +170,125 @@ export default {
       let footUp = (25 * Math.pow((this.height / 3.2808), 2)).toFixed(2)
       if ((this.height && this.weight !== null) && this.weightUnit === 'kg') {
         return 'Your best weight is between ' + cmDown + ' Kg ~ ' + cmUp + ' Kg'
-      } else if((this.height && this.weight) !== null && this.weightUnit === 'gr') {
+      } else if ((this.height && this.weight) !== null && this.weightUnit === 'gr') {
         return 'Your best weight is between ' + mDown + ' gr ~ ' + mUp + ' gr'
-      } else if((this.height && this.weight) !== null && this.weightUnit === 'pound') {
+      } else if ((this.height && this.weight) !== null && this.weightUnit === 'pound') {
         return 'Your best weight is between ' + feetDown + ' pounds ~ ' + feetUp + ' pounds'
       }
     },
     robinsonFormula () {
-      let manCm = (((this.height - 152.4) / 2.54 ) * 1.9) + 52
-      let manM = (((this.height *100 - 152.4) / 2.54 ) * 1.9) + 52
-      let womenCm = (((this.height - 152.4) / 2.54 ) * 1.7) + 49
-      let womenM = (((this.height *100  - 152.4) / 2.54 ) * 1.7) + 49
-      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54 ) * 1.9) + 52
-      let womenFeet =(((this.height * 3.2808 - 152.4) / 2.54 ) * 1.7) + 49
-      if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+      let manCm = (((this.height - 152.4) / 2.54) * 1.9) + 52
+      let manM = (((this.height * 100 - 152.4) / 2.54) * 1.9) + 52
+      let womenCm = (((this.height - 152.4) / 2.54) * 1.7) + 49
+      let womenM = (((this.height * 100 - 152.4) / 2.54) * 1.7) + 49
+      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.9) + 52
+      let womenFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.7) + 49
+      if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'male') {
-        return "Robinson Formula: " + manCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Robinson Formula: ' + manCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'male') {
-        return "Robinson Formula: " + manM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+        return 'Robinson Formula: ' + manM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'female') {
-        return "Robinson Formula: " + womenCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Robinson Formula: ' + womenCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'female') {
-        return "Robinson Formula: " + womenM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Robinson Formula: ' + womenM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'male') {
-        return "Robinson Formula: " + manFeet +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Robinson Formula: ' + manFeet + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'female') {
-        return "Robinson Formula: " + womenFeet +" kg"
+        return 'Robinson Formula: ' + womenFeet + ' kg'
       }
-
     },
-    millerFormula() {
-      let manCm = (((this.height - 152.4) / 2.54 ) * 1.41) + 56.2
-      let manM = (((this.height *100 - 152.4) / 2.54 ) * 1.41) + 56.2
-      let womenCm = (((this.height - 152.4) / 2.54 ) * 1.36) + 53.1
-      let womenM = (((this.height *100  - 152.4) / 2.54 ) * 1.36) + 53.1
-      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54 ) * 1.41) + 56.2
-      let womenFeet =(((this.height * 3.2808 - 152.4) / 2.54 ) * 1.36) + 53.1
-      if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+    millerFormula () {
+      let manCm = (((this.height - 152.4) / 2.54) * 1.41) + 56.2
+      let manM = (((this.height * 100 - 152.4) / 2.54) * 1.41) + 56.2
+      let womenCm = (((this.height - 152.4) / 2.54) * 1.36) + 53.1
+      let womenM = (((this.height * 100 - 152.4) / 2.54) * 1.36) + 53.1
+      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.41) + 56.2
+      let womenFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.36) + 53.1
+      if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'male') {
-        return "Miller Formula: " + manCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Miller Formula: ' + manCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'male') {
-        return "Miller Formula: " + manM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+        return 'Miller Formula: ' + manM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'female') {
-        return "Miller Formula: " + womenCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Miller Formula: ' + womenCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'female') {
-        return "Miller Formula: " + womenM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Miller Formula: ' + womenM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'male') {
-        return "Miller Formula: " + manFeet +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Miller Formula: ' + manFeet + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'female') {
-        return "Miller Formula: " + womenFeet +" kg"
+        return 'Miller Formula: ' + womenFeet + ' kg'
       }
-
     },
-    hamwiFormula() {
-      let manCm = (((this.height - 152.4) / 2.54 ) * 2.7) + 48
-      let manM = (((this.height *100 - 152.4) / 2.54 ) * 2.7) + 48
-      let womenCm = (((this.height - 152.4) / 2.54 ) * 2.2) + 45.4
-      let womenM = (((this.height *100  - 152.4) / 2.54 ) * 2.2) + 45.4
-      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54 ) * 2.7) + 48
-      let womenFeet =(((this.height * 3.2808 - 152.4) / 2.54 ) * 2.2) + 45.4
-      if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+    hamwiFormula () {
+      let manCm = (((this.height - 152.4) / 2.54) * 2.7) + 48
+      let manM = (((this.height * 100 - 152.4) / 2.54) * 2.7) + 48
+      let womenCm = (((this.height - 152.4) / 2.54) * 2.2) + 45.4
+      let womenM = (((this.height * 100 - 152.4) / 2.54) * 2.2) + 45.4
+      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 2.7) + 48
+      let womenFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 2.2) + 45.4
+      if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'male') {
-        return "Hamwi Formula: " + manCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Hamwi Formula: ' + manCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'male') {
-        return "Hamwi Formula: " + manM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+        return 'Hamwi Formula: ' + manM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'female') {
-        return "Hamwi Formula: " + womenCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Hamwi Formula: ' + womenCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'female') {
-        return "Hamwi Formula: " + womenM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Hamwi Formula: ' + womenM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'male') {
-        return "Hamwi Formula: " + manFeet +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Hamwi Formula: ' + manFeet + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'female') {
-        return "Hamwi Formula: " + womenFeet +" kg"
+        return 'Hamwi Formula: ' + womenFeet + ' kg'
       }
-
     },
-    devineFormula() {
-      let manCm = (((this.height - 152.4) / 2.54 ) * 2.3) + 50
-      let manM = (((this.height * 100 - 152.4) / 2.54 ) * 2.3) + 50
-      let womenCm = (((this.height - 152.4) / 2.54 ) * 2.3) + 45.5
-      let womenM = (((this.height * 100  - 152.4) / 2.54 ) * 2.3) + 45.5
-      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54 ) * 2.3) + 50
-      let womenFeet =(((this.height * 3.2808 - 152.4) / 2.54 ) * 2.3) + 45.5
-      if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+    devineFormula () {
+      let manCm = (((this.height - 152.4) / 2.54) * 2.3) + 50
+      let manM = (((this.height * 100 - 152.4) / 2.54) * 2.3) + 50
+      let womenCm = (((this.height - 152.4) / 2.54) * 2.3) + 45.5
+      let womenM = (((this.height * 100 - 152.4) / 2.54) * 2.3) + 45.5
+      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 2.3) + 50
+      let womenFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 2.3) + 45.5
+      if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'male') {
-        return "Devine Formula: " + manCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Devine Formula: ' + manCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'male') {
-        return "Devine Formula: " + manM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
+        return 'Devine Formula: ' + manM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
         'female') {
-        return "Devine Formula: " + womenCm +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
+        return 'Devine Formula: ' + womenCm + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
         'female') {
-        return "Devine Formula: " + womenM +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Devine Formula: ' + womenM + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'male') {
-        return "Devine Formula: " + manFeet +" kg"
-      } else if((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
+        return 'Devine Formula: ' + manFeet + ' kg'
+      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
         'female') {
-        return "Devine Formula: " + womenFeet +" kg"
+        return 'Devine Formula: ' + womenFeet + ' kg'
       }
-
     }
   },
   methods: {
     reset: function () {
       this.weight = null,
-        this.height = null
+      this.height = null
     }
   }
 }
