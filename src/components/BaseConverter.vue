@@ -46,7 +46,7 @@ export default {
   data () {
     return {
       inputValue: '',
-      inputUnit: '',
+      inputUnit: 'dec',
       outputUnit: '',
       base: '',
       items: [

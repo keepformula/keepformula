@@ -16,6 +16,17 @@
                        v-model="heightUnit"
                        float-label="Choose Unit"
                        :options="inputHeightUnit"
+                       separator="true"
+                       radio  
+                       :after="[
+                       {
+                       icon: 'done',
+                       content: true,
+                       handler () {
+                       // do something...
+                       }
+                       }
+                       ]"
                        />
                   </div>
                 </div>
@@ -28,6 +39,17 @@
                        v-model="weightUnit"
                        float-label="Choose Unit"
                        :options="inputWeightUnit"
+                       separator="true"
+                       radio  
+                       :after="[
+                       {
+                       icon: 'done',
+                       content: true,
+                       handler () {
+                       // do something...
+                       }
+                       }
+                       ]"
                        />
                   </div>
                 </div>
@@ -288,7 +310,7 @@ export default {
   methods: {
     reset: function () {
       this.weight = null,
-      this.height = null
+        this.height = null
     }
   }
 }
