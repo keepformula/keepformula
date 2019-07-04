@@ -7,18 +7,33 @@
           <q-card>
             <q-card-separator />
               <q-card-main>
-                <q-input type="number" v-model="number" float-label="Enter Number" />
-                  <q-field class="q-mt-sm q-headline">{{ shorterSection }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ longerSection }}</q-field>
-                  <div class="q-mt-md">
-                    <q-btn @click="reset" label="Reset"/>
+                <div class="row q-mt-lg">
+                  <div class="col-8">
+                    <q-input type="number" v-model="number" float-label="Enter Number" />
                   </div>
-                    </q-card-main>
-                </q-card>
+                  <div class="col-3 q-ml-xl">
+                    <q-select
+                       v-model="inputUnitSelect"
+                       float-label="Unit"
+                       :options="inputUnitOptions"
+                       />
+                  </div>
+                  <div class="col-12">
+                    <q-field class="q-mt-sm q-headline">{{ shorterSection }} {{inputUnitSelect}}</q-field>
+                  </div>
+                  <div class ="col-12">
+                    <q-field class="q-mt-sm q-headline">{{ longerSection }} {{inputUnitSelect}}</q-field>
+                  </div>
+                </div>
+                <div class="q-mt-md">
+                  <q-btn @click="reset" label="Reset"/>
+                </div>
+            </q-card-main>
+          </q-card>
         </div>
       </div>
     </div>
-              </q-page>
+  </q-page>
 </template>
 
 <script>
@@ -26,7 +41,22 @@ export default {
   name: 'GoldenRatio',
   data () {
     return {
-      number: null
+      number: null,
+      inputUnitSelect: 'm',
+      inputUnitOptions: [
+        {
+          label: 'cm',
+          value: 'cm'
+        },
+        {
+          label: 'm',
+          value: 'm'
+        },
+        {
+          label: 'feet',
+          value: 'feet'
+        }
+      ]
     }
   },
   props: {
@@ -34,12 +64,12 @@ export default {
   computed: {
     shorterSection () {
       if (this.number != null) {
-        return ('Shorter is :' + this.number / 1.61803398875)
+        return ('Shorter is : ' + this.number / 1.61803398875)
       }
     },
     longerSection () {
       if (this.number != null) {
-        return ('Longer is :' + this.number * 1.61803398875)
+        return ('Longer is : ' + this.number * 1.61803398875)
       }
     }
   },
