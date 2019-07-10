@@ -16,8 +16,8 @@
         />
 
         <q-toolbar-title>
-          Arsham App
-          <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
+          Calci
+          <div slot="subtitle">Version {{ $q.version }}</div>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
@@ -64,7 +64,7 @@ export default {
   name: 'LayoutDefault',
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
+      leftDrawerOpen: false
     }
   },
   methods: {
