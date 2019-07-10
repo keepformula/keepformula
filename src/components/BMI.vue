@@ -15,8 +15,8 @@
                     <q-select
                        v-model="heightUnit"
                        float-label="Choose Unit"
-                       :options="inputHeightUnit"
-                       separator="true"
+                       :options="unit.length"
+                       :separator="true"
                        radio  
                        />
                   </div>
@@ -29,8 +29,8 @@
                     <q-select
                        v-model="weightUnit"
                        float-label="Choose Unit"
-                       :options="inputWeightUnit"
-                       separator="true"
+                       :options="unit.weight"
+                       :separator="true"
                        radio  
                        />
                   </div>
@@ -39,10 +39,10 @@
                        v-model="gender"
                        class="q-mt-lg"
                        text-color="primary"
-                       :options="genderInput"
+                       :options="unit.gender"
                        />
-                  <q-field class="q-mt-sm q-headline">{{ bmi | toFixed }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ bmiCalculate }}</q-field>
+                  <q-field class="q-mt-sm q-headline">{{ bmi }}</q-field>
+                  <q-field class="q-mt-sm q-headline">{{ bmiMessageCalculate }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ bestWeight }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ millerFormula }}</q-field>
@@ -62,94 +62,68 @@
 </template>
 
 <script>
+import Unit from '@/units'
+import UnitConverter from '@/units-converter'
 export default {
   name: 'BMI',
   data () {
     return {
+      unit: Unit,
       gender: 'male',
       height: null,
       weight: null,
       weightUnit: 'kg',
       heightUnit: 'cm',
+      // TODO: i18n
       bmiMessage: {
         underWeight: 'You are Under weight',
         normal: 'You are Normal',
         overWeight: 'You are Overweight',
         obesity: 'You are Obesity',
         severeObesity: 'You are Severe obesity'
-      },
-      inputHeightUnit: [
-        {
-          label: 'cm',
-          value: 'cm'
-        },
-        {
-          label: 'm',
-          value: 'm'
-        },
-        {
-          label: 'feet',
-          value: 'feet'
-        }
-      ],
-      inputWeightUnit: [
-        {
-          label: 'gr',
-          value: 'gr'
-        },
-        {
-          label: 'kg',
-          value: 'kg'
-        },
-        {
-          label: 'pound',
-          value: 'pound'
-        }
-      ],
-      genderInput: [
-        {
-          label: 'Male',
-          value: 'male'
-        },
-        {
-          label: 'Female',
-          value: 'female'
-        }
-      ]
+      }
     }
   },
   computed: {
     bmi () {
-      if ((this.height && this.weight != null) && this.heightUnit === 'cm' &&
-        this.weightUnit === 'kg') {
-        return this.weight / Math.pow(this.height / 100, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'cm' &&
-        this.weightUnit === 'gr') {
-        return (this.weight / 1000) / Math.pow(this.height / 100, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'cm' &&
-        this.weightUnit === 'pound') {
-        return (this.weight / 2.2046) / Math.pow(this.height / 100, 2)
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' &&
-        this.weightUnit === 'kg') {
-        return this.weight / Math.pow(this.height, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'm' &&
-        this.weightUnit === 'gr') {
-        return (this.weight / 1000) / Math.pow(this.height, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'm' &&
-        this.weightUnit === 'pound') {
-        return (this.weight / 2.2046) / Math.pow(this.height, 2)
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' &&
-        this.weightUnit === 'kg') {
-        return this.weight / Math.pow(this.height / 3.2808, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'feet' &&
-        this.weightUnit === 'gr') {
-        return (this.weight / 1000) / Math.pow(this.height / 3.2808, 2)
-      } else if (this.height && this.weight != null && this.heightUnit === 'feet' &&
-        this.weightUnit === 'pound') {
-        return (this.weight / 2.2046) / Math.pow(this.height / 3.2808, 2)
+      let out = null
+      if (this.weight && this.height) {
+        // Main Formula
+        // NOTE: calculate based on KG, Centimeter
+        out = UnitConverter(this.weight, this.weightUnit, 'kg') /
+          Math.pow(UnitConverter(this.height, this.heightUnit, 'metere'), 2)
+        // let heightPower = Math.pow(this.height / 100, 2)
+        // if (this.heightUnit === 'cm' && this.weightUnit === 'kg') {
+        //   out = this.weight / heightPower
+        // } else if (this.heightUnit === 'cm' &&
+        //   this.weightUnit === 'gr') {
+        //   out = (this.weight / 1000) / heightPower
+        // } else if (this.heightUnit === 'cm' &&
+        //   this.weightUnit === 'pound') {
+        //   out = (this.weight / 2.2046) / heightPower
+        // } else if (this.heightUnit === 'm' &&
+        //   this.weightUnit === 'kg') {
+        //   out = this.weight / Math.pow(this.height, 2)
+        // } else if (this.heightUnit === 'm' &&
+        //   this.weightUnit === 'gr') {
+        //   out = (this.weight / 1000) / Math.pow(this.height, 2)
+        // } else if (this.heightUnit === 'm' &&
+        //   this.weightUnit === 'pound') {
+        //   out = (this.weight / 2.2046) / Math.pow(this.height, 2)
+        // } else if (this.heightUnit === 'feet' &&
+        //   this.weightUnit === 'kg') {
+        //   out = this.weight / Math.pow(this.height / 3.2808, 2)
+        // } else if (this.heightUnit === 'feet' &&
+        //   this.weightUnit === 'gr') {
+        //   out = (this.weight / 1000) / Math.pow(this.height / 3.2808, 2)
+        // } else if (this.heightUnit === 'feet' &&
+        //   this.weightUnit === 'pound') {
+        //   out = (this.weight / 2.2046) / Math.pow(this.height / 3.2808, 2)
+        // }
       }
+      return out
     },
-    bmiCalculate () {
+    bmiMessageCalculate () {
       let out = null
       let bmi = this.bmi
       if (bmi < 18.5 && (this.height && this.weight) !== null) {
@@ -290,9 +264,9 @@ export default {
     }
   },
   methods: {
-    reset: function () {
-      this.weight = null,
-        this.height = null
+    reset () {
+      this.weight = null
+      this.height = null
     }
   }
 }
