@@ -18,8 +18,8 @@
                        :options="items"
                        />
                   </div>
-                  <div class="col-8">
-                  </div>
+                    <div class="col-8">
+                    </div>
                   <div class="col-3 q-ml-xl">
                     <q-select
                        v-model="outputUnit"
@@ -135,7 +135,6 @@ export default {
   methods: {
     reset: function () {
       this.inputValue = ''
-      this.inputUnit = ''
       this.outputUnit = ''
     }
   }

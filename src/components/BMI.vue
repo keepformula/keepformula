@@ -18,15 +18,6 @@
                        :options="inputHeightUnit"
                        separator="true"
                        radio  
-                       :after="[
-                       {
-                       icon: 'done',
-                       content: true,
-                       handler () {
-                       // do something...
-                       }
-                       }
-                       ]"
                        />
                   </div>
                 </div>
@@ -41,15 +32,6 @@
                        :options="inputWeightUnit"
                        separator="true"
                        radio  
-                       :after="[
-                       {
-                       icon: 'done',
-                       content: true,
-                       handler () {
-                       // do something...
-                       }
-                       }
-                       ]"
                        />
                   </div>
                 </div>
