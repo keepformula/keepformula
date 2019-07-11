@@ -17,7 +17,7 @@
                        float-label="Unit"
                        :options="unit.length"
                        :separator="true"
-                       radio  
+                       radio
                        />
                   </div>
                 </div>
@@ -31,7 +31,7 @@
                        float-label="Unit"
                        :options="unit.weight"
                        :separator="true"
-                       radio  
+                       radio
                        />
                   </div>
                 </div>

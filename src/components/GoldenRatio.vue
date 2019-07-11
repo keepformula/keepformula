@@ -71,11 +71,11 @@ export default {
       if (this.number != null) {
         return ('Longer is : ' + this.number * 1.61803398875)
       }
-    },
-//    numberUnitCalculator() {
-//    if(this.inputUnitSelect === 'cm')
-//      return this.number = (this.number / 100)
-//    }
+    }
+    //    numberUnitCalculator() {
+    //    if(this.inputUnitSelect === 'cm')
+    //      return this.number = (this.number / 100)
+    //    }
   },
   methods: {
     reset: function () {
