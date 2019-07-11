@@ -8,13 +8,13 @@
             <q-card-separator />
               <q-card-main>
                 <div class="row">
-                  <div class="col-8">
+                  <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md" >
                     <q-input type="number" v-model="height" float-label="Your height"/>
                   </div>
-                  <div class="col-3 q-ml-xl">
+                  <div class="col-3 col-xs-auto q-ml-lg">
                     <q-select
                        v-model="heightUnit"
-                       float-label="Choose Unit"
+                       float-label="Unit"
                        :options="unit.length"
                        :separator="true"
                        radio  
@@ -22,13 +22,13 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-8">
+                  <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md">
                     <q-input type="number" v-model="weight" float-label="Your weight"/>
                   </div>
-                  <div class="col-3 q-ml-xl">
+                  <div class="col-3 col-xs-auto q-ml-lg">
                     <q-select
                        v-model="weightUnit"
-                       float-label="Choose Unit"
+                       float-label="Unit"
                        :options="unit.weight"
                        :separator="true"
                        radio  

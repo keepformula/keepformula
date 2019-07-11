@@ -8,19 +8,19 @@
             <q-card-separator />
               <q-card-main>
                 <div class="row q-mt-lg">
-                  <div class="col-8">
+                  <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md">
                     <q-input type="number" v-model="inputValue" float-label="Enter Number" />
                   </div>
-                  <div class="col-3 q-ml-xl">
+                  <div class="col-3 col-xs-auto q-ml-lg">
                     <q-select
                        v-model="inputUnit"
                        float-label="from base"
                        :options="items"
                        />
                   </div>
-                    <div class="col-8">
+                  <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md">
                     </div>
-                  <div class="col-3 q-ml-xl">
+                  <div class="col-3 col-xs-auto q-ml-lg">
                     <q-select
                        v-model="outputUnit"
                        float-label="to base"
