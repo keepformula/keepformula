@@ -15,7 +15,7 @@
           <q-icon
           class="text-primary"
           style="font-size: 100px;"
-          name="https://www.freepik.com/free-icon/scale_911024.htm"
+          name="done"
           />
           </q-card-media>
           <q-card-title>
