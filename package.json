@@ -24,6 +24,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "convert-units": "^2.3.4",
     "core-js": "^2.6.5",
     "quasar": "^1.0.0-beta.15",
     "quasar-extras": "^2.0.4",
