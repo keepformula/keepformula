@@ -3,12 +3,11 @@
     <q-search
           class="q-mb-lg"
           v-model="search" />
-      <div class="justify-center"> 
+      <div class="justify-center">
       <q-card
           class="q-ma-sm cursor-pointer"
           v-for="item in calculators"
           v-bind:key="item"
-          @click.native="selectItem"
           inline
           style="width: 300px">
         <q-card-media
@@ -60,11 +59,6 @@ export default {
       ],
       search: null,
       select: null
-    }
-  },
-  // TODO Fix this
-  methods: {
-    selectItem () {
     }
   }
 }

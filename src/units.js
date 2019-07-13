@@ -1,18 +1,4 @@
 export default {
-  length: [
-    {
-      label: 'cm',
-      value: 'cm'
-    },
-    {
-      label: 'm',
-      value: 'm'
-    },
-    {
-      label: 'feet',
-      value: 'feet'
-    }
-  ],
   gender: [
     {
       label: 'Male',
@@ -23,18 +9,40 @@ export default {
       value: 'female'
     }
   ],
+  length: [
+    {
+      label: 'Centimetre',
+      value: 'cm'
+    },
+    {
+      label: 'Metre',
+      value: 'm'
+    },
+    {
+      label: 'Foot',
+      value: 'ft'
+    },
+    {
+      label: 'Inch',
+      value: 'in'
+    }
+  ],
   weight: [
     {
       label: 'Gram',
-      value: 'gr'
+      value: 'g'
     },
     {
-      label: 'kilogram',
+      label: 'Kilogram',
       value: 'kg'
     },
     {
       label: 'Pound',
       value: 'lb'
+    },
+    {
+      label: 'Ounce',
+      value: 'oz'
     }
   ]
 }
