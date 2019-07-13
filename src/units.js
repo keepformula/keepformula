@@ -23,18 +23,18 @@ export default {
       value: 'female'
     }
   ],
-  weight: [ 
+  weight: [
     {
-      label: 'gr',
+      label: 'Gram',
       value: 'gr'
     },
     {
-      label: 'kg',
+      label: 'kilogram',
       value: 'kg'
     },
     {
-      label: 'pound',
-      value: 'pound'
+      label: 'Pound',
+      value: 'lb'
     }
   ]
 }

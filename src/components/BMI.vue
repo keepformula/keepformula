@@ -86,40 +86,18 @@ export default {
     }
   },
   computed: {
+    weightInKG () {
+      return Converter(this.weight).from(this.weightUnit).to('kg')
+    },
+    heighttInMeter () {
+      return Converter(this.height).from(this.heightUnit).to('m')
+    },
     bmi () {
       let out = null
       if (this.weight && this.height) {
         // Main Formula
-        // NOTE: calculate based on KG, Centimeter
-        out =(this.weight) / Math.pow((convert(this.height).from('cm').to('m')), 2)
-        // let heightPower = Math.pow(this.height / 100, 2)
-        // if (this.heightUnit === 'cm' && this.weightUnit === 'kg') {
-        //   out = this.weight / heightPower
-        // } else if (this.heightUnit === 'cm' &&
-        //   this.weightUnit === 'gr') {
-        //   out = (this.weight / 1000) / heightPower
-        // } else if (this.heightUnit === 'cm' &&
-        //   this.weightUnit === 'pound') {
-        //   out = (this.weight / 2.2046) / heightPower
-        // } else if (this.heightUnit === 'm' &&
-        //   this.weightUnit === 'kg') {
-        //   out = this.weight / Math.pow(this.height, 2)
-        // } else if (this.heightUnit === 'm' &&
-        //   this.weightUnit === 'gr') {
-        //   out = (this.weight / 1000) / Math.pow(this.height, 2)
-        // } else if (this.heightUnit === 'm' &&
-        //   this.weightUnit === 'pound') {
-        //   out = (this.weight / 2.2046) / Math.pow(this.height, 2)
-        // } else if (this.heightUnit === 'feet' &&
-        //   this.weightUnit === 'kg') {
-        //   out = this.weight / Math.pow(this.height / 3.2808, 2)
-        // } else if (this.heightUnit === 'feet' &&
-        //   this.weightUnit === 'gr') {
-        //   out = (this.weight / 1000) / Math.pow(this.height / 3.2808, 2)
-        // } else if (this.heightUnit === 'feet' &&
-        //   this.weightUnit === 'pound') {
-        //   out = (this.weight / 2.2046) / Math.pow(this.height / 3.2808, 2)
-        // }
+        // NOTE: calculate based on KG, Meter
+        out = this.weightInKG / Math.pow(this.heighttInMeter, 2)
       }
       return out
     },
