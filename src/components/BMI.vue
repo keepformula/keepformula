@@ -63,6 +63,7 @@
 
 <script>
 import Unit from '@/units'
+import Converter from 'convert-units'
 import UnitConverter from '@/units-converter'
 export default {
   name: 'BMI',
@@ -90,8 +91,7 @@ export default {
       if (this.weight && this.height) {
         // Main Formula
         // NOTE: calculate based on KG, Centimeter
-        out = UnitConverter(this.weight, this.weightUnit, 'kg') /
-          Math.pow(UnitConverter(this.height, this.heightUnit, 'metere'), 2)
+        out =(this.weight) / Math.pow((convert(this.height).from('cm').to('m')), 2)
         // let heightPower = Math.pow(this.height / 100, 2)
         // if (this.heightUnit === 'cm' && this.weightUnit === 'kg') {
         //   out = this.weight / heightPower
