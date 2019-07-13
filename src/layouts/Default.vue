@@ -17,7 +17,8 @@
 
         <q-toolbar-title>
           Calci
-          <div slot="subtitle">Version {{ $q.version }}</div>
+          <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
+          <div slot="subtitle">Version {{ VERSION }}</div>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>

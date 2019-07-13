@@ -3,6 +3,7 @@
     <q-search
           class="q-mb-lg"
           v-model="search" />
+      <div class="justify-center"> 
       <q-card
           class="q-ma-sm cursor-pointer"
           v-for="item in calculators"
@@ -12,11 +13,12 @@
           style="width: 300px">
         <q-card-media
           class="q-py-lg flex flex-center">
-          <q-icon
+          <!-- <q-icon
           class="text-primary"
           style="font-size: 100px;"
           name="done"
-          />
+          />-->
+          <img src="/icon/weight.svg" width="100" style="width: 100px;"  />
           </q-card-media>
           <q-card-title>
             <router-link class="flex flex-center" :to="{ name: item.name }" >
@@ -27,6 +29,7 @@
             <p class="text-faded flex flex-center"> {{ item.description }} </p>
           </q-card-main>
         </q-card>
+      </div>
       </q-page>
 </template>
 
@@ -40,7 +43,7 @@ export default {
           name: 'BMI',
           route: 'BMI',
           description: 'Calculate Body Mass Index',
-          icon: 'alarm'
+          icon: 'weight'
         },
         {
           name: 'GoldenRatio',
