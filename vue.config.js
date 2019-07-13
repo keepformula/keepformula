@@ -1,6 +1,26 @@
+const webpack = require('webpack')
+const version = require('./package.json').version
 module.exports = {
   lintOnSave: false,
-
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      return {
+        plugins: [
+          new webpack.DefinePlugin({
+            VERSION: JSON.stringify(require('./package.json').version)
+          })
+        ]
+      }
+    } else {
+      return {
+        plugins: [
+          new webpack.DefinePlugin({
+            VERSION: JSON.stringify(require('./package.json').version)
+          })
+        ]
+      }
+    }
+  },
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
@@ -25,10 +45,8 @@ module.exports = {
     },
     cordovaPath: 'src-cordova'
   },
-
   transpileDependencies: [
     /[\\\/]node_modules[\\\/]quasar-framework[\\\/]/
   ],
-
   publicPath: ''
 }
