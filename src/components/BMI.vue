@@ -43,7 +43,7 @@
                        />
                   <q-field class="q-mt-sm q-headline">{{ bmi }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ bmiMessageCalculate }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ bestWeight }}</q-field>
+                  <q-field class="q-mt-sm q-headline">{{ normWeight }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ millerFormula }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ hamwiFormula }}</q-field>
@@ -89,7 +89,7 @@ export default {
     weightInKG () {
       return Converter(this.weight).from(this.weightUnit).to('kg')
     },
-    heighttInMeter () {
+    heightInMeter () {
       return Converter(this.height).from(this.heightUnit).to('m')
     },
     bmi () {
@@ -97,14 +97,14 @@ export default {
       if (this.weight && this.height) {
         // Main Formula
         // NOTE: calculate based on KG, Meter
-        out = this.weightInKG / Math.pow(this.heighttInMeter, 2)
+        out = this.weightInKG / Math.pow(this.heightInMeter, 2)
       }
       return out
     },
     bmiMessageCalculate () {
       let out = null
       let bmi = this.bmi
-      if (bmi < 18.5 && (this.height && this.weight) !== null) {
+      if (bmi < 18.5 && (this.height && this.weight)) {
         out = this.bmiMessage.underWeight
       } else if (bmi >= 18.5 && bmi < 25) {
         out = this.bmiMessage.normal
@@ -117,47 +117,34 @@ export default {
       }
       return out
     },
-    bestWeight () {
-      let cmDown = (18.5 * Math.pow((this.height / 100), 2)).toFixed(2)
-      let cmUp = (25 * Math.pow((this.height / 100), 2)).toFixed(2)
-      let mDown = (18.5 * Math.pow(this.height, 2)).toFixed(2)
-      let mUp = (25 * Math.pow(this.height, 2)).toFixed(2)
-      let footDown = (18.5 * Math.pow((this.height / 3.2808), 2)).toFixed(2)
-      let footUp = (25 * Math.pow((this.height / 3.2808), 2)).toFixed(2)
-      if ((this.height && this.weight !== null) && this.weightUnit === 'kg') {
-        return 'Your best weight is between ' + cmDown + ' Kg ~ ' + cmUp + ' Kg'
-      } else if ((this.height && this.weight) !== null && this.weightUnit === 'gr') {
-        return 'Your best weight is between ' + mDown + ' gr ~ ' + mUp + ' gr'
-      } else if ((this.height && this.weight) !== null && this.weightUnit === 'pound') {
-        return 'Your best weight is between ' + feetDown + ' pounds ~ ' + feetUp + ' pounds'
+    minNormWeightConvert () {
+      let minNormWeight = 18.5 * Math.pow(this.heightInMeter, 2)
+      return Converter(minNormWeight).from('kg').to(this.weightUnit)
+    },
+    maxNormWeightConvert () {
+      let maxNormWeight = 25 * Math.pow(this.heightInMeter, 2)
+      return Converter(maxNormWeight).from('kg').to(this.weightUnit)
+    },
+    normWeight () {
+      let out = null
+      if (this.height && this.weight) {
+        out = 'Your Normal weight is between ' + this.minNormWeightConvert + ' ' +
+          this.weightUnit + ' to ' + this.maxNormWeightConvert + ' ' + this.weightUnit
+        return out
       }
     },
     robinsonFormula () {
-      let manCm = (((this.height - 152.4) / 2.54) * 1.9) + 52
-      let manM = (((this.height * 100 - 152.4) / 2.54) * 1.9) + 52
-      let womenCm = (((this.height - 152.4) / 2.54) * 1.7) + 49
-      let womenM = (((this.height * 100 - 152.4) / 2.54) * 1.7) + 49
-      let manFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.9) + 52
-      let womenFeet = (((this.height * 3.2808 - 152.4) / 2.54) * 1.7) + 49
-      if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
-        'male') {
-        return 'Robinson Formula: ' + manCm + ' kg'
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
-        'male') {
-        return 'Robinson Formula: ' + manM + ' kg'
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'cm' && this.gender ===
-        'female') {
-        return 'Robinson Formula: ' + womenCm + ' kg'
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'm' && this.gender ===
-        'female') {
-        return 'Robinson Formula: ' + womenM + ' kg'
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
-        'male') {
-        return 'Robinson Formula: ' + manFeet + ' kg'
-      } else if ((this.height && this.weight != null) && this.heightUnit === 'feet' && this.gender ===
-        'female') {
-        return 'Robinson Formula: ' + womenFeet + ' kg'
+      let out = null
+      let man = (((this.heightInMeter * 100 - 152.4) / 2.54) * 1.9) + 52
+      let women = (((this.heightInMeter * 100 - 152.4) / 2.54) * 1.7) + 49
+      if ((this.height && this.weight != null) && this.gender === 'male') {
+        out = 'Robinson Formula: ' + Converter(man).from('kg').to(this.weightUnit) + ' ' +
+          this.weightUnit
+      } else if ((this.height && this.weight) && this.gender === 'female') {
+        out = 'Robinson Formula: ' + Converter(women).from('kg').to(this.weightUnit) + ' ' +
+          this.weightUnit
       }
+      return out
     },
     millerFormula () {
       let manCm = (((this.height - 152.4) / 2.54) * 1.41) + 56.2
