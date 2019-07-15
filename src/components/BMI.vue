@@ -44,15 +44,63 @@
                   <q-field class="q-mt-sm q-headline">{{ bmi }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ bmiMessageCalculate }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ normWeight }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ millerFormula }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ hamwiFormula }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ devineFormula }}</q-field>
-                  <div class="q-mt-md">
-                    <q-btn
-                       @click="reset"
-                       label="reset"/>
-                  </div>
+                  <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}
+                    <a
+                           href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
+                           target="_blank"
+                           title="what's robinson Formula?">
+                      <q-icon
+                           v-if="this.weight && this.height != null"
+                           class="text-primary"
+                           style="font-size: 40px; display: inline-flex;"
+                           name="info"
+                           />
+                    </a>
+                      </q-field>
+                      <q-field class="q-mt-sm q-headline">{{ millerFormula }}
+                        <a
+                               href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
+                               target="_blank"
+                               title="what's miller Formula?">
+                          <q-icon
+                               v-if="this.weight && this.height != null"
+                               class="text-primary"
+                               style="font-size: 40px; display: inline-flex;"
+                               name="info"
+                               />
+                        </a>
+                          </q-field>
+                          <q-field class="q-mt-sm q-headline">{{ hamwiFormula }}
+                            <a
+                                   href=https://en.wikipedia.org/wiki/Human_body_weight#Hamwi_method
+                                   target="_blank"
+                                   title="what's hamwi Formula?">
+                              <q-icon
+                                   v-if="this.weight && this.height != null"
+                                   class="text-primary"
+                                   style="font-size: 40px; display: inline-flex;"
+                                   name="info"
+                                   />
+                            </a>
+                              </q-field>
+                              <q-field class="q-mt-sm q-headline">{{ devineFormula }}
+                                <a
+                                       href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
+                                       target="_blank"
+                                       title="what's devine Formula?">
+                                  <q-icon
+                                       v-if="this.weight && this.height != null"
+                                       class="text-primary"
+                                       style="font-size: 40px; display: inline-flex;"
+                                       name="info"
+                                       />
+                                </a>
+                                  </q-field>
+                                  <div class="q-mt-md">
+                                    <q-btn
+                                       @click="reset"
+                                       label="reset"/>
+                                  </div>
               </q-card-main>
            </q-card>
         </div>
@@ -75,6 +123,7 @@ export default {
       weight: null,
       weightUnit: 'kg',
       heightUnit: 'cm',
+      seen: false,
       // TODO: i18n
       bmiMessage: {
         underWeight: 'You are Under weight',
@@ -140,7 +189,6 @@ export default {
     },
     robinsonFormula () {
       let out = null
-      // Main Formula
       // NOTE: calculate based on KG, Centimeter
       let man = (((this.heightInCentimeter - 152.4) / 2.54) * 1.9) + 52
       let women = (((this.heightInCentimeter - 152.4) / 2.54) * 1.7) + 49
@@ -201,3 +249,8 @@ export default {
   }
 }
 </script>
+
+<style>
+a {text-decoration : none;
+}
+</style>
