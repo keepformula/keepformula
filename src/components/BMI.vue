@@ -149,7 +149,7 @@ export default {
       if (this.weight && this.height) {
         // Main Formula
         // NOTE: calculate based on KG, Meter
-        out = this.weightInKG / Math.pow(this.heightInMeter, 2)
+        out = 'Your BMI is: ' + (this.weightInKG / Math.pow(this.heightInMeter, 2))
       }
       return out
     },
