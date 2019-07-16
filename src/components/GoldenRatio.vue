@@ -13,7 +13,7 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-4 on-right">
                     <q-select
-                       v-model="inputUnitSelect"
+                       v-model="inputUnit"
                        float-label="Unit"
                        :options="inputUnitOptions"
                        />
@@ -28,12 +28,12 @@
                 <div class="q-mt-md">
                   <q-btn @click="reset" label="Reset"/>
                 </div>
-            </q-card-main>
-          </q-card>
+                  </q-card-main>
+                    </q-card>
         </div>
       </div>
     </div>
-  </q-page>
+                    </q-page>
 </template>
 
 <script>
@@ -42,7 +42,7 @@ export default {
   data () {
     return {
       number: null,
-      inputUnitSelect: 'm',
+      inputUnit: 'm',
       inputUnitOptions: [
         {
           label: 'cm',
@@ -59,8 +59,6 @@ export default {
       ]
     }
   },
-  props: {
-  },
   computed: {
     shorterSection () {
       if (this.number != null) {
@@ -72,13 +70,9 @@ export default {
         return ('Longer is : ' + this.number * 1.61803398875)
       }
     }
-    //    numberUnitCalculator() {
-    //    if(this.inputUnitSelect === 'cm')
-    //      return this.number = (this.number / 100)
-    //    }
   },
   methods: {
-    reset: function () {
+    reset () {
       this.number = null
     }
   }

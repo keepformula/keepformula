@@ -133,9 +133,9 @@ export default {
     }
   },
   methods: {
-    reset: function () {
-      this.inputValue = ''
-      this.outputUnit = ''
+    reset () {
+      this.inputValue = null
+      this.outputUnit = null
     }
   }
 }

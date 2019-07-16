@@ -251,6 +251,7 @@ export default {
 </script>
 
 <style>
-a {text-decoration : none;
+a {
+  text-decoration : none;
 }
 </style>
