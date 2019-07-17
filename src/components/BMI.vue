@@ -43,7 +43,7 @@
                        />
                   <q-field class="q-mt-sm q-headline">{{ bmi }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ bmiMessageCalculate }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ normWeight }}</q-field>
+                  <q-field class="q-mt-sm q-headline">{{ normalWeight }}</q-field>
                   <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}
                     <a
                            href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
@@ -171,19 +171,19 @@ export default {
     },
     // Main Formula
     // NOTE: calculate based on KG, Meter
-    minNormWeightConvert () {
+    minNormalWeight () {
       let minNormWeight = 18.5 * Math.pow(this.heightInMeter, 2)
       return Converter(minNormWeight).from('kg').to(this.weightUnit)
     },
-    maxNormWeightConvert () {
+    maxNormalWeight () {
       let maxNormWeight = 25 * Math.pow(this.heightInMeter, 2)
       return Converter(maxNormWeight).from('kg').to(this.weightUnit)
     },
-    normWeight () {
+    normalWeight () {
       let out = null
       if (this.height && this.weight) {
-        out = 'Your Normal weight is between ' + this.minNormWeightConvert + ' ' +
-          this.weightUnit + ' to ' + this.maxNormWeightConvert + ' ' + this.weightUnit
+        out = 'Your Normal weight is between ' + this.minNormalWeight + ' ' +
+          this.weightUnit + ' to ' + this.maxNormalWeight + ' ' + this.weightUnit
       }
       return out
     },
