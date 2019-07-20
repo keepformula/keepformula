@@ -8,15 +8,8 @@
             <q-card-separator />
               <q-card-main>
                 <div class="row q-mt-lg">
-                  <div class="col-xl-8 col-lg-8 col-md-7 col-sm-7 col-xs-6 q-mb-md">
+                  <div class="col-10 q-mb-md">
                     <q-input type="number" v-model="number" float-label="Enter Number" />
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-4 on-right">
-                    <q-select
-                      v-model="inputUnit"
-                      float-label="Unit"
-                      :options="inputUnitOptions"
-                      />
                   </div>
                   <div class="col-12">
                     <q-field class="q-mt-sm q-headline">{{ shorterSection }}</q-field>
@@ -42,34 +35,23 @@ export default {
   name: 'GoldenRatio',
   data () {
     return {
-      number: null,
-      inputUnit: 'm',
-      inputUnitOptions: [
-        {
-          label: 'cm',
-          value: 'cm'
-        },
-        {
-          label: 'm',
-          value: 'm'
-        },
-        {
-          label: 'feet',
-          value: 'feet'
-        }
-      ]
+      number: null
     }
   },
   computed: {
     shorterSection () {
+      let out = null
       if (this.number != null) {
-        return ('Shorter is : ' + this.number / 1.61803398875)
+        out = ('Shorter is : ' + this.number / 1.61803398875)
       }
+      return out
     },
     longerSection () {
+      let out = null
       if (this.number != null) {
-        return ('Longer is : ' + this.number * 1.61803398875)
+        out = ('Longer is : ' + this.number * 1.61803398875)
       }
+      return out
     }
   },
   methods: {
@@ -77,7 +59,7 @@ export default {
       this.number = null
     },
     back () {
-      window.location ='/'
+      window.location = '/'
     }
   }
 }
