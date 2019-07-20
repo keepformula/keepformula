@@ -6,8 +6,8 @@
       <div class="justify-center">
       <q-card
           class="q-ma-sm cursor-pointer"
-          v-for="item in calculators"
-          v-bind:key="item"
+          v-for="(item, index) in calculators"
+          :key="index"
           inline
           style="width: 300px">
         <q-card-media

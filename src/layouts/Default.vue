@@ -16,7 +16,7 @@
         />
 
         <q-toolbar-title>
-          Calci
+          {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
         </q-toolbar-title>
       </q-toolbar>
