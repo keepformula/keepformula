@@ -1,9 +1,9 @@
 <template>
   <q-page class="q-pa-lg">
     <div>
-      <h3 class="q-mb-md">Golden Ratio</h3>
+      <h4 class="q-mb-md">Golden Ratio</h4>
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-12 col-lg-6">
           <q-card>
             <q-card-separator />
               <q-card-main>
@@ -13,10 +13,10 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-4 on-right">
                     <q-select
-                       v-model="inputUnit"
-                       float-label="Unit"
-                       :options="inputUnitOptions"
-                       />
+                      v-model="inputUnit"
+                      float-label="Unit"
+                      :options="inputUnitOptions"
+                      />
                   </div>
                   <div class="col-12">
                     <q-field class="q-mt-sm q-headline">{{ shorterSection }}</q-field>
@@ -28,12 +28,12 @@
                 <div class="q-mt-md">
                   <q-btn @click="reset" label="Reset"/>
                 </div>
-                  </q-card-main>
-                    </q-card>
+              </q-card-main>
+            </q-card>
         </div>
       </div>
     </div>
-                    </q-page>
+  </q-page>
 </template>
 
 <script>
