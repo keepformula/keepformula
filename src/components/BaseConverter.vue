@@ -139,7 +139,7 @@ export default {
       this.outputUnit = null
     },
     back () {
-      window.location ='/'
+      this.$router.go(-1)
     }
   }
 }

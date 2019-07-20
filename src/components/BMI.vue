@@ -250,7 +250,7 @@ export default {
       this.height = null
     },
     back () {
-    window.location ='/'
+      this.$router.go(-1)
     }
   }
 }

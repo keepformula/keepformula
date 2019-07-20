@@ -59,7 +59,7 @@ export default {
       this.number = null
     },
     back () {
-      window.location = '/'
+      this.$router.go(-1)
     }
   }
 }
