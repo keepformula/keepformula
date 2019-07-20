@@ -5,7 +5,7 @@ import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
 const messages = {
   en: {
-    app_title: 'Shalculator'
+    app_name: 'Shalculator'
   }
 }
 const i18n = new VueI18n({
