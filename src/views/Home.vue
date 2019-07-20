@@ -62,8 +62,6 @@ export default {
       let out =  []
       if (this.searchQuery) {
         this.calculators.forEach((item) => {
-          console.log(item)
-          console.log(item.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()))
           if (item.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1) {
             out.push(item)
           }
