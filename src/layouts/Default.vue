@@ -37,12 +37,8 @@ class="navigation"
             <q-item-side icon="home" />
             <q-item-main label="Home" />
           </q-item>
-          <q-item to="/about">
-            <q-item-side icon="info_outline" />
-            <q-item-main label="About" />
-          </q-item>
           <q-item-separator />
-          <q-list-header>Essential Links</q-list-header>
+          <q-list-header>Development Links</q-list-header>
           <q-item @click.native="openURL('http://quasar-framework.org')">
             <q-item-side icon="school" />
             <q-item-main label="Docs" sublabel="quasar-framework.org"></q-item-main>
