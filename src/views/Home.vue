@@ -2,32 +2,28 @@
   <q-page class="q-pa-lg">
     <q-search
           class="q-mb-lg"
-          v-model="search" />
+          v-model="searchQuery" />
       <div class="justify-center">
-      <q-card
-          class="q-ma-sm cursor-pointer"
-          v-for="(item, index) in calculators"
+        <router-link 
+          v-for="(item, index) in searchResult"
           :key="index"
-          inline
-          style="width: 300px">
-        <q-card-media
-          class="q-py-lg flex flex-center">
-          <!-- <q-icon
-          class="text-primary"
-          style="font-size: 100px;"
-          name="done"
-          />-->
-          <img src="/icon/weight.svg" width="100" style="width: 100px;"  />
-          </q-card-media>
-          <q-card-title>
-            <router-link class="flex flex-center" :to="{ name: item.name }" >
+          :to="{ name: item.name }" >
+          <q-card
+            class="q-ma-sm cursor-pointer"
+            inline
+            style="width: 300px">
+            <q-card-media
+              class="q-py-lg flex flex-center">
+            <img :src="`/icon/${item.icon}.svg`" width="100" style="width: 100px;"  />
+            </q-card-media>
+            <q-card-title class="text-center">
               {{ item.name }}
-            </router-link>
-          </q-card-title>
-          <q-card-main>
-            <p class="text-faded flex flex-center"> {{ item.description }} </p>
-          </q-card-main>
-        </q-card>
+            </q-card-title>
+            <q-card-main>
+              <p class="text-faded flex flex-center"> {{ item.description }} </p>
+            </q-card-main>
+          </q-card>
+        </router-link>
       </div>
       </q-page>
 </template>
@@ -48,17 +44,34 @@ export default {
           name: 'GoldenRatio',
           route: 'Golden.Ratio',
           description: 'Calculate Golden Ratio',
-          icon: 'done'
+          icon: 'ratio'
         },
         {
           name: 'BaseConverter',
           route: 'Base.Converter',
           description: 'Number base conversion calculator',
-          icon: 'alarm'
+          icon: 'binary'
         }
       ],
-      search: null,
+      searchQuery: null,
       select: null
+    }
+  },
+  computed: {
+    searchResult () {
+      let out =  []
+      if (this.searchQuery) {
+        this.calculators.forEach((item) => {
+          console.log(item)
+          console.log(item.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()))
+          if (item.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1) {
+            out.push(item)
+          }
+        })
+      } else {
+        out = this.calculators
+      }
+      return out
     }
   }
 }
