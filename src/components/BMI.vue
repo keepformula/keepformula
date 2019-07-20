@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-lg">
     <div>
-      <h3 class="q-mb-md">Body Mass Index</h3>
+      <h4 class="q-mb-md">Body Mass Index</h4>
       <div class="row">
         <div class="col-12 col-md-12 col-lg-6">
           <q-card>
