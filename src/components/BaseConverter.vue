@@ -31,6 +31,7 @@
                 </div>
                 <div class="q-mt-md">
                   <q-btn @click="reset" label="Reset"/>
+                  <q-btn @click="back" label="Back"/>
                 </div>
             </q-card-main>
           </q-card>
@@ -136,6 +137,9 @@ export default {
     reset () {
       this.inputValue = null
       this.outputUnit = null
+    },
+    back () {
+      window.location ='/'
     }
   }
 }

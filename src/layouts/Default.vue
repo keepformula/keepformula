@@ -14,11 +14,12 @@
           aria-label="Menu"
           icon="menu"
         />
-
-        <q-toolbar-title>
+          <div class="absolute-center textColor"> 
+          <router-link  to="/">
           {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
-        </q-toolbar-title>
+          </router-link>
+          </div>
       </q-toolbar>
     </q-layout-header>
 
@@ -68,6 +69,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>
