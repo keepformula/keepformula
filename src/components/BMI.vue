@@ -100,6 +100,9 @@
                                     <q-btn
                                        @click="reset"
                                        label="reset"/>
+                                    <q-btn
+                                       @click="back"
+                                       label="Back"/>
                                   </div>
               </q-card-main>
            </q-card>
@@ -245,6 +248,9 @@ export default {
     reset () {
       this.weight = null
       this.height = null
+    },
+    back () {
+    window.location ='/'
     }
   }
 }

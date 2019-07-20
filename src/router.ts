@@ -28,7 +28,7 @@ export default new Router({
         },
         {
           path: '/Golden.Ratio',
-          name: 'GoldenRatio',
+          name: 'Golden Ratio',
           component: GoldenRatio
         },
         {
@@ -38,7 +38,7 @@ export default new Router({
         },
         {
           path: '/Base.Converter',
-          name: 'BaseConverter',
+          name: 'Base Converter',
           component: BaseConverter
         },
         {
