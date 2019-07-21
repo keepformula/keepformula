@@ -4,10 +4,11 @@
           class="q-mb-lg"
           v-model="searchQuery" />
       <div class="row">
-        <div 
+        <div
            v-for="(item, index) in searchResult"
+           v-bind:key="item"
            class="q-pa-sm col-12 col-md-4 col-lg-3" >
-           <router-link 
+           <router-link
            :key="index"
            :to="{ name: item.name }" >
            <q-card
@@ -57,7 +58,7 @@ export default {
         {
           name: 'Data Storage Converter',
           route: 'Data.Storage.Converter',
-          description: 'Conversion units for the Data Storage Converter',
+          description: 'Conversion units for the Data Storage',
           icon: 'dataStorageConverter'
         }
       ],
@@ -67,7 +68,7 @@ export default {
   },
   computed: {
     searchResult () {
-      let out =  []
+      let out = []
       if (this.searchQuery) {
         this.calculators.forEach((item) => {
           if (item.name.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1) {
