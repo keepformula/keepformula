@@ -99,7 +99,7 @@
                                   <div class="q-mt-md">
                                     <q-btn
                                        @click="reset"
-                                       label="reset"/>
+                                       label="Reset"/>
                                     <q-btn
                                        @click="back"
                                        label="Back"/>

@@ -44,5 +44,47 @@ export default {
       label: 'Ounce',
       value: 'oz'
     }
+  ],
+  digital: [
+    {
+      label: 'b',
+      value: 'b'
+    },
+    {
+      label: 'Kb',
+      value: 'Kb'
+    },
+    {
+      label: 'Mb',
+      value: 'Mb'
+    },
+    {
+      label: 'Gb',
+      value: 'Gb'
+    },
+    {
+      label: 'Tb',
+      value: 'Tb'
+    },
+    {
+      label: 'B',
+      value: 'B'
+    },
+    {
+      label: 'KB',
+      value: 'KB'
+    },
+    {
+      label: 'MB',
+      value: 'MB'
+    },
+    {
+      label: 'GB',
+      value: 'GB'
+    },
+    {
+      label: 'TB',
+      value: 'TB'
+    }
   ]
 }

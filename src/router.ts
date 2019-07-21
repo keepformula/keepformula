@@ -43,7 +43,7 @@ export default new Router({
         },
         {
           path: 'Data.Storage.Converter',
-          name: 'DataStorageConverter',
+          name: 'Data Storage Converter',
           component: DataStorageConverter
         }
       ]

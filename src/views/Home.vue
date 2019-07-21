@@ -53,6 +53,12 @@ export default {
           route: 'Base.Converter',
           description: 'Number base conversion calculator',
           icon: 'baseConverter'
+        },
+        {
+          name: 'Data Storage Converter',
+          route: 'Data.Storage.Converter',
+          description: 'Conversion units for the Data Storage Converter',
+          icon: 'dataStorageConverter'
         }
       ],
       searchQuery: null,

@@ -1,50 +1,81 @@
 <template>
-  <q-page id="q-page">
-    <div class="container-main">
-      <h3 class="q-mb-lg">Data Storage Converter</h3>
-      <div class="container-input">
-        <div id="input">
-        </div>
-        <div class="btn-reset">
-          <q-btn @click="Reset" style="background: #2468a3; color: white" label="Reset" size="22px"/>
+  <q-page class="q-pa-lg">
+    <div>
+      <h4 class="q-mb-md">Data Storage Converter</h4>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-6">
+          <q-card>
+            <q-card-separator />
+              <q-card-main>
+                <div class="row">
+                  <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md" >
+                    <q-input type="number" v-model="value" float-label="Enter value"/>
+                  </div>
+                    <div class="col-3 col-xs-auto q-ml-lg">
+                      <q-select
+                         v-model="inputUnit"
+                         float-label="Unit"
+                         :options="unit.digital"
+                         :separator="true"
+                         radio
+                         />
+                    </div>
+                    <div class="col-8 col-md-7 col-sm-6 col-xs-5 q-mb-md">
+                    </div>
+                    <div class="col-3 col-xs-auto q-ml-lg">
+                      <q-select
+                         v-model="outputUnit"
+                         float-label="Unit"
+                         :options="unit.digital"
+                         :separator="true"
+                         radio
+                         />
+                    </div>
+                </div>
+                <q-field class="q-mt-sm q-pl-lg q-headline">{{ dataStorageConvert }}</q-field>
+                <div class="q-mt-md">
+                  <q-btn @click="reset" label="Reset"/>
+                    <q-btn @click="back" label="Back"/>
+                </div>
+              </q-card-main>
+           </q-card>
         </div>
       </div>
     </div>
-          </q-page>
+  </q-page>
 </template>
 
 <script>
+import Unit from '@/units'
+import Converter from 'convert-units'
+import UnitConverter from '@/units-converter'
 export default {
   name: 'DataStorageConverter',
   data () {
     return {
+      unit: Unit,
+      value: null,
+      inputUnit: 'Kb',
+      outputUnit: 'Mb'
     }
-  },
-  props: {
   },
   computed: {
+    dataStorageConvert () {
+      let out = null
+      if (this.value) {
+        return Converter(this.value).from(this.inputUnit).to(this.outputUnit)
+      }
+      return out
+    }
   },
   methods: {
-    Reset: function () {
-      this.byte = ''
+    reset () {
+      this.value = null
+    },
+    back () {
+      this.$router.go(-1)
     }
+
   }
 }
 </script>
-<style>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-</style>
