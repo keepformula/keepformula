@@ -63,7 +63,7 @@ export default {
     dataStorageConvert () {
       let out = null
       if (this.value) {
-        return Converter(this.value).from(this.inputUnit).to(this.outputUnit)
+        out = Converter(this.value).from(this.inputUnit).to(this.outputUnit) + ' ' + this.outputUnit
       }
       return out
     }

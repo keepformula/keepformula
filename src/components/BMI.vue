@@ -152,13 +152,13 @@ export default {
       if (this.weight && this.height) {
         // Main Formula
         // NOTE: calculate based on KG, Meter
-        out = 'Your BMI is: ' + (this.weightInKG / Math.pow(this.heightInMeter, 2))
+        out = 'BMI is: ' + (this.weightInKG / Math.pow(this.heightInMeter, 2))
       }
       return out
     },
     bmiMessageCalculate () {
       let out = null
-      let bmi = this.bmi
+      let bmi = this.weightInKG / Math.pow(this.heightInMeter, 2)
       if (bmi < 18.5 && (this.height && this.weight)) {
         out = this.bmiMessage.underWeight
       } else if (bmi >= 18.5 && bmi < 25) {
