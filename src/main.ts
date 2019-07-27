@@ -14,7 +14,8 @@ import 'quasar-extras/fontawesome'
 import 'quasar-extras/ionicons'
 import 'quasar-extras/mdi'
 import Quasar from 'quasar'
-
+import Config from './config/config'
+Vue.prototype.$config = Config
 Vue.use(Quasar, {
   config: {}
 })

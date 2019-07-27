@@ -10,11 +10,16 @@
           flat
           dense
           round
+          color="text-primary"
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
           icon="menu"
         />
-          <div class="absolute-center textColor"> 
+          <img
+          class="icon"
+          width="30" height="30"
+          >
+          <div class="absolute-center textColor">
           <router-link  to="/">
           {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
@@ -22,13 +27,12 @@
           </div>
       </q-toolbar>
     </q-layout-header>
-
     <q-layout-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
       <q-list
-class="navigation"
+        class="navigation"
         no-border
         link
         inset-delimiter >
@@ -47,7 +51,6 @@ class="navigation"
         </q-list>
       </q-list>
     </q-layout-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
