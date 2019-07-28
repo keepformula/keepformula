@@ -3,11 +3,11 @@
     <div>
       <h4 class="q-mb-md">{{ $t('base_converter') }}
         <a
-          href=https://en.wikipedia.org/wiki/Positional_notation#Base_conversion     
+          href=https://en.wikipedia.org/wiki/Positional_notation#Base_conversion
           target="_blank"
           title="What's Base Convertion?">
           <q-icon
-          class="text-warning" 
+          class="text-warning"
           name="help"
           />
         </a>
@@ -19,13 +19,13 @@
               <q-card-main>
                 <div class="row q-mt-lg">
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                    <q-input type="number" v-model="inputValue" :float-label="$t('value_label')" />
+                    <q-input type="text" v-model="inputValue" :float-label="$t('value_label')" />
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                     <q-select
                        v-model="inputUnit"
                        :float-label="$t('input_unit')"
-                       :options="items"
+                       :options="unit.numericalBases"
                        />
                   </div>
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
@@ -34,10 +34,10 @@
                     <q-select
                        v-model="outputUnit"
                        :float-label="$t('output_unit')"
-                       :options="items"
+                       :options="unit.numericalBases"
                        />
                   </div>
-                  <q-field class="q-mt-xl q-ml-sm q-title">{{ outputValue }}</q-field>
+                  <q-field class="q-mt-xl q-ml-sm q-title">{{ toBase }}</q-field>
                 </div>
                 <div class="q-mt-md">
                   <q-btn @click="reset" :label="$t('Reset')"/>
@@ -52,95 +52,26 @@
 </template>
 
 <script>
+import Converter from 'bases'
+import Unit from '@/units'
 export default {
   name: 'BaseConvrter',
   data () {
     return {
+      unit: Unit,
       inputValue: '',
-      inputUnit: 'dec',
-      outputUnit: '',
-      base: '',
-      items: [
-        {
-          label: 'decimal',
-          value: 'dec'
-        },
-        {
-          label: 'binary',
-          value: 'bin'
-        },
-        {
-          label: 'octal',
-          value: 'oct'
-        },
-        {
-          label: 'hex',
-          value: 'hex'
-        }
-      ]
+      inputUnit: '10',
+      outputUnit: ''
     }
   },
   computed: {
-    outputValue () {
-      let decToBin
-      let decToOct
-      let decToHex
-      let binToDec
-      let binToHex
-      let binToOct
-      let octToDec
-      let octToHex
-      let octToBin
-      let hexToDec
-      let hexToBin
-      let hexToOct
-      if (this.inputValue == null) {
-        return ('')
-      } else if (this.inputUnit === 'dec' && this.outputUnit === 'bin') {
-        decToBin = (this.inputValue.toString(2))
-        return 'Binary is ' + decToBin
-      } else if (this.inputUnit === 'dec' && this.outputUnit === 'oct') {
-        decToOct = (this.inputValue.toString(8))
-        return 'Octal is ' + decToOct
-      } else if (this.inputUnit === 'dec' && this.outputUnit === 'hex') {
-        decToHex = (this.inputValue.toString(16))
-        return 'Hex is ' + decToHex
-      } else if (this.inputUnit === 'dec' && this.outputUnit === 'dec') {
-        return 'Please Select Another Unit!!'
-      } else if (this.inputUnit === 'bin' && this.outputUnit === 'dec') {
-        binToDec = (parseInt(this.inputValue, 2).toString(10))
-        return 'Decimal is ' + binToDec
-      } else if (this.inputUnit === 'bin' && this.outputUnit === 'oct') {
-        binToOct = (parseInt(this.inputValue, 2).toString(8))
-        return 'Octal is ' + binToOct
-      } else if (this.inputUnit === 'bin' && this.outputUnit === 'hex') {
-        binToHex = (parseInt(this.inputValue, 2).toString(16))
-        return 'Hex is ' + binToHex
-      } else if (this.inputUnit === 'bin' && this.outputUnit === 'bin') {
-        return 'Please Select Another Unit!!'
-      } else if (this.inputUnit === 'oct' && this.outputUnit === 'dec') {
-        octToDec = (parseInt(this.inputValue, 8).toString(10))
-        return 'Decimal is ' + octToDec
-      } else if (this.inputUnit === 'oct' && this.outputUnit === 'bin') {
-        octToBin = (this.inputValue.toString(2))
-        return 'Binary is ' + octToBin
-      } else if (this.inputUnit === 'oct' && this.outputUnit === 'hex') {
-        octToHex = (parseInt(this.inputValue, 8).toString(16))
-        return 'Hex is ' + octToHex
-      } else if (this.inputUnit === 'oct' && this.outputUnit === 'oct') {
-        return 'Please Select Another Unit!!'
-      } else if (this.inputUnit === 'hex' && this.outputUnit === 'dec') {
-        hexToDec = (parseInt(this.inputValue, 16).toString(10))
-        return 'Decimal is ' + hexToDec
-      } else if (this.inputUnit === 'hex' && this.outputUnit === 'bin') {
-        hexToBin = (parseInt(this.inputValue, 16).toString(2))
-        return 'Binary is ' + hexToBin
-      } else if (this.inputUnit === 'hex' && this.outputUnit === 'oct') {
-        hexToOct = (parseInt(this.inputValue, 16).toString(8))
-        return 'Octal is ' + hexToOct
-      } else if (this.inputUnit === 'hex' && this.outputUnit === 'hex') {
-        return 'Please Select Another Unit!!'
+    toBase () {
+      let out = null
+      if (this.inputValue) {
+        let from = Converter.fromBase(this.inputValue, this.inputUnit)
+        out = Converter.toBase(from, this.outputUnit)
       }
+      return out
     }
   },
   methods: {

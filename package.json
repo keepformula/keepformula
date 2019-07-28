@@ -24,6 +24,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "bases": "^0.2.1",
     "convert-units": "^2.3.4",
     "core-js": "^2.6.5",
     "lodash": "^4.17.15",

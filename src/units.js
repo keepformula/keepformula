@@ -86,5 +86,23 @@ export default {
       label: 'Terabyte',
       value: 'TB'
     }
+  ],
+  numericalBases: [
+    {
+      label: 'decimal',
+      value: '10'
+    },
+    {
+      label: 'binary',
+      value: '2'
+    },
+    {
+      label: 'octal',
+      value: '8'
+    },
+    {
+      label: 'hex',
+      value: '16'
+    }
   ]
 }
