@@ -19,7 +19,7 @@
           class="icon"
           width="30" height="30"
           >
-          <div class="absolute-center textColor">
+          <div class="absolute-center textColor header-app-name">
           <router-link  to="/">
           {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
