@@ -37,7 +37,9 @@
                        :options="unit.numericalBases"
                        />
                   </div>
-                  <q-field class="q-mt-xl q-ml-sm q-title">{{ toBase }}</q-field>
+                  <q-field v-if='this.inputValue' class="q-mt-xl q-ml-sm q-title">
+                    {{ this.inputValue }}<sub>{{ this.inputUnit }}</sub> = {{ toBase }}<sub>{{ this.outputUnit }}</sub>
+                  </q-field>
                 </div>
                 <div class="q-mt-md">
                   <q-btn @click="reset" :label="$t('Reset')"/>

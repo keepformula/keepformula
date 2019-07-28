@@ -89,19 +89,19 @@ export default {
   ],
   numericalBases: [
     {
-      label: 'decimal',
+      label: 'Decimal',
       value: '10'
     },
     {
-      label: 'binary',
+      label: 'Binary',
       value: '2'
     },
     {
-      label: 'octal',
+      label: 'Octal',
       value: '8'
     },
     {
-      label: 'hex',
+      label: 'Hex',
       value: '16'
     }
   ]
