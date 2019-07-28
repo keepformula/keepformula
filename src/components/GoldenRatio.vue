@@ -3,11 +3,11 @@
     <div>
       <h4 class="q-mb-md">{{ $t('golden_ratio') }}
         <a
-          href=https://en.wikipedia.org/wiki/Golden_ratio     
+          href=https://en.wikipedia.org/wiki/Golden_ratio
           target="_blank"
-          title="What's Golden Ratio?">
+          :title="$t('golden_ratio_wiki_icon')">
           <q-icon
-          class="text-warning" 
+          class="text-warning"
           name="help"
           />
         </a>
@@ -28,7 +28,7 @@
                     <q-field class="q-mt-sm q-headline">{{ longerSection }}</q-field>
                   </div>
                 </div>
-                <div class="q-mt-md">
+                <div class="q-mt-lg">
                   <q-btn @click="reset" :label="$t('Reset')"/>
                     <q-btn @click="back" :label="$t('Back')"/>
                 </div>

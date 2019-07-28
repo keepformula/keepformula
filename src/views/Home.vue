@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page class="q-pa-md">
     <q-search
           class="q-mb-lg"
           v-model="searchQuery" />

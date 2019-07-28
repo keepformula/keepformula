@@ -5,7 +5,7 @@
         <a
           href=https://en.wikipedia.org/wiki/Positional_notation#Base_conversion
           target="_blank"
-          title="What's Base Convertion?">
+          :title="$t('base_converter_wiki_icon')">
           <q-icon
           class="text-warning"
           name="help"
@@ -41,7 +41,7 @@
                     {{ this.inputValue }}<sub>{{ this.inputUnit }}</sub> = {{ toBase }}<sub>{{ this.outputUnit }}</sub>
                   </q-field>
                 </div>
-                <div class="q-mt-md">
+                <div class="q-mt-lg">
                   <q-btn @click="reset" :label="$t('Reset')"/>
                     <q-btn @click="back" :label="$t('Back')"/>
                 </div>

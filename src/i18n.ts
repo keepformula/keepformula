@@ -22,6 +22,10 @@ const messages = {
   input_unit: 'Input Unit',
   output_unit: 'Output Unit',
   base_converter: 'Base Converter',
+  data_storage_wiki_icon: 'What\'s Data Storage Convertion?',
+  bmi_wiki_icon: 'What\'s BMI?',
+  golden_ratio_wiki_icon: 'What\'s Golden Ratio?',
+  base_converter_wiki_icon: 'What\'s Base Convertion?',
   reset: 'Reset',
   back: 'Back'
   }

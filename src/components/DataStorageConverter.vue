@@ -3,11 +3,11 @@
     <div>
       <h4 class="q-mb-md">{{ $t('data_storage_converter')}}
         <a
-          href=https://en.wikipedia.org/wiki/Byte#Unit_symbol     
+          href=https://en.wikipedia.org/wiki/Byte#Unit_symbol
           target="_blank"
-          title="What's Data Storage Unit?">
+          :title="$t('data_storage_wiki_icon')">
           <q-icon
-          class="text-warning" 
+          class="text-warning"
           name="help"
           />
         </a>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <q-field class="q-pt-lg q-mt-sm q-ml-sm q-headline">{{ dataStorageConvert }}</q-field>
-                <div class="q-mt-md">
+                <div class="q-mt-lg">
                   <q-btn @click="reset" :label="$t('Reset')"/>
                     <q-btn @click="back" :label="$t('Back')"/>
                 </div>
@@ -65,8 +65,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'Kb',
-      outputUnit: 'Mb'
+      inputUnit: 'KB',
+      outputUnit: 'MB'
     }
   },
   computed: {

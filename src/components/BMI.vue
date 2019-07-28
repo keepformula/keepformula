@@ -3,11 +3,11 @@
     <div class="row">
       <h4 class="q-mb-md col-12 col-md-12 col-lg-12" >{{ $t('body_mass_index') }}
         <a
-          href=https://en.wikipedia.org/wiki/Body_mass_index     
+          href=https://en.wikipedia.org/wiki/Body_mass_index
           target="_blank"
-          title="What's BMI?">
+          :title="$t('bmi_wiki_icon')">
           <q-icon
-          class="text-warning" 
+          class="text-warning"
           name="help"
           />
         </a>
@@ -115,7 +115,6 @@
            </q-card>
         </div>
       </div>
-    </div>
   </q-page>
 </template>
 
