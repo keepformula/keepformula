@@ -1,7 +1,7 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page class="q-pa-lg border-top">
     <div class="row">
-      <h4 class="q-mb-md col-12 col-md-12 col-lg-12" >{{ $t('body_mass_index') }}
+      <h4 class="q-my-md">{{ $t('body_mass_index') }}
         <a
           href=https://en.wikipedia.org/wiki/Body_mass_index
           target="_blank"

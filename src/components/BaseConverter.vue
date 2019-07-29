@@ -1,7 +1,7 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page class="q-pa-lg border-top">
     <div>
-      <h4 class="q-mb-md">{{ $t('base_converter') }}
+      <h4 class="q-my-md">{{ $t('base_converter') }}
         <a
           href=https://en.wikipedia.org/wiki/Positional_notation#Base_conversion
           target="_blank"

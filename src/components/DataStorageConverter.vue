@@ -1,7 +1,7 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page class="q-pa-lg border-top">
     <div>
-      <h4 class="q-mb-md">{{ $t('data_storage_converter')}}
+      <h4 class="q-my-md">{{ $t('data_storage_converter')}}
         <a
           href=https://en.wikipedia.org/wiki/Byte#Unit_symbol
           target="_blank"

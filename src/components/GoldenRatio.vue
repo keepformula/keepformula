@@ -1,7 +1,7 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page class="q-pa-lg border-top">
     <div>
-      <h4 class="q-mb-md">{{ $t('golden_ratio') }}
+      <h4 class="q-my-md">{{ $t('golden_ratio') }}
         <a
           href=https://en.wikipedia.org/wiki/Golden_ratio
           target="_blank"
