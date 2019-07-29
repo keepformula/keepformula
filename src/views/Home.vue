@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md">
     <q-search
-          class="q-mb-lg"
+          class="q-mb-md"
           v-model="searchQuery" />
       <div class="row">
         <div
