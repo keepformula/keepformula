@@ -4,6 +4,7 @@
     <q-search
           class="q-my-md q-mx-auto col-12 col-xl-8 col-lg-8 col-md-9 col-sm-10 search-style"
           hide-underline
+          autofocus
           v-model="searchQuery" />
     </div>
     <div class="row">
