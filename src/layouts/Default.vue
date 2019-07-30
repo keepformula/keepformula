@@ -51,7 +51,11 @@
             <q-item-side icon="fab fa-github" />
             <q-item-main label="GitHub" sublabel=""></q-item-main>
           </q-item>
-        </q-list>
+          <q-item @click.native="openURL('http://quasar-framework.org')">
+            <q-item-side icon="school" />
+              <q-item-main label="Docs" sublabel="quasar-framework.org"></q-item-main>
+            </q-item>
+          </q-list>
       </q-list>
     </q-layout-drawer>
     <q-page-container>
