@@ -7,7 +7,7 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-          <div class="textColor header-app-name">
+          <div class="q-ml-sm textColor header-app-name">
           <router-link  to="/">
           <img
           class="icon"
