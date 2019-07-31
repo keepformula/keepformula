@@ -1,7 +1,8 @@
 <template>
-  <q-page class="q-pa-lg border-top">
+  <q-page class="q-pa-md">
     <div class="row">
-      <h4 class="q-my-md">{{ $t('body_mass_index') }}
+      <div class="q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
+      <h4 class="">{{ $t('body_mass_index') }}
         <a
           href=https://en.wikipedia.org/wiki/Body_mass_index
           target="_blank"
@@ -12,14 +13,13 @@
           />
         </a>
       </h4>
-    </div>
       <div class="row">
         <div class="col-12 col-md-12 col-lg-6">
           <q-card>
             <q-card-separator />
               <q-card-main>
-                <div class="row">
-                  <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
+                  <div class="row q-mt-md">
+                  <div class="col-12 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
                     <q-input type="number" v-model="height" :float-label="$t('height_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
@@ -52,73 +52,74 @@
                        text-color="primary"
                        :options="unit.gender"
                        />
-                  <q-field class="q-mt-sm q-headline">{{ bmi }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ bmiMessageCalculate }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ normalWeight }}</q-field>
-                  <q-field class="q-mt-sm q-headline">{{ robinsonFormula }}
-                    <a
-                           href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
-                           target="_blank"
-                           title="what's robinson Formula?">
-                      <q-icon
-                           v-if="this.weight && this.height != null"
-                           class="text-primary"
-                           style="font-size: 40px; display: inline-flex;"
-                           name="info"
-                           />
-                    </a>
-                      </q-field>
-                      <q-field class="q-mt-sm q-headline">{{ millerFormula }}
-                        <a
-                               href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
-                               target="_blank"
-                               title="what's miller Formula?">
-                          <q-icon
-                               v-if="this.weight && this.height != null"
-                               class="text-primary"
-                               style="font-size: 40px; display: inline-flex;"
-                               name="info"
-                               />
-                        </a>
-                          </q-field>
-                          <q-field class="q-mt-sm q-headline">{{ hamwiFormula }}
-                            <a
-                                   href=https://en.wikipedia.org/wiki/Human_body_weight#Hamwi_method
-                                   target="_blank"
-                                   title="what's hamwi Formula?">
-                              <q-icon
-                                   v-if="this.weight && this.height != null"
-                                   class="text-primary"
-                                   style="font-size: 40px; display: inline-flex;"
-                                   name="info"
-                                   />
-                            </a>
-                              </q-field>
-                              <q-field class="q-mt-sm q-headline">{{ devineFormula }}
-                                <a
-                                       href=https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula
-                                       target="_blank"
-                                       title="what's devine Formula?">
-                                  <q-icon
-                                       v-if="this.weight && this.height != null"
-                                       class="text-primary"
-                                       style="font-size: 40px; display: inline-flex;"
-                                       name="info"
-                                       />
-                                </a>
-                                  </q-field>
-                                  <div class="q-mt-md">
-                                    <q-btn @click="reset" :label="$t('Reset')"/>
-                                      <q-btn @click="back" :label="$t('Back')"/>
-                                  </div>
+                  <div v-if='this.height && this.weight'>
+                  <q-list-header class="q-mt-md">Result</q-list-header>
+                  <q-item tag="label">
+                      <q-item-main>
+                        <q-item-tile label>BMI is: {{ bmi }}</q-item-tile>
+                      </q-item-main>
+                    </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label>{{ bmiMessageCalculate }}</q-item-tile>
+                        </q-item-main>
+                      </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label> Your Normal weight is between {{ minNormalWeight
+                            }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}
+
+                          </q-item-tile>
+                        </q-item-main>
+                        </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label>{{ robinsonFormula }}
+                            <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
+                              size= "2rem" name="info" />
+                          </q-item-tile>
+                        </q-item-main>
+                        </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label>{{ millerFormula }}
+                            <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
+                              size= "2rem" name="info" />
+                          </q-item-tile>
+                        </q-item-main>
+                        </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label>{{ hamwiFormula }}
+                            <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Hamwi_method')"
+                            size= "2rem" name="info" />
+                          </q-item-tile>
+                        </q-item-main>
+                        </q-item>
+                    <q-item tag="label">
+                        <q-item-main>
+                          <q-item-tile label>{{ devineFormula }}
+                            <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
+                              size= "2rem" name="info" />
+                          </q-item-tile>
+                        </q-item-main>
+                        </q-item>
+                  </div>
+                  <div class="q-mt-md">
+                    <q-btn @click="reset" :label="$t('Reset')"/>
+                      <q-btn @click="back" :label="$t('Back')"/>
+                  </div>
               </q-card-main>
            </q-card>
         </div>
+        </div>
       </div>
+    </div>
   </q-page>
 </template>
 
 <script>
+import { openURL } from 'quasar'
 import Unit from '@/units'
 import Converter from 'convert-units'
 import UnitConverter from '@/units-converter'
@@ -158,7 +159,7 @@ export default {
       if (this.weight && this.height) {
         // Main Formula
         // NOTE: calculate based on KG, Meter
-        out = 'BMI is: ' + (this.weightInKG / Math.pow(this.heightInMeter, 2))
+        out = this.weightInKG / Math.pow(this.heightInMeter, 2)
       }
       return out
     },
@@ -187,14 +188,6 @@ export default {
     maxNormalWeight () {
       let maxNormWeight = 25 * Math.pow(this.heightInMeter, 2)
       return Converter(maxNormWeight).from('kg').to(this.weightUnit)
-    },
-    normalWeight () {
-      let out = null
-      if (this.height && this.weight) {
-        out = 'Your Normal weight is between ' + this.minNormalWeight + ' ' +
-          this.weightUnit + ' to ' + this.maxNormalWeight + ' ' + this.weightUnit
-      }
-      return out
     },
     robinsonFormula () {
       let out = null
@@ -251,6 +244,7 @@ export default {
     }
   },
   methods: {
+    openURL,
     reset () {
       this.weight = null
       this.height = null
