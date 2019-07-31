@@ -41,25 +41,33 @@ export default {
           name: 'BMI',
           route: 'BMI',
           description: 'Calculate Body Mass Index',
-          icon: 'bmi'
+          icon: 'bmi',
+          tag: 'health , weight , height , mass , body',
+          category: 'Health'
         },
         {
           name: 'Golden Ratio',
           route: 'Golden.Ratio',
           description: 'Calculate Golden Ratio',
-          icon: 'goldenRatio'
+          icon: 'goldenRatio',
+          tag: 'math , rectangle , ratio',
+          category: 'Math'
         },
         {
           name: 'Base Converter',
           route: 'Base.Converter',
           description: 'Number base conversion calculator',
-          icon: 'baseConverter'
+          icon: 'baseConverter',
+          tag: 'number , numerical convertion , convert',
+          category: 'Convertion'
         },
         {
           name: 'Data Storage Converter',
           route: 'Data.Storage.Converter',
           description: 'Conversion units for the Data Storage',
-          icon: 'dataStorageConverter'
+          icon: 'dataStorageConverter',
+          tag: 'storage , kilobyte , megabyte , gigabye ,terabyte',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
