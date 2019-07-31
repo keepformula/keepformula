@@ -2,7 +2,7 @@
   <q-page class="q-pa-md">
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
-      <h4>{{ $t('golden_ratio') }}
+      <h4 class="q-mt-xs">{{ $t('golden_ratio') }}
         <a
           href=https://en.wikipedia.org/wiki/Golden_ratio
           target="_blank"
@@ -19,7 +19,7 @@
             <q-card-separator />
               <q-card-main>
                   <div class="col-12 q-mt-md">
-                    <q-input type="number" v-model="value" :float-label="$t('value_label')" />
+                    <q-input autofocus type="number" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
                   <q-list-header class="q-mt-md">Result</q-list-header>

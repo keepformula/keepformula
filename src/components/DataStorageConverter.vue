@@ -2,7 +2,7 @@
   <q-page class="q-pa-md">
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
-      <h4>{{ $t('data_storage_converter')}}
+      <h4 class="q-mt-xs">{{ $t('data_storage_converter')}}
         <a
           href=https://en.wikipedia.org/wiki/Byte#Unit_symbol
           target="_blank"
@@ -20,7 +20,7 @@
               <q-card-main>
                   <div class="row q-mt-md">
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                    <q-input type="number" v-model="value" :float-label="$t('value_label')"/>
+                    <q-input autofocus type="number" v-model="value" :float-label="$t('value_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                       <q-select
