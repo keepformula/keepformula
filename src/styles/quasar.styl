@@ -27,17 +27,17 @@ line-height: 1.5rem;
 .header-app-name {
 font-style: italic;
 font-family: roboto;
-font-size: 18px;
+font-size: 1.3em;
 }
 .icon {
-background-color: #737373;
-position: absolute; 
-left:20px;
+width:40px;
+height:40px;
+background-color: black;
 -webkit-mask: url(../assets/logo.svg) no-repeat center;
 }
 .position-right {
-position: absolute; 
-right:10px;
+position: flex; 
+float:right;
 }
 .q-layout-header {
 border-bottom :0;
@@ -53,4 +53,13 @@ padding: 12px;
 background: white;
 border: 1px solid #36454F;
 border-radius: 20px;
+}
+.drawer-icon{
+font-size: 1.5em;
+}
+.query{
+@media only screen and (max-width: 768px) {
+  padding-top:0;
+  border-bottom: 1px solid #E0E0E0;
+  }
 }
