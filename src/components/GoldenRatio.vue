@@ -1,6 +1,6 @@
 <template>
-  <q-page class="q-pa-md">
-    <div class="row">
+  <q-page class="border-top">
+    <div class="row q-pa-md">
       <div class="q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
       <h4>{{ $t('golden_ratio') }}
         <a
