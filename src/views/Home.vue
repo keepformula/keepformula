@@ -1,8 +1,8 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="row">
+    <div class="row" >
     <q-search
-          class="q-my-md q-mx-auto col-12 col-xl-4 col-lg-8 col-md-9 col-sm-10 search-style"
+          class="q-mb-md q-mx-auto col-12 col-xl-4 col-lg-8 col-md-9 col-sm-10 search-style"
           hide-underline
           autofocus
           v-model="searchQuery" />

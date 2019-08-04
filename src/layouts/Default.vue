@@ -1,23 +1,24 @@
 <template>
   <q-layout view="lHr Lpr lFf">
-    <q-layout-header>
+    <div class="row">
+    <q-layout-header class="query q-mx-auto q-pt-lg col-12 col-xl-9 col-lg-9 col-md-10">
       <q-toolbar
         color="primary"
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
+          <div class="q-ml-sm textColor header-app-name">
+          <router-link  to="/">
           <img
           class="icon"
-          width="30" height="30"
           >
-          <div class="absolute-center textColor header-app-name">
-          <router-link  to="/">
           {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
           </router-link>
           </div>
-          <div class="position-right">
+          <div class="q-ml-auto">
         <q-btn
+          class="drawer-icon"
           flat
           dense
           round
@@ -29,6 +30,7 @@
           </div>
       </q-toolbar>
     </q-layout-header>
+    </div>
     <q-layout-drawer
       v-model="rightDrawerOpen"
       side="right"
