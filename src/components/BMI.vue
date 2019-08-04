@@ -26,7 +26,7 @@
                       <q-select
                          v-model="heightUnit"
                          :float-label="$t('height_unit')"
-                         :options="unit.length"
+                         :options="unit.lengthBMI"
                          :separator="true"
                          radio
                          />

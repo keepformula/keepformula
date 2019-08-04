@@ -4,7 +4,7 @@
       <div class="q-pa-sm q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
         <h4 class="q-mt-xs">{{ $t('length_converter')}}
         <a
-          href="http//"
+          href="https://en.wikipedia.org/wiki/Unit_of_length"
           target="_blank"
           :title="$t('length_converter_wiki_icon')">
           <q-icon

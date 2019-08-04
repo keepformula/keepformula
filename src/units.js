@@ -11,6 +11,40 @@ export default {
   ],
   length: [
     {
+      label: 'Milimetre',
+      value: 'mm'
+    },
+    {
+      label: 'Centimetre',
+      value: 'cm'
+    },
+    {
+      label: 'Metre',
+      value: 'm'
+    },
+    {
+      label: 'Foot',
+      value: 'ft'
+    },
+    {
+      label: 'Us survey foot',
+      value: 'ft-us'
+    },
+    {
+      label: 'Inch',
+      value: 'in'
+    },
+    {
+      label: 'Mile',
+      value: 'mi'
+    }
+  ],
+  lengthBMI: [
+    {
+      label: 'Milimetre',
+      value: 'mm'
+    },
+    {
       label: 'Centimetre',
       value: 'cm'
     },
@@ -95,6 +129,10 @@ export default {
     {
       label: 'Binary',
       value: '2'
+    },
+    {
+      label: 'Senary',
+      value: '6'
     },
     {
       label: 'Octal',
