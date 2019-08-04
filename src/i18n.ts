@@ -5,7 +5,7 @@ import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
 const messages = {
   en: {
-  app_name: 'Shalculator',
+  app_name: 'Owlculator',
   golden_ratio: 'Golden Ratio',
   value_label: 'Enter value',
   body_mass_index: 'Body Mass Index',

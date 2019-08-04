@@ -7,16 +7,18 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-          <div class="q-ml-sm textColor header-app-name">
+          <div class="textColor">
           <router-link  to="/">
           <img
           class="icon"
           >
+          <span class="header-app-name">
           {{ $t('app_name') }}
           <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
+          </span>
           </router-link>
           </div>
-          <div class="q-ml-auto">
+          <div class="q-ml-auto ">
         <q-btn
           class="drawer-icon"
           flat
