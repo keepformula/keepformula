@@ -7,6 +7,7 @@ import GoldenRatio from './components/GoldenRatio.vue'
 import BMI from './components/BMI.vue'
 import BaseConverter from './components/BaseConverter.vue'
 import DataStorageConverter from './components/DataStorageConverter.vue'
+import LengthConverter from './components/LengthConverter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -45,6 +46,11 @@ export default new Router({
           path: 'Data.Storage.Converter',
           name: 'Data Storage Converter',
           component: DataStorageConverter
+        },
+        {
+          path: '/Length.Converter',
+          name: 'Length Converter',
+          component: LengthConverter
         }
       ]
     }

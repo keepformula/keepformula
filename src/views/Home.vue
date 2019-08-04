@@ -76,6 +76,14 @@ export default {
           icon: 'dataStorageConverter',
           tag: 'storage , kilobyte , megabyte , gigabye ,terabyte',
           category: 'Convertion'
+        },
+        {
+          name: 'Length Converter',
+          route: 'Length.Converter',
+          description: 'Length conversion calculator',
+          icon: 'lengthConverter',
+          tag: 'number , length convertion , convert',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
