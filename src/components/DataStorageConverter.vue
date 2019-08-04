@@ -1,7 +1,8 @@
 <template>
-  <q-page class="q-pa-lg border-top">
-    <div>
-      <h4 class="q-my-md">{{ $t('data_storage_converter')}}
+  <q-page class="border-top">
+    <div class="row q-pa-md">
+      <div class="q-mx-auto col-12 col-xl-9 col-lg-9 col-md-10">
+      <h4>{{ $t('data_storage_converter')}}
         <a
           href=https://en.wikipedia.org/wiki/Byte#Unit_symbol
           target="_blank"
@@ -17,7 +18,7 @@
           <q-card>
             <q-card-separator />
               <q-card-main>
-                <div class="row">
+                  <div class="row q-mt-md">
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
                     <q-input type="number" v-model="value" :float-label="$t('value_label')"/>
                   </div>
@@ -42,7 +43,16 @@
                          />
                     </div>
                 </div>
-                <q-field class="q-pt-lg q-mt-sm q-ml-sm q-headline">{{ dataStorageConvert }}</q-field>
+                        <div v-if='this.value'>
+                          <q-list-header class="q-mt-md">Result</q-list-header>
+                          <q-item tag="label">
+                            <q-item-main>
+                              <q-item-tile label>
+                                {{ value }} {{ inputUnit }} =  {{ dataStorageConvert }} {{ outputUnit }}
+                              </q-item-tile>
+                            </q-item-main>
+                          </q-item>
+                        </div>
                 <div class="q-mt-lg">
                   <q-btn @click="reset" :label="$t('Reset')"/>
                     <q-btn @click="back" :label="$t('Back')"/>
@@ -51,6 +61,7 @@
            </q-card>
         </div>
       </div>
+    </div>
     </div>
   </q-page>
 </template>
@@ -73,7 +84,7 @@ export default {
     dataStorageConvert () {
       let out = null
       if (this.value) {
-        out = Converter(this.value).from(this.inputUnit).to(this.outputUnit) + ' ' + this.outputUnit
+        out = Converter(this.value).from(this.inputUnit).to(this.outputUnit)
       }
       return out
     }
