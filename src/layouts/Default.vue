@@ -7,29 +7,29 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-          <div class="textColor q-ml-sm">
-          <router-link  to="/">
+      <div class="textColor">
+        <router-link  to="/">
           <img
-          class="icon"
-          >
-          <span class="header-app-name">
-          {{ $t('app_name') }}
-          <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
-          </span>
-          </router-link>
-          </div>
-          <div class="q-ml-auto">
+            class="icon"
+            >
+             <span class="header-app-name">
+                {{ $t('app_name') }}
+                <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
+             </span>
+        </router-link>
+      </div>
+      <div class="q-ml-auto">
         <q-btn
-          class="drawer-icon"
-          flat
-          dense
-          round
-          color="text-primary"
-          @click="rightDrawerOpen = !rightDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
-          </div>
+           class="drawer-icon"
+           flat
+           dense
+           round
+           color="text-primary"
+           @click="rightDrawerOpen = !rightDrawerOpen"
+           aria-label="Menu"
+           icon="menu"
+           />
+      </div>
       </q-toolbar>
     </q-layout-header>
     </div>
@@ -38,21 +38,21 @@
       side="right"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
-      <q-list
-        class="navigation"
-        no-border
-        link
-        inset-delimiter >
-        <q-list no-border link inset-delimiter>
-          <q-list-header>Navigation</q-list-header>
-          <q-item to="/" exact>
-            <q-item-side icon="home" />
-            <q-item-main label="Home" />
+    <q-list
+      class="navigation"
+      no-border
+      link
+      inset-delimiter >
+      <q-list no-border link inset-delimiter>
+        <q-list-header>Navigation</q-list-header>
+      <q-item to="/" exact>
+        <q-item-side icon="home" />
+          <q-item-main label="Home" />
           </q-item>
-          <q-item-separator />
-          <q-list-header>Development Links</q-list-header>
-          <q-item @click.native="openURL('https://github.com/babakhani/nightjar')">
-            <q-item-side icon="fab fa-github" />
+      <q-item-separator />
+        <q-list-header>Development Links</q-list-header>
+        <q-item @click.native="openURL('https://github.com/babakhani/nightjar')">
+          <q-item-side icon="fab fa-github" />
             <q-item-main label="GitHub" sublabel=""></q-item-main>
           </q-item>
           <q-item @click.native="openURL('http://quasar-framework.org')">
@@ -60,9 +60,9 @@
               <q-item-main label="Docs" sublabel="quasar-framework.org"></q-item-main>
             </q-item>
           </q-list>
-      </q-list>
-    </q-layout-drawer>
-    <q-page-container>
+        </q-list>
+          </q-layout-drawer>
+        <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
