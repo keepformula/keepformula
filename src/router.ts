@@ -10,6 +10,7 @@ import DataStorageConverter from './components/DataStorageConverter.vue'
 import LengthConverter from './components/LengthConverter.vue'
 import WeightConverter from './components/WeightConverter.vue'
 import AreaConverter from './components/AreaConverter.vue'
+import VolumeConverter from './components/VolumeConverter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -63,6 +64,11 @@ export default new Router({
           path: '/Area.Converter',
           name: 'Area Converter',
           component: AreaConverter
+        },
+        {
+          path: '/Volume.Converter',
+          name: 'Volume Converter',
+          component: VolumeConverter
         }
       ]
     }

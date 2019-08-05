@@ -214,5 +214,75 @@ export default {
       label: 'Square mile',
       value: 'mi2'
     }
+  ],
+  volume: [
+    {
+      label: 'Cubic milimetre',
+      value: 'mm3'
+    },
+    {
+      label: 'Cubic centimetre',
+      value: 'cm3'
+    },
+    {
+      label: 'Cubic metre',
+      value: 'm3'
+    },
+    {
+      label: 'Mililitre',
+      value: 'ml'
+    },
+    {
+      label: 'Litre',
+      value: 'l'
+    },
+    {
+      label: 'Kilolitre',
+      value: 'kl'
+    },
+    {
+      label: 'Cubic kilometre',
+      value: 'km3'
+    },
+    {
+      label: 'Us tea spoon',
+      value: 'tsp'
+    },
+    {
+      label: 'Us table spoon',
+      value: 'Tbs'
+    },
+    {
+      label: 'Cubic inch',
+      value: 'in3'
+    },
+    {
+      label: 'Us fluid ounce',
+      value: 'fl-oz'
+    },
+    {
+      label: 'Us cup',
+      value: 'cup'
+    },
+    {
+      label: 'Us liquid pint',
+      value: 'pnt'
+    },
+    {
+      label: 'Us liquid quart',
+      value: 'qt'
+    },
+    {
+      label: 'Us liquid gallon',
+      value: 'gal'
+    },
+    {
+      label: 'Cubic foot',
+      value: 'ft3'
+    },
+    {
+      label: 'Cubic yard',
+      value: 'yd3'
+    }
   ]
 }

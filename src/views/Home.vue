@@ -102,6 +102,14 @@ export default {
           icon: 'areaConverter',
           tag: 'area , area convertion , convert , hectare , squad',
           category: 'Convertion'
+        },
+        {
+          name: 'Volume Converter',
+          route: 'Volume.Converter',
+          description: 'Volume conversion calculator',
+          icon: 'volumeConverter',
+          tag: 'volume , volume convertion , convert , liquid , cubic',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

@@ -33,7 +33,9 @@ const messages = {
     weight_converter: 'Weight Converter',
     weight_converter_wiki_icon: 'What\'s Weight?',
     area_converter: 'Area Converter',
-    area_converter_wiki_icon: 'What\'s Area?'
+    area_converter_wiki_icon: 'What\'s Area?',
+    volume_converter: 'Volume Converter',
+    volume_converter_wiki_icon: 'What\'s Volume?'
   }
 }
 const i18n = new VueI18n({
