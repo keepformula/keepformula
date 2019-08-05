@@ -94,6 +94,14 @@ export default {
           icon: 'weightConverter',
           tag: 'weight , mass convertion , convert',
           category: 'Convertion'
+        },
+        {
+          name: 'Area Converter',
+          route: 'Area.Converter',
+          description: 'Area conversion calculator',
+          icon: 'areaConverter',
+          tag: 'area , area convertion , convert , hectare , squad',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

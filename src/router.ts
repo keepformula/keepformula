@@ -9,6 +9,7 @@ import BaseConverter from './components/BaseConverter.vue'
 import DataStorageConverter from './components/DataStorageConverter.vue'
 import LengthConverter from './components/LengthConverter.vue'
 import WeightConverter from './components/WeightConverter.vue'
+import AreaConverter from './components/AreaConverter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +58,11 @@ export default new Router({
           path: '/Weight.Converter',
           name: 'Weight Converter',
           component: WeightConverter
+        },
+        {
+          path: '/Area.Converter',
+          name: 'Area Converter',
+          component: AreaConverter
         }
       ]
     }

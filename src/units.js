@@ -176,5 +176,43 @@ export default {
       label: 'Hex',
       value: '16'
     }
+  ],
+  area: [
+    {
+      label: 'Square milimetre',
+      value: 'mm2'
+    },
+    {
+      label: 'Square centimetre',
+      value: 'cm2'
+    },
+    {
+      label: 'Square metre',
+      value: 'm2'
+    },
+    {
+      label: 'Hectare',
+      value: 'ha'
+    },
+    {
+      label: 'Square kilometre',
+      value: 'km2'
+    },
+    {
+      label: 'Square inch',
+      value: 'in2'
+    },
+    {
+      label: 'Square foot',
+      value: 'ft2'
+    },
+    {
+      label: 'Acre',
+      value: 'ac'
+    },
+    {
+      label: 'Square mile',
+      value: 'mi2'
+    }
   ]
 }
