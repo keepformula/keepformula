@@ -63,6 +63,40 @@ export default {
   ],
   weight: [
     {
+      label: 'Microgram',
+      value: 'mcg'
+    },
+    {
+      label: 'Miligram',
+      value: 'mg'
+    },
+    {
+      label: 'Gram',
+      value: 'g'
+    },
+    {
+      label: 'Kilogram',
+      value: 'kg'
+    },
+    {
+      label: 'Pound',
+      value: 'lb'
+    },
+    {
+      label: 'Ounce',
+      value: 'oz'
+    },
+    {
+      label: 'Metric tonne',
+      value: 'mt'
+    },
+    {
+      label: 'Ton',
+      value: 't'
+    }
+  ],
+  weightBMI: [
+    {
       label: 'Gram',
       value: 'g'
     },

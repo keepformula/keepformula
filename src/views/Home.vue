@@ -86,6 +86,14 @@ export default {
           icon: 'lengthConverter',
           tag: 'number , length convertion , convert',
           category: 'Convertion'
+        },
+        {
+          name: 'Weight Converter',
+          route: 'Weight.Converter',
+          description: 'Weight conversion calculator',
+          icon: 'weightConverter',
+          tag: 'weight , mass convertion , convert',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

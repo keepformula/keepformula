@@ -29,7 +29,9 @@ const messages = {
     reset: 'Reset',
     back: 'Back',
     length_converter: 'Length Converter',
-    length_converter_wiki_icon: 'What\'s Length Convertion?'
+    length_converter_wiki_icon: 'What\'s Length?',
+    weight_converter: 'Weight Converter',
+    weight_converter_wiki_icon: 'What\'s Weight?'
   }
 }
 const i18n = new VueI18n({

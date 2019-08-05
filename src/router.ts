@@ -8,6 +8,7 @@ import BMI from './components/BMI.vue'
 import BaseConverter from './components/BaseConverter.vue'
 import DataStorageConverter from './components/DataStorageConverter.vue'
 import LengthConverter from './components/LengthConverter.vue'
+import WeightConverter from './components/WeightConverter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +52,11 @@ export default new Router({
           path: '/Length.Converter',
           name: 'Length Converter',
           component: LengthConverter
+        },
+        {
+          path: '/Weight.Converter',
+          name: 'Weight Converter',
+          component: WeightConverter
         }
       ]
     }

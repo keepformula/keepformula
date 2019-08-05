@@ -40,7 +40,7 @@
                     <q-select
                        v-model="weightUnit"
                          :float-label="$t('weight_unit')"
-                       :options="unit.weight"
+                       :options="unit.weightBMI"
                        :separator="true"
                        radio
                        />
