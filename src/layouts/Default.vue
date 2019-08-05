@@ -7,7 +7,7 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-          <div class="textColor">
+          <div class="textColor q-ml-sm">
           <router-link  to="/">
           <img
           class="icon"
@@ -18,7 +18,7 @@
           </span>
           </router-link>
           </div>
-          <div class="q-ml-auto ">
+          <div class="q-ml-auto">
         <q-btn
           class="drawer-icon"
           flat
