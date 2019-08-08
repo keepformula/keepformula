@@ -110,6 +110,14 @@ export default {
           icon: 'volumeConverter',
           tag: 'volume , volume convertion , convert , liquid , cubic',
           category: 'Convertion'
+        },
+        {
+          name: 'Pressure Converter',
+          route: 'Pressure.Converter',
+          description: 'Pressure conversion calculator',
+          icon: 'pressureConverter',
+          tag: 'pressure , pressure convertion , convert , atmosphere , pascal',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

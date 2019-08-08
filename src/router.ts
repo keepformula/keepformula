@@ -11,6 +11,8 @@ import LengthConverter from './components/LengthConverter.vue'
 import WeightConverter from './components/WeightConverter.vue'
 import AreaConverter from './components/AreaConverter.vue'
 import VolumeConverter from './components/VolumeConverter.vue'
+import PressureConverter from './components/PressureConverter.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -69,6 +71,11 @@ export default new Router({
           path: '/Volume.Converter',
           name: 'Volume Converter',
           component: VolumeConverter
+        },
+        {
+          path: '/Pressure.Converter',
+          name: 'Pressure Converter',
+          component: PressureConverter
         }
       ]
     }
