@@ -284,5 +284,39 @@ export default {
       label: 'Cubic yard',
       value: 'yd3'
     }
+  ],
+  pressure: [
+    {
+      label: 'Pascal',
+      value: 'Pa'
+    },
+    {
+      label: 'Kilopascal',
+      value: 'kPa'
+    },
+    {
+      label: 'Hectopascal',
+      value: 'hPa'
+    },
+    {
+      label: 'Megapascal',
+      value: 'MPa'
+    },
+    {
+      label: 'Bar',
+      value: 'bar'
+    },
+    {
+      label: 'Torr',
+      value: 'torr'
+    },
+    {
+      label: 'Pound per square inch',
+      value: 'psi'
+    },
+    {
+      label: 'Kilopound per square inch',
+      value: 'ksi'
+    }
   ]
 }
