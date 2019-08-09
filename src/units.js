@@ -404,5 +404,35 @@ export default {
       label: 'Second of arc',
       value: 'arcsec'
     }
+  ],
+  energy: [
+    {
+      label: 'Watt hour',
+      value: 'Wh'
+    },
+    {
+      label: 'Miliwatt hour',
+      value: 'mWh'
+    },
+    {
+      label: 'Kilowatt hour',
+      value: 'kWh'
+    },
+    {
+      label: 'Megawatt hour',
+      value: 'MWh'
+    },
+    {
+      label: 'Gigawatt hour',
+      value: 'GWh'
+    },
+    {
+      label: 'Joule',
+      value: 'J'
+    },
+    {
+      label: 'Kilojoule',
+      value: 'kJ'
+    }
   ]
 }
