@@ -15,6 +15,7 @@ import PressureConverter from './components/PressureConverter.vue'
 import SpeedConverter from './components/SpeedConverter.vue'
 import TimeConverter from './components/TimeConverter.vue'
 import AngleConverter from './components/AngleConverter.vue'
+import EnergyConverter from './components/EnergyConverter.vue'
 
 Vue.use(Router)
 
@@ -94,6 +95,11 @@ export default new Router({
           path: '/Angle.Converter',
           name: 'Angle Converter',
           component: AngleConverter
+        },
+        {
+          path: '/Energy.Converter',
+          name: 'Energy Converter',
+          component: EnergyConverter
         }
       ]
     }

@@ -142,6 +142,14 @@ export default {
           icon: 'angleConverter',
           tag: 'angle , angle convertion , convert , degrees , radian , gradian ',
           category: 'Convertion'
+        },
+        {
+          name: 'Energy Converter',
+          route: 'Energy.Converter',
+          description: 'Energy conversion calculator',
+          icon: 'energyConverter',
+          tag: 'energy , energy convertion , convert , watt , joule ',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
