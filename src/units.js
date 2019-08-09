@@ -382,5 +382,27 @@ export default {
       label: 'Year',
       value: 'year'
     }
+  ],
+  angle: [
+    {
+      label: 'Degree',
+      value: 'deg'
+    },
+    {
+      label: 'Radian',
+      value: 'rad'
+    },
+    {
+      label: 'Gradian',
+      value: 'grad'
+    },
+    {
+      label: 'Minute of arc',
+      value: 'arcmin'
+    },
+    {
+      label: 'Second of arc',
+      value: 'arcsec'
+    }
   ]
 }

@@ -41,7 +41,9 @@ const messages = {
     speed_converter: 'Speed Converter',
     speed_converter_wiki_icon: 'What\'s Speed?',
     time_converter: 'Time Converter',
-    time_converter_wiki_icon: 'What\'s Time?'
+    time_converter_wiki_icon: 'What\'s Time?',
+    angle_converter: 'Angle Convertion Calculator',
+    angle_converter_wiki_icon: 'What\'s Angle?'
   }
 }
 const i18n = new VueI18n({
