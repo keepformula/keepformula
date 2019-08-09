@@ -13,6 +13,7 @@ import AreaConverter from './components/AreaConverter.vue'
 import VolumeConverter from './components/VolumeConverter.vue'
 import PressureConverter from './components/PressureConverter.vue'
 import SpeedConverter from './components/SpeedConverter.vue'
+import TimeConverter from './components/TimeConverter.vue'
 
 Vue.use(Router)
 
@@ -82,6 +83,11 @@ export default new Router({
           path: '/Speed.Converter',
           name: 'Speed Converter',
           component: SpeedConverter
+        },
+        {
+          path: '/Time.Converter',
+          name: 'Time Converter',
+          component: TimeConverter
         }
       ]
     }

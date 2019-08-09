@@ -124,7 +124,15 @@ export default {
           route: 'Speed.Converter',
           description: 'Speed conversion calculator',
           icon: 'speedConverter',
-          tag: 'speed , speed convertion , convert , metre per hourse , knot',
+          tag: 'speed , speed convertion , convert , metre per hour , knot',
+          category: 'Convertion'
+        },
+        {
+          name: 'Time Converter',
+          route: 'Time.Converter',
+          description: 'Time conversion calculator',
+          icon: 'timeConverter',
+          tag: 'time , time convertion , convert , second , minute , hour ',
           category: 'Convertion'
         }
       ],
