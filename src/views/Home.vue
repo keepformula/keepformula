@@ -134,6 +134,14 @@ export default {
           icon: 'timeConverter',
           tag: 'time , time convertion , convert , second , minute , hour ',
           category: 'Convertion'
+        },
+        {
+          name: 'Angle Converter',
+          route: 'Angle.Converter',
+          description: 'Angle conversion calculator',
+          icon: 'angleConverter',
+          tag: 'angle , angle convertion , convert , degrees , radian , gradian ',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
