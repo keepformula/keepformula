@@ -325,11 +325,11 @@ export default {
       value: 'm/s'
     },
     {
-      label: 'Kilometre per hourse',
+      label: 'Kilometre per hour',
       value: 'km/h'
     },
     {
-      label: 'Metre per hourse',
+      label: 'Metre per hour',
       value: 'm/h'
     },
     {
@@ -339,6 +339,48 @@ export default {
     {
       label: 'Minute per kilometre',
       value: 'min/km'
+    }
+  ],
+  time: [
+    {
+      label: 'Nanosecond',
+      value: 'ns'
+    },
+    {
+      label: 'Microsecond',
+      value: 'mu'
+    },
+    {
+      label: 'Millisecond',
+      value: 'ms'
+    },
+    {
+      label: 'Second',
+      value: 's'
+    },
+    {
+      label: 'Minute',
+      value: 'min'
+    },
+    {
+      label: 'Hour',
+      value: 'h'
+    },
+    {
+      label: 'Day',
+      value: 'd'
+    },
+    {
+      label: 'Week',
+      value: 'week'
+    },
+    {
+      label: 'Month',
+      value: 'month'
+    },
+    {
+      label: 'Year',
+      value: 'year'
     }
   ]
 }
