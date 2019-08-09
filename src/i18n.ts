@@ -37,7 +37,9 @@ const messages = {
     volume_converter: 'Volume Converter',
     volume_converter_wiki_icon: 'What\'s Volume?',
     pressure_converter: 'Pressure Converter',
-    pressure_converter_wiki_icon: 'What\'s Pressure?'
+    pressure_converter_wiki_icon: 'What\'s Pressure?',
+    speed_converter: 'Speed Converter',
+    speed_converter_wiki_icon: 'What\'s Speed?'
   }
 }
 const i18n = new VueI18n({

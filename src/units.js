@@ -318,5 +318,27 @@ export default {
       label: 'Kilopound per square inch',
       value: 'ksi'
     }
+  ],
+  speed: [
+    {
+      label: 'Metre per second',
+      value: 'm/s'
+    },
+    {
+      label: 'Kilometre per houre',
+      value: 'km/h'
+    },
+    {
+      label: 'Metre per hourse',
+      value: 'm/h'
+    },
+    {
+      label: 'Knot',
+      value: 'knot'
+    },
+    {
+      label: 'Minute per kilometre',
+      value: 'min/km'
+    }
   ]
 }

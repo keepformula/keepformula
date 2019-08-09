@@ -118,6 +118,14 @@ export default {
           icon: 'pressureConverter',
           tag: 'pressure , pressure convertion , convert , atmosphere , pascal',
           category: 'Convertion'
+        },
+        {
+          name: 'Speed Converter',
+          route: 'Speed.Converter',
+          description: 'Speed conversion calculator',
+          icon: 'speedConverter',
+          tag: 'speed , speed convertion , convert , metre per hourse , knot',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
