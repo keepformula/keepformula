@@ -325,7 +325,7 @@ export default {
       value: 'm/s'
     },
     {
-      label: 'Kilometre per houre',
+      label: 'Kilometre per hourse',
       value: 'km/h'
     },
     {
