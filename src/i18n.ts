@@ -43,7 +43,9 @@ const messages = {
     time_converter: 'Time Converter',
     time_converter_wiki_icon: 'What\'s Time?',
     angle_converter: 'Angle Convertion Calculator',
-    angle_converter_wiki_icon: 'What\'s Angle?'
+    angle_converter_wiki_icon: 'What\'s Angle?',
+    energy_converter: 'Energy Convertion Calculator',
+    energy_converter_wiki_icon: 'What\'s Energy?'
   }
 }
 const i18n = new VueI18n({
