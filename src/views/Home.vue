@@ -150,6 +150,14 @@ export default {
           icon: 'energyConverter',
           tag: 'energy , energy convertion , convert , watt , joule ',
           category: 'Convertion'
+        },
+        {
+          name: 'Frequency Converter',
+          route: 'Frequency.Converter',
+          description: 'Frequency conversion calculator',
+          icon: 'frequencyConverter',
+          tag: 'frequency , frequency convertion , convert , rpm , hz , mhz',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

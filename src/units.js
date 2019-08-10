@@ -434,5 +434,43 @@ export default {
       label: 'Kilojoule',
       value: 'kJ'
     }
+  ],
+  frequency: [
+    {
+      label: 'Hertz',
+      value: 'Hz'
+    },
+    {
+      label: 'Milihertz',
+      value: 'mHz'
+    },
+    {
+      label: 'Kilohertz',
+      value: 'kHz'
+    },
+    {
+      label: 'Megahertz',
+      value: 'MHz'
+    },
+    {
+      label: 'Gigahertz',
+      value: 'GHz'
+    },
+    {
+      label: 'Terahertz',
+      value: 'THz'
+    },
+    {
+      label: 'Revolution per minute',
+      value: 'rpm'
+    },
+    {
+      label: 'Degree per second',
+      value: 'deg/s'
+    },
+    {
+      label: 'Radian per second',
+      value: 'rad/s'
+    }
   ]
 }

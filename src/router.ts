@@ -16,6 +16,7 @@ import SpeedConverter from './components/SpeedConverter.vue'
 import TimeConverter from './components/TimeConverter.vue'
 import AngleConverter from './components/AngleConverter.vue'
 import EnergyConverter from './components/EnergyConverter.vue'
+import FrequencyConverter from './components/FrequencyConverter.vue'
 
 Vue.use(Router)
 
@@ -100,6 +101,11 @@ export default new Router({
           path: '/Energy.Converter',
           name: 'Energy Converter',
           component: EnergyConverter
+        },
+        {
+          path: '/Frequency.Converter',
+          name: 'Frequency Converter',
+          component: FrequencyConverter
         }
       ]
     }
