@@ -45,7 +45,9 @@ const messages = {
     angle_converter: 'Angle Convertion Calculator',
     angle_converter_wiki_icon: 'What\'s Angle?',
     energy_converter: 'Energy Convertion Calculator',
-    energy_converter_wiki_icon: 'What\'s Energy?'
+    energy_converter_wiki_icon: 'What\'s Energy?',
+    frequency_converter: 'Frequency Convertion Calculator',
+    frequency_converter_wiki_icon: 'What\'s Frequency?'
   }
 }
 const i18n = new VueI18n({
