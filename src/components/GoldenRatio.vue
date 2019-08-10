@@ -19,7 +19,7 @@
             <q-card-separator />
               <q-card-main>
                   <div class="col-12 q-mt-md">
-                    <q-input autofocus type="number" v-model="value" :float-label="$t('value_label')" />
+                    <q-input autofocus type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
                   <q-list-header class="q-mt-md">Result</q-list-header>

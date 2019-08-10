@@ -20,7 +20,7 @@
               <q-card-main>
                   <div class="row q-mt-md">
                   <div class="col-12 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                    <q-input autofocus type="number" v-model="height" :float-label="$t('height_label')"/>
+                    <q-input autofocus type="text" v-model="height" :float-label="$t('height_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                       <q-select
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row">
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md">
-                    <q-input type="number" v-model="weight" :float-label="$t('weight_label')"/>
+                    <q-input type="text" v-model="weight" :float-label="$t('weight_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                     <q-select
