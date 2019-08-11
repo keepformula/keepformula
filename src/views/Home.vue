@@ -25,7 +25,7 @@
              inline>
                <q-card-media
              class="q-py-lg flex flex-center">
-                 <img :src="`/icon/${item.icon}.svg`" style="width: 90px;"  />
+                 <img :src="`/icon/${item.icon}.svg`" style="width: 90px;" />
                </q-card-media>
                <q-card-title class="text-center">
                  {{ item.name }}
