@@ -72,7 +72,7 @@ export default {
       unit: Unit,
       inputValue: '',
       inputUnit: '10',
-      outputUnit: ''
+      outputUnit: '2'
     }
   },
   computed: {
@@ -88,7 +88,6 @@ export default {
   methods: {
     reset () {
       this.inputValue = null
-      this.outputUnit = null
       this.$refs.input.focus()
     },
     back () {
