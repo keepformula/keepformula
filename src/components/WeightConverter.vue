@@ -54,8 +54,8 @@
                           </q-item>
                         </div>
                 <div class="q-mt-lg">
-                  <q-btn @click="reset" :label="$t('Reset')"/>
-                  <q-btn @click="back" :label="$t('Back')"/>
+                  <q-btn @click="reset" :label="$t('reset')"/>
+                  <q-btn @click="back" :label="$t('back')"/>
                 </div>
               </q-card-main>
            </q-card>

@@ -14,7 +14,7 @@
         <div class="row">
           <div
              v-for="(item, index) in searchResult"
-             v-bind:key="item"
+             v-bind:key="index"
              class="q-pa-sm col-12 col-md-6 col-lg-4 col-xl-4" >
              <router-link
              :key="index"
