@@ -6,7 +6,7 @@
           <a
             href="https://en.wikipedia.org/wiki/Frequency"
             target="_blank"
-            :title="$t('Frequency_converter_wiki_icon')">
+            :title="$t('frequency_converter_wiki_icon')">
             <q-icon
             class="text-warning"
             name="help"
