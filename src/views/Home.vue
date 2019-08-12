@@ -1,10 +1,10 @@
 <template>
-  <q-page class="q-pa-md">
+  <q-page class="q-pa-sm">
     <div class="q-mx-sm">
       <div class="row">
         <q-search
            @keydown.enter="oneResult"
-           class="q-mb-md q-mx-auto col-12 col-xl-4 col-lg-8 col-md-9 col-sm-10 search-style"
+           class="q-mb-sm q-mt-md q-mx-auto col-12 col-xl-4 col-lg-8 col-md-9 col-sm-10 search-style"
            hide-underline
            autofocus
            v-model="searchQuery" />

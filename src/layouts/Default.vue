@@ -1,15 +1,15 @@
 <template>
   <q-layout view="lHr Lpr lFf">
     <q-layout-header
-      class="row" :class="{ 'scroll-header': !showNavbar }"
+      class="row q-mt-sm" :class="{ 'scroll-header': !showNavbar }"
       >
-      <div class="query q-mx-auto q-pt-lg col-12 col-xl-9 col-lg-9 col-md-10" >
+      <div class="q-pb-xs query q-mx-auto q-pt-lg col-12 col-xl-9 col-lg-9 col-md-10" >
       <q-toolbar
         color="primary"
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-      <div class="textColor">
+      <div class="textColor q-ml-xs">
         <router-link  to="/">
           <img
             class="icon"
@@ -20,7 +20,7 @@
              </span>
         </router-link>
       </div>
-      <div class="q-ml-auto">
+      <div>
         <q-btn
            class="drawer-icon"
            flat
