@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHr Lpr lFf">
     <q-layout-header
-      class="row q-mt-sm" :class="{ 'scroll-header': !showNavbar }"
+      class="row " :class="{ 'scroll-header': !showNavbar }"
       >
       <div class="q-pb-xs query q-mx-auto q-pt-lg col-12 col-xl-9 col-lg-9 col-md-10" >
       <q-toolbar
