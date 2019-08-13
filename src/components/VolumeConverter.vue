@@ -70,7 +70,7 @@
 import { openURL } from 'quasar'
 import Unit from '@/units'
 import Converter from 'convert-units'
-import UnitConverter from '@/units-converter'
+
 export default {
   name: 'VolumeConverter',
   data () {
