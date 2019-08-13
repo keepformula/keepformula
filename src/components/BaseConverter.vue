@@ -37,6 +37,9 @@
                              :float-label="$t('output_unit')"
                              :options="unit.numericalBases"
                              />
+                            <div class="q-mt-md">
+                              <q-btn @click="btnClick" icon="cached" round color="primary" class="float-right" />
+                            </div>
                         </div>
                         <div v-if='this.inputValue'>
                           <q-list-header class="q-mt-md">Result</q-list-header>
@@ -70,7 +73,7 @@ export default {
   data () {
     return {
       unit: Unit,
-      inputValue: '',
+      inputValue: null,
       inputUnit: '10',
       outputUnit: '2'
     }
@@ -92,6 +95,12 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    },
+    btnClick () {
+      let x = this.inputUnit
+      let y = this.outputUnit
+      this.inputUnit = y
+      this.outputUnit = x
     }
   }
 }

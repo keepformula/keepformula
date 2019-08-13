@@ -39,7 +39,7 @@
                     <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                     <q-select
                        v-model="weightUnit"
-                         :float-label="$t('weight_unit')"
+                       :float-label="$t('weight_unit')"
                        :options="unit.weightBMI"
                        :separator="true"
                        radio
@@ -48,25 +48,25 @@
                 </div>
                 <q-btn-toggle
                        v-model="gender"
-                       class="q-mt-lg"
+                       class="q-mt-md q-ml-md"
                        text-color="primary"
                        :options="unit.gender"
                        />
                   <div v-if='this.height && this.weight'>
-                  <q-list-header class="q-mt-md">Result</q-list-header>
+                  <q-list-header class="q-mt-md q-subheading">Result</q-list-header>
                   <q-item tag="label">
                       <q-item-main>
-                        <q-item-tile label>BMI is: {{ bmi }}</q-item-tile>
+                        <q-item-tile class="q-title" label>BMI is: {{ bmi }}</q-item-tile>
                       </q-item-main>
                     </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label>{{ bmiMessageCalculate }}</q-item-tile>
+                          <q-item-tile class="q-title" label>{{ bmiMessageCalculate }}</q-item-tile>
                         </q-item-main>
                       </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label> Your Normal weight is between {{ minNormalWeight
+                          <q-item-tile class="q-title" label> Your Normal weight is between {{ minNormalWeight
                             }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}
 
                           </q-item-tile>
@@ -74,7 +74,7 @@
                         </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label>{{ robinsonFormula }}
+                          <q-item-tile class="q-title" label>{{ robinsonFormula }}
                             <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
                               size= "2rem" name="info" />
                           </q-item-tile>
@@ -82,7 +82,7 @@
                         </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label>{{ millerFormula }}
+                          <q-item-tile class="q-title" label>{{ millerFormula }}
                             <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
                               size= "2rem" name="info" />
                           </q-item-tile>
@@ -90,7 +90,7 @@
                         </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label>{{ hamwiFormula }}
+                          <q-item-tile class="q-title" label>{{ hamwiFormula }}
                             <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Hamwi_method')"
                             size= "2rem" name="info" />
                           </q-item-tile>
@@ -98,7 +98,7 @@
                         </q-item>
                     <q-item tag="label">
                         <q-item-main>
-                          <q-item-tile label>{{ devineFormula }}
+                          <q-item-tile class="q-title" label>{{ devineFormula }}
                             <q-icon class="cursor-pointer" @click.native="openURL('https://en.wikipedia.org/wiki/Human_body_weight#Devine_formula')"
                               size= "2rem" name="info" />
                           </q-item-tile>
