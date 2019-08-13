@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import Knowledge from '@/knowledge'
+
 export default {
   name: 'GoldenRatio',
   data () {
@@ -59,14 +61,14 @@ export default {
     shorterSection () {
       let out = null
       if (this.value) {
-        out = this.value / 1.61803398875
+        out = Knowledge.goldenRatioShorter(this.value)
       }
       return out
     },
     longerSection () {
       let out = null
       if (this.value) {
-        out = this.value * 1.61803398875
+        out = Knowledge.goldenRatioLonger(this.value)
       }
       return out
     }

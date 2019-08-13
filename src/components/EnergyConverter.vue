@@ -69,7 +69,7 @@
 <script>
 import { openURL } from 'quasar'
 import Unit from '@/units'
-import Converter from 'convert-units'
+import Knowledge from '@/knowledge'
 
 export default {
   name: 'EnergyConverter',
@@ -85,7 +85,7 @@ export default {
     energyConvert () {
       let out = null
       if (this.value) {
-        out = Converter(this.value).from(this.inputUnit).to(this.outputUnit)
+        out = Knowledge.convert(this.value, this.inputUnit, this.outputUnit)
       }
       return out
     }

@@ -1,8 +1,7 @@
 export default {
- locale: 'en',
- defaultUnits: {
-	weight: 'kg',
-	height: 'cm'
- }
+  locale: 'en',
+  defaultUnits: {
+    weight: 'kg',
+    height: 'cm'
+  }
 }
-

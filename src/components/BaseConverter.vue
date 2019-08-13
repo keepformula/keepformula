@@ -66,8 +66,9 @@
 </template>
 
 <script>
-import Converter from 'bases'
+import Knowledge from '@/knowledge'
 import Unit from '@/units'
+
 export default {
   name: 'BaseConvrter',
   data () {
@@ -82,8 +83,7 @@ export default {
     toBase () {
       let out = null
       if (this.inputValue) {
-        let from = Converter.fromBase(this.inputValue, this.inputUnit)
-        out = Converter.toBase(from, this.outputUnit)
+        out = Knowledge.baseConverter(this.inputValue, this.inputUnit, this.outputUnit)
       }
       return out
     }
