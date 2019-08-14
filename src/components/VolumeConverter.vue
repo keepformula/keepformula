@@ -41,6 +41,9 @@
                              :separator="true"
                              radio
                              />
+                            <div class="q-mt-md">
+                              <q-btn @click="btnClick" icon="cached" round color="primary" class="float-right" />
+                            </div>
                         </div>
                   </div>
                   <div v-if='this.value'>
@@ -57,13 +60,13 @@
                     <q-btn @click="reset" :label="$t('reset')"/>
                       <q-btn @click="back" :label="$t('back')"/>
                   </div>
-              </q-card-main>
-            </q-card>
+                      </q-card-main>
+                    </q-card>
           </div>
         </div>
       </div>
     </div>
-  </q-page>
+                              </q-page>
 </template>
 
 <script>
@@ -97,8 +100,13 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    },
+    btnClick () {
+      let x = this.inputUnit
+      let y = this.outputUnit
+      this.inputUnit = y
+      this.outputUnit = x
     }
-
   }
 }
 </script>

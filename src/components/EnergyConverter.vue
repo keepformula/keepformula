@@ -19,21 +19,21 @@
               <q-card-separator />
                 <q-card-main>
                   <div class="row q-mt-md">
-                  <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                    <q-input autofocus ref="input" type="text" v-model="value" :float-label="$t('value_label')"/>
-                  </div>
-                    <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
-                      <q-select
-                         v-model="inputUnit"
-                         :float-label="$t('input_unit')"
-                         :options="unit.energy"
-                         :separator="true"
-                         radio
-                         />
+                    <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
+                      <q-input autofocus ref="input" type="text" v-model="value" :float-label="$t('value_label')"/>
                     </div>
-                  <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                    </div>
-                    <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
+                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
+                        <q-select
+                           v-model="inputUnit"
+                           :float-label="$t('input_unit')"
+                           :options="unit.energy"
+                           :separator="true"
+                           radio
+                           />
+                      </div>
+                      <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
+                      </div>
+                        <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                           <q-select
                              v-model="outputUnit"
                              :float-label="$t('output_unit')"
@@ -41,6 +41,9 @@
                              :separator="true"
                              radio
                              />
+                            <div class="q-mt-md">
+                              <q-btn @click="btnClick" icon="cached" round color="primary" class="float-right" />
+                            </div>
                         </div>
                   </div>
                   <div v-if='this.value'>
@@ -57,13 +60,13 @@
                     <q-btn @click="reset" :label="$t('reset')"/>
                       <q-btn @click="back" :label="$t('back')"/>
                   </div>
-              </q-card-main>
-            </q-card>
+                      </q-card-main>
+                    </q-card>
           </div>
         </div>
       </div>
     </div>
-  </q-page>
+                              </q-page>
 </template>
 
 <script>
@@ -97,6 +100,12 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    },
+    btnClick () {
+      let x = this.inputUnit
+      let y = this.outputUnit
+      this.inputUnit = y
+      this.outputUnit = x
     }
   }
 }

@@ -41,6 +41,9 @@
                          :separator="true"
                          radio
                          />
+                            <div class="q-mt-md">
+                              <q-btn @click="btnClick" icon="cached" round color="primary" class="float-right" />
+                            </div>
                     </div>
                 </div>
                         <div v-if='this.value'>
@@ -96,8 +99,13 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    },
+    btnClick () {
+      let x = this.inputUnit
+      let y = this.outputUnit
+      this.inputUnit = y
+      this.outputUnit = x
     }
-
   }
 }
 </script>
