@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'kg',
-      outputUnit: 'lb'
+      inputUnit: this.$config.defaultUnits.inputUnitWeightConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitWeightConverter
     }
   },
   computed: {

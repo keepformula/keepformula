@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'Pa',
-      outputUnit: 'psi'
+      inputUnit: this.$config.defaultUnits.inputUnitPressureConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitPressureConverter
     }
   },
   computed: {

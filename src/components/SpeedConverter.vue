@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'km/h',
-      outputUnit: 'knot'
+      inputUnit: this.$config.defaultUnits.inputUnitSpeedConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitSpeedConverter
     }
   },
   computed: {

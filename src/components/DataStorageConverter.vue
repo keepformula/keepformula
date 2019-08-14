@@ -76,8 +76,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'KB',
-      outputUnit: 'MB'
+      inputUnit: this.$config.defaultUnits.inputUnitDataStorageConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitDataStorageConverter
     }
   },
   computed: {

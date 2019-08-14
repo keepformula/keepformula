@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'd',
-      outputUnit: 'min'
+      inputUnit: this.$config.defaultUnits.inputUnitTimeConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitTimeConverter
     }
   },
   computed: {

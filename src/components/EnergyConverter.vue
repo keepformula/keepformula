@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'Wh',
-      outputUnit: 'J'
+      inputUnit: this.$config.defaultUnits.inputUnitEnergyConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitEnergyConverter
     }
   },
   computed: {

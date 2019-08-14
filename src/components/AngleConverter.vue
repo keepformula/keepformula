@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'deg',
-      outputUnit: 'rad'
+      inputUnit: this.$config.defaultUnits.inputUnitAngleConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitAngleConverter
     }
   },
   computed: {

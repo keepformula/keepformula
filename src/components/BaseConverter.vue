@@ -75,8 +75,8 @@ export default {
     return {
       unit: Unit,
       inputValue: null,
-      inputUnit: '10',
-      outputUnit: '2'
+      inputUnit: this.$config.defaultUnits.inputUnitBaseConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitBaseConverter
     }
   },
   computed: {

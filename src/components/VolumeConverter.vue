@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'gal',
-      outputUnit: 'l'
+      inputUnit: this.$config.defaultUnits.inputUnitVolumeConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitVolumeConverter
     }
   },
   computed: {

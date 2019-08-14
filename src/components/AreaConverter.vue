@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'm2',
-      outputUnit: 'ha'
+      inputUnit: this.$config.defaultUnits.inputUnitAreaConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitAreaConverter
     }
   },
   computed: {

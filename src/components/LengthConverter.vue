@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'cm',
-      outputUnit: 'm'
+      inputUnit: this.$config.defaultUnits.inputUnitLengthConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitLengthConverter
     }
   },
   computed: {

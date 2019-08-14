@@ -2,6 +2,30 @@ export default {
   locale: 'en',
   defaultUnits: {
     weight: 'kg',
-    height: 'cm'
+    height: 'cm',
+    inputUnitAngleConverter: 'deg',
+    outputUnitAngleConverter: 'rad',
+    inputUnitAreaConverter: 'm2',
+    outputUnitAreaConverter: 'ha',
+    inputUnitBaseConverter: '10',
+    outputUnitBaseConverter: '2',
+    inputUnitDataStorageConverter: 'KB',
+    outputUnitDataStorageConverter: 'MB',
+    inputUnitEnergyConverter: 'Wh',
+    outputUnitEnergyConverter: 'J',
+    inputUnitFrequencyConverter: 'Hz',
+    outputUnitFrequencyConverter: 'rpm',
+    inputUnitLengthConverter: 'cm',
+    outputUnitLengthConverter: 'm',
+    inputUnitPressureConverter: 'Pa',
+    outputUnitPressureConverter: 'psi',
+    inputUnitSpeedConverter: 'km/h',
+    outputUnitSpeedConverter: 'knot',
+    inputUnitTimeConverter: 'd',
+    outputUnitTimeConverter: 'min',
+    inputUnitVolumeConverter: 'gal',
+    outputUnitVolumeConverter: 'l',
+    inputUnitWeightConverter: 'kg',
+    outputUnitWeightConverter: 'lb'
   }
 }

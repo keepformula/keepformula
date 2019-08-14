@@ -164,7 +164,7 @@ export default {
     },
     bmiMessageCalculate () {
       let out = null
-      let bmi = this.weightInKG / Math.pow(this.heightInMeter, 2)
+      let bmi = Knowledge.bmi(this.weightInKG, this.heightInMeter)
       if (bmi < 18.5 && (this.height && this.weight)) {
         out = this.bmiMessage.underWeight
       } else if (bmi >= 18.5 && bmi < 25) {
@@ -181,18 +181,18 @@ export default {
     // Main Formula
     // NOTE: calculate based on KG, Meter
     minNormalWeight () {
-      let minNormWeight = 18.5 * Math.pow(this.heightInMeter, 2)
+      let minNormWeight = Knowledge.minimumNormalWeight(this.heightInMeter)
       return Knowledge.convert(minNormWeight, 'kg', this.weightUnit)
     },
     maxNormalWeight () {
-      let maxNormWeight = 25 * Math.pow(this.heightInMeter, 2)
+      let maxNormWeight = Knowledge.maximumNormalWeight(this.heightInMeter)
       return Knowledge.convert(maxNormWeight, 'kg', this.weightUnit)
     },
     robinsonFormula () {
       let out = null
       // NOTE: calculate based on KG, Centimeter
-      let man = (((this.heightInCentimeter - 152.4) / 2.54) * 1.9) + 52
-      let women = (((this.heightInCentimeter - 152.4) / 2.54) * 1.7) + 49
+      let man = Knowledge.robinsonFormulaMan(this.heightInCentimeter)
+      let women = Knowledge.robinsonFormulaWomen(this.heightInCentimeter)
       if ((this.height && this.weight) && this.gender === 'male') {
         out = 'Robinson Formula: ' + Knowledge.convert(man, 'kg', this.weightUnit) + ' ' +
           this.weightUnit
@@ -204,8 +204,8 @@ export default {
     },
     millerFormula () {
       let out = null
-      let man = (((this.heightInCentimeter - 152.4) / 2.54) * 1.41) + 56.2
-      let women = (((this.heightInCentimeter - 152.4) / 2.54) * 1.36) + 53.1
+      let man = Knowledge.millerFormulaMan(this.heightInCentimeter)
+      let women = Knowledge.millerFormulaWomen(this.heightInCentimeter)
       if ((this.height && this.weight) && this.gender === 'male') {
         out = 'Miller Formula: ' + Knowledge.convert(man, 'kg', this.weightUnit) + ' ' +
           this.weightUnit
@@ -217,8 +217,8 @@ export default {
     },
     hamwiFormula () {
       let out = null
-      let man = (((this.heightInCentimeter - 152.4) / 2.54) * 2.7) + 48
-      let women = (((this.heightInCentimeter - 152.4) / 2.54) * 2.2) + 45.4
+      let man = Knowledge.hamwiFormulaMan(this.heightInCentimeter)
+      let women = Knowledge.hamwiFormulaWomen(this.heightInCentimeter)
       if ((this.height && this.weight) && this.gender === 'male') {
         out = 'Hamwi Formula: ' + Knowledge.convert(man, 'kg', this.weightUnit) + ' ' +
           this.weightUnit
@@ -230,8 +230,8 @@ export default {
     },
     devineFormula () {
       let out = null
-      let man = (((this.heightInCentimeter - 152.4) / 2.54) * 2.3) + 50
-      let women = (((this.heightInCentimeter - 152.4) / 2.54) * 2.3) + 45.5
+      let man = Knowledge.devineFormulaMan(this.heightInCentimeter)
+      let women = Knowledge.devineFormulaWomen(this.heightInCentimeter)
       if ((this.height && this.weight) && this.gender === 'male') {
         out = 'Devine Formula: ' + Knowledge.convert(man, 'kg', this.weightUnit) + ' ' +
           this.weightUnit

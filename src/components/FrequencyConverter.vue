@@ -77,8 +77,8 @@ export default {
     return {
       unit: Unit,
       value: null,
-      inputUnit: 'Hz',
-      outputUnit: 'rpm'
+      inputUnit: this.$config.defaultUnits.inputUnitFrequencyConverter,
+      outputUnit: this.$config.defaultUnits.outputUnitFrequencyConverter
     }
   },
   computed: {
