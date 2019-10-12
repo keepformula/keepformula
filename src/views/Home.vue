@@ -159,6 +159,30 @@ export default {
           icon: 'frequencyConverter',
           tag: 'frequency , frequency convertion , convert , rpm , hz , mhz',
           category: 'Convertion'
+        },
+        {
+          name: 'Density Converter',
+          route: 'Density.Converter',
+          description: 'Density conversion calculator',
+          icon: 'densityConverter',
+          tag: 'density , density convertion , convert',
+          category: 'Convertion'
+        },
+        {
+          name: 'Force Converter',
+          route: 'Force.Converter',
+          description: 'Force conversion calculator',
+          icon: 'forceConverter',
+          tag: 'force , force convertion , convert , newton',
+          category: 'Convertion'
+        },
+        {
+          name: 'Flow Rate Converter',
+          route: 'Flow.Rate.Converter',
+          description: 'Flow rate conversion calculator',
+          icon: 'flowRateConverter',
+          tag: 'flow , flow rate convertion , volume , convertion',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
