@@ -47,7 +47,13 @@ const messages = {
     energy_converter: 'Energy Convertion Calculator',
     energy_converter_wiki_icon: 'What\'s Energy?',
     frequency_converter: 'Frequency Convertion Calculator',
-    frequency_converter_wiki_icon: 'What\'s Frequency?'
+    frequency_converter_wiki_icon: 'What\'s Frequency?',
+    density_converter: 'Density Convertion Calculator',
+    density_converter_wiki_icon: 'What\'s Density?',
+    force_converter: 'Force Convertion Calculator',
+    force_converter_wiki_icon: 'What\'s Force?',
+    flow_rate_converter: 'Flow Rate Convertion Calculator',
+    flow_rate_converter_wiki_icon: 'What\'s Flow Rate?'
   }
 }
 const i18n = new VueI18n({
