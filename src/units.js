@@ -472,5 +472,171 @@ export default {
       label: 'Radian per second',
       value: 'rad/s'
     }
+  ],
+  force: [
+    {
+      label: 'Newton',
+      value: 'N'
+    },
+    {
+      label: 'Kilo newton',
+      value: 'kN'
+    },
+    {
+      label: 'Pound-force',
+      value: 'lbf'
+    }
+  ],
+  density: [
+    {
+      label: 'Kg per cubic meter',
+      value: 'kg/m3'
+    }
+  ],
+  flow: [
+    {
+      label: 'Cubic milimetre / Second',
+      value: 'mm3/s'
+    },
+    {
+      label: 'cubic centimetre / Second',
+      value: 'cm3/s'
+    },
+    {
+      label: 'Mililitre / Second',
+      value: 'ml/s'
+    },
+    {
+      label: 'Centilitre / Second',
+      value: 'cl/s'
+    },
+    {
+      label: 'Decilitre / Second',
+      value: 'dl/s'
+    },
+    {
+      label: 'Litre / Second',
+      value: 'l/s'
+    },
+    {
+      label: 'Litre / Minute',
+      value: 'l/min'
+    },
+    {
+      label: 'Litre / hour',
+      value: 'l/h'
+    },
+    {
+      label: 'Kilolitre / Second',
+      value: 'kl/s'
+    },
+    {
+      label: 'Kilolitre / Minute',
+      value: 'kl/min'
+    },
+    {
+      label: 'Kilolitre / Hour',
+      value: 'kl/h'
+    },
+    {
+      label: 'Cubic Metre / Second',
+      value: 'm3/s'
+    },
+    {
+      label: 'cubic Metre / Minute',
+      value: 'm3/min'
+    },
+    {
+      label: 'Cubic kilo Metre / Second',
+      value: 'km3/s'
+    },
+    {
+      label: 'Us teaspoon / Second',
+      value: 'tsp/s'
+    },
+    {
+      label: 'Tablespoons / Second',
+      value: 'Tbs/s'
+    },
+    {
+      label: 'Cubic inch / Second',
+      value: 'in3/s'
+    },
+    {
+      label: 'Cubic inch / Minute',
+      value: 'in3/min'
+    },
+    {
+      label: 'Cubic inch / hour',
+      value: 'in3/h'
+    },
+    {
+      label: 'Us fluid ounce / Second',
+      value: 'fl-oz/s'
+    },
+    {
+      label: 'Us fluid ounce / Minute',
+      value: 'fl-oz/min'
+    },
+    {
+      label: 'Us fluid ounce / Hour',
+      value: 'fl-oz/h'
+    },
+    {
+      label: 'Us cup / Second',
+      value: 'cup/s'
+    },
+    {
+      label: 'Pint / Second',
+      value: 'pnt/s'
+    },
+    {
+      label: 'Pint / Second',
+      value: 'pnt/min'
+    },
+    {
+      label: 'Pint / Second',
+      value: 'pnt/h'
+    },
+    {
+      label: 'Us liquid quart / Second',
+      value: 'qt/s'
+    },
+    {
+      label: 'Us liquid gallon / Second',
+      value: 'gal/s'
+    },
+    {
+      label: 'Us liquid gallon / Minute',
+      value: 'gal/min'
+    },
+    {
+      label: 'Us liquid gallon / hour',
+      value: 'gal/h'
+    },
+    {
+      label: 'Cubic foot / Second',
+      value: 'ft3/s'
+    },
+    {
+      label: 'Cubic foot / Minute',
+      value: 'ft3/min'
+    },
+    {
+      label: 'Cubic foot / Hour',
+      value: 'ft3/h'
+    },
+    {
+      label: 'Cubic yard / Second',
+      value: 'yd3/s'
+    },
+    {
+      label: 'cubic yard / Minute',
+      value: 'yd3/min'
+    },
+    {
+      label: 'Cubic yard / Hour',
+      value: 'yd3/h'
+    }
   ]
 }
