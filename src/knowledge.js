@@ -5,9 +5,6 @@ export default {
   convert (value, fromUnit, toUnit) {
     return Converter(value).from(fromUnit).to(toUnit)
   },
-  calulateOHM () {
-
-  },
   bmi (weight, height) {
     return weight / Math.pow(height, 2)
   },
@@ -50,5 +47,11 @@ export default {
   },
   goldenRatioLonger (value) {
     return value * 1.61803398875
+  },
+  densityConverter (value, inputUnit, outputUnit) {
+    return Converter(value).from(inputUnit).to(outputUnit)
+  },
+  calulateOHM () {
+
   }
 }

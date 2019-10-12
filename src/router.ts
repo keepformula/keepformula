@@ -17,6 +17,9 @@ import TimeConverter from './components/TimeConverter.vue'
 import AngleConverter from './components/AngleConverter.vue'
 import EnergyConverter from './components/EnergyConverter.vue'
 import FrequencyConverter from './components/FrequencyConverter.vue'
+import DensityConverter from './components/DensityConverter.vue'
+import ForceConverter from './components/ForceConverter.vue'
+import FlowRateConverter from './components/FlowRateConverter.vue'
 
 Vue.use(Router)
 
@@ -106,6 +109,21 @@ export default new Router({
           path: '/Frequency.Converter',
           name: 'Frequency Converter',
           component: FrequencyConverter
+        },
+        {
+          path: '/Density.Converter',
+          name: 'Density Converter',
+          component: DensityConverter
+        },
+        {
+          path: '/Force.Converter',
+          name: 'Force Converter',
+          component: ForceConverter
+        },
+        {
+          path: '/Flow.Rate.Converter',
+          name: 'Flow Rate Converter',
+          component: FlowRateConverter
         }
       ]
     }

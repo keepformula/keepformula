@@ -26,6 +26,10 @@ export default {
     inputUnitVolumeConverter: 'gal',
     outputUnitVolumeConverter: 'l',
     inputUnitWeightConverter: 'kg',
-    outputUnitWeightConverter: 'lb'
+    outputUnitWeightConverter: 'lb',
+    inputUnitForceConverter: 'N',
+    outputUnitForceConverter: 'lbf',
+    inputUnitFlowRateConverter: 'm3/s',
+    outputUnitFlowRateConverter: 'l/s'
   }
 }
