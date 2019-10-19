@@ -183,6 +183,14 @@ export default {
           icon: 'flowRateConverter',
           tag: 'flow , flow rate convertion , volume , convertion',
           category: 'Convertion'
+        },
+        {
+          name: 'Temperature Converter',
+          route: 'Temperature.Converter',
+          description: 'Temperature conversion calculator',
+          icon: 'temperatureConverter',
+          tag: 'temperature , temp convertion , centigrade , celsius , kelvin , convertion',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

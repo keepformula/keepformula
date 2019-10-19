@@ -638,5 +638,23 @@ export default {
       label: 'Cubic yard / Hour',
       value: 'yd3/h'
     }
+  ],
+  temperature: [
+    {
+      label: 'Celsius',
+      value: 'C'
+    },
+    {
+      label: 'Fahrenheit',
+      value: 'F'
+    },
+    {
+      label: 'Kelvin',
+      value: 'K'
+    },
+    {
+      label: 'Rankine scale',
+      value: 'R'
+    }
   ]
 }

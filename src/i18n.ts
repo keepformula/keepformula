@@ -53,7 +53,9 @@ const messages = {
     force_converter: 'Force Convertion Calculator',
     force_converter_wiki_icon: 'What\'s Force?',
     flow_rate_converter: 'Flow Rate Convertion Calculator',
-    flow_rate_converter_wiki_icon: 'What\'s Flow Rate?'
+    flow_rate_converter_wiki_icon: 'What\'s Flow Rate?',
+    temperature_converter: 'Temperature Convertion Calculator',
+    temperature_converter_wiki_icon: 'About Temperature'
   }
 }
 const i18n = new VueI18n({
