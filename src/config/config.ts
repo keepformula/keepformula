@@ -30,6 +30,8 @@ export default {
     inputUnitForceConverter: 'N',
     outputUnitForceConverter: 'lbf',
     inputUnitFlowRateConverter: 'm3/s',
-    outputUnitFlowRateConverter: 'l/s'
+    outputUnitFlowRateConverter: 'l/s',
+    inputUnitTemperatureConverter: 'C',
+    outputUnitTemperatureConverter: 'F'
   }
 }
