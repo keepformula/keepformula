@@ -55,7 +55,10 @@ const messages = {
     flow_rate_converter: 'Flow Rate Convertion Calculator',
     flow_rate_converter_wiki_icon: 'What\'s Flow Rate?',
     temperature_converter: 'Temperature Convertion Calculator',
-    temperature_converter_wiki_icon: 'About Temperature'
+    temperature_converter_wiki_icon: 'About Temperature',
+    stepperMotor: 'Stepper Motor For 3D Printing Calculation',
+    stepperMotor_wiki_icon: 'What\'s Stepper Motor?',
+    stepperMotor_label: 'StepperMotor'
   }
 }
 const i18n = new VueI18n({

@@ -21,6 +21,7 @@ import DensityConverter from './components/DensityConverter.vue'
 import ForceConverter from './components/ForceConverter.vue'
 import FlowRateConverter from './components/FlowRateConverter.vue'
 import TemperatureConverter from './components/TemperatureConverter.vue'
+import StepperMotor from './components/StepperMotor.vue'
 
 Vue.use(Router)
 
@@ -130,6 +131,11 @@ export default new Router({
           path: '/Temperature.Converter',
           name: 'Temperature Converter',
           component: TemperatureConverter
+        },
+        {
+          path: '/Stepper.Motor',
+          name: 'Stepper Motor',
+          component: StepperMotor
         }
       ]
     }

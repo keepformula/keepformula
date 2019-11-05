@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 import i18n from './i18n'
-
 import './styles/quasar.styl'
 import 'quasar-framework/dist/quasar.ie.polyfills'
 import 'quasar-extras/animate'

@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-sm">
+  <q-page>
     <div class="q-mx-sm">
       <div class="row">
         <q-search
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-  </q-page>
+        </q-page>
 </template>
 
 <script>
@@ -191,6 +191,14 @@ export default {
           icon: 'temperatureConverter',
           tag: 'temperature , temp convertion , centigrade , celsius , kelvin , convertion',
           category: 'Convertion'
+        },
+        {
+          name: 'Stepper Motor',
+          route: 'Stepper.Motor',
+          description: 'Stepper Motor 3D Printing',
+          icon: 'stepperMotor',
+          tag: '3d , stepper convertion , angle , Driver microstepping ,Belt pitch, calculate',
+          category: '3dprinting'
         }
       ],
       searchQuery: null,
