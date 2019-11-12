@@ -191,14 +191,6 @@ export default {
           icon: 'temperatureConverter',
           tag: 'temperature , temp convertion , centigrade , celsius , kelvin , convertion',
           category: 'Convertion'
-        },
-        {
-          name: 'Stepper Motor',
-          route: 'Stepper.Motor',
-          description: 'Stepper Motor 3D Printing',
-          icon: 'stepperMotor',
-          tag: '3d , stepper convertion , angle , Driver microstepping ,Belt pitch, calculate',
-          category: '3dprinting'
         }
       ],
       searchQuery: null,
