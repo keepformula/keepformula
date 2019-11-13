@@ -32,12 +32,14 @@
            icon="menu"
            />
       </div>
-      </q-toolbar>
+        </q-toolbar>
       </div>
-    </q-layout-header>
-    <q-layout-drawer
+      </q-layout-header>
+      <q-layout-drawer
       v-model="rightDrawerOpen"
       side="right"
+      flat
+      round
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
     <q-list
@@ -51,18 +53,12 @@
         <q-item-side icon="home" />
           <q-item-main label="Home" />
           </q-item>
-      <q-item-separator />
-        <q-list-header>Development Links</q-list-header>
-        <q-item @click.native="openURL('https://github.com/babakhani/nightjar')">
-          <q-item-side icon="fab fa-github" />
-            <q-item-main label="GitHub" sublabel=""></q-item-main>
+        <q-item @click.native="openURL('https://github.com/babakhani/nightjar/graphs/contributors')">
+          <q-item-side icon="fas fa-user-friends" />
+            <q-item-main label="Team's Link" sublabel=""></q-item-main>
           </q-item>
-          <q-item @click.native="openURL('http://quasar-framework.org')">
-            <q-item-side icon="school" />
-              <q-item-main label="Docs" sublabel="quasar-framework.org"></q-item-main>
-            </q-item>
-          </q-list>
         </q-list>
+      </q-list>
           </q-layout-drawer>
         <q-page-container>
       <router-view />
