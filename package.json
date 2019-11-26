@@ -1,5 +1,5 @@
 {
-  "name": "firstq",
+  "name": "keepFormula",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,7 +26,7 @@
   "main": "background.js",
   "dependencies": {
     "bases": "^0.2.1",
-    "convert-units": "^2.3.4",
+    "convert-units": "git+https://github.com/keepformula/convert-units.git",
     "core-js": "^2.6.5",
     "lodash": "^4.17.15",
     "quasar": "^1.0.0-beta.15",

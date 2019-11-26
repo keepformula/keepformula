@@ -47,11 +47,5 @@ export default {
   },
   goldenRatioLonger (value) {
     return value * 1.61803398875
-  },
-  densityConverter (value, inputUnit, outputUnit) {
-    return Converter(value).from(inputUnit).to(outputUnit)
-  },
-  calulateOHM () {
-
   }
 }
