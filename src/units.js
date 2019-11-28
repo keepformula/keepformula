@@ -491,6 +491,30 @@ export default {
     {
       label: 'Kg per cubic meter',
       value: 'kg/m3'
+    },
+    {
+      label: 'Kg per litre',
+      value: 'kg/l'
+    },
+    {
+      label: 'Ton per cubic meter',
+      value: 't/m3'
+    },
+    {
+      label: 'Pound per cubic yard',
+      value: 'lb/cuyd'
+    },
+    {
+      label: 'Pound per cubic feet',
+      value: 'lb/cuft'
+    },
+    {
+      label: 'Pound per gallon',
+      value: 'lb/gal'
+    },
+    {
+      label: 'Ounce per cubic inch',
+      value: 'oz/cuin'
     }
   ],
   flow: [

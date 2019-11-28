@@ -32,6 +32,9 @@ export default {
     inputUnitFlowRateConverter: 'm3/s',
     outputUnitFlowRateConverter: 'l/s',
     inputUnitTemperatureConverter: 'C',
-    outputUnitTemperatureConverter: 'F'
+    outputUnitTemperatureConverter: 'F',
+    inputUnitDensityConverter: 'kg/m3',
+    outputUnitDensityConverter: 'lb/cuft'
+
   }
 }
