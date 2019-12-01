@@ -502,11 +502,11 @@ export default {
     },
     {
       label: 'Pound per cubic yard',
-      value: 'lb/cuyd'
+      value: 'lb/cu-yd'
     },
     {
       label: 'Pound per cubic feet',
-      value: 'lb/cuft'
+      value: 'lb/cu-ft'
     },
     {
       label: 'Pound per gallon',
@@ -514,7 +514,7 @@ export default {
     },
     {
       label: 'Ounce per cubic inch',
-      value: 'oz/cuin'
+      value: 'oz/cu-in'
     }
   ],
   flow: [

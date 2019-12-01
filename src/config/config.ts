@@ -34,7 +34,7 @@ export default {
     inputUnitTemperatureConverter: 'C',
     outputUnitTemperatureConverter: 'F',
     inputUnitDensityConverter: 'kg/m3',
-    outputUnitDensityConverter: 'lb/cuft'
+    outputUnitDensityConverter: 'lb/cu-ft'
 
   }
 }
