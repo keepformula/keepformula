@@ -6,6 +6,7 @@
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "git checkout master; vue-cli-service build; git checkout gh-pages; cp -r ./dist/* ./; git add .; git commit -am 'new release'; git push origin gh-pages;",
     "lint": "vue-cli-service lint",
     "cordova-build-android": "vue-cli-service cordova-build-android",
     "cordova-build-browser": "vue-cli-service cordova-build-browser",
