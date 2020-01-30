@@ -2,6 +2,9 @@ const webpack = require('webpack')
 const version = require('./package.json').version
 module.exports = {
   lintOnSave: false,
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/keepformula-webui/'
+    : '/',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       return {
