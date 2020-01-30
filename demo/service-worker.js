@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/keepformula-webui/demo/precache-manifest.6c970c8bc30ab735a6a3f6fbb8215648.js"
+  "/keepformula-webui/demo/precache-manifest.c9563909d4cc9021e379d7d6785646d9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "keepFormula"});
