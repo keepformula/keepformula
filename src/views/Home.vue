@@ -1,37 +1,39 @@
 <template>
   <q-page>
     <div class="q-mx-sm">
-      <div class="row">
+      <div class="row mobile-search-padding">
         <q-search
            @keydown.enter="oneResult"
-           class="q-mb-sm q-mt-md q-mx-auto col-12 col-xl-4 col-lg-6 col-md-9 col-sm-10 search-style"
+           class="q-mb-sm q-mt-md q-mx-auto col-12 col-xl-4 col-lg-6 col-md-10 col-sm-10
+           search-style"
            hide-underline
            autofocus
+           placeholder="Search (e.g., speed)"
            v-model="searchQuery" />
       </div>
     </div>
     <div class="row">
-      <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-9 col-sm-10">
+      <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10">
         <div class="row">
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
-             class="q-pa-sm col-12 col-md-6 col-lg-4 col-xl-4" >
+             class="q-pa-sm col-6 col-md-4 col-lg-4 col-xl-4 main-card" >
              <router-link
              :key="index"
              :to="{ name: item.name }" >
              <q-card
-             class="card-hover calculator-cards w-100 cursor-pointer"
+             class="card-hover text-center calculator-cards w-100 cursor-pointer"
              inline>
                <q-card-media
-             class="q-py-lg flex flex-center">
+             class="q-py-lg q-pa-xs-none flex flex-center card-image">
                  <img :src="`/icon/${item.icon}.svg`" style="width: 90px;" />
                </q-card-media>
-               <q-card-title class="text-center">
+               <q-card-title class="text-justisfy">
                  {{ item.name }}
                </q-card-title>
             <q-card-main>
-              <p class="text-faded flex flex-center q-caption"> {{ item.description }} </p>
+              <p class="text-faded flex flex-center text-center q-caption"> {{ item.description }} </p>
             </q-card-main>
              </q-card>
              </router-link>
@@ -39,7 +41,7 @@
         </div>
       </div>
     </div>
-        </q-page>
+  </q-page>
 </template>
 
 <script>
@@ -216,7 +218,9 @@ export default {
     oneResult () {
       let calci = this.searchResult.length
       if (calci === 1) {
-        this.$router.go(+1)
+        for (item in searchResult.item) {
+          window.location.pathname = window.location.pathname + item.route
+        }
       }
     }
   }

@@ -24,11 +24,13 @@ a.router-link-active {
   color: $primary;
   font-weight:bold;
   line-height: 1.5rem;
+  }
+.textBorder {
+  border: 2px solid black;
 }
 .header-app-name {
   position: relative;
-  bottom: 2px;
-  font-size: 2em;
+  font-size: 2.9em;
 }
 .icon {
   width:50px;
@@ -39,7 +41,7 @@ a.router-link-active {
 .q-layout-header {
   background-color:white;
   border-bottom: 0;
-}
+  }
 .q-layout-drawer{
   border-left: 1px solid #E0E0E0;
 }
@@ -52,19 +54,90 @@ a.router-link-active {
 .drawer-icon{
   color: $primary;
   font-size: 1.5em;
-  position: absolute;
-  right: 5px;
-  top: 6px;
 }
 .border-top {
   border-top: 1px solid #E0E0E0;
 }
-.query{
+.q-loading-bar {
+  background-color: $blue-6 !important;
+}
 @media only screen and (max-width: 768px) {
   padding-top:0;
   border-bottom: 1px solid #E0E0E0;
   }
-}
 .scroll-header {
 border-bottom: 1px solid #E0E0E0 !important;
 }
+@media only screen and (max-width: 560px) {
+  .card-image {
+    padding-top: 0 !important;
+    }
+    .main-card {
+      padding-top: 0px;
+      padding-right: 4px;
+      padding-left: 4px;
+      }
+      .search-style {
+        margin-top: 8px;
+        margin-bottom: 6px;
+        }
+        .header-app-name {
+          position: relative;
+          font-size: 2.35em;
+          }
+          .mobile-scroll-header {
+            border-bottom: 1px solid #E0E0E0 !important;
+            }
+            .icon {
+              width:40px;
+              height:40px;
+              background-color: black;
+              -webkit-mask: url(../assets/logo.svg) no-repeat center;
+              }
+              .mobile-size-padding {
+                margin-top: 0 !important;
+                padding-bottom: 0 !important;
+                }
+                .drawer-icon{
+                  color: $primary;
+                    font-size: 1.55em;
+                      }
+              }
+      @media only screen and (max-width: 365px) {
+        .header-app-name {
+          position: relative;
+          font-size: 2em;
+          }
+          .icon {
+            width:34px;
+            height:34px;
+            background-color: black;
+            -webkit-mask: url(../assets/logo.svg) no-repeat center;
+            }
+            .scroll-header {
+              border-bottom: 1px solid #E0E0E0 !important;
+              }
+              .mobile-size-padding {
+                margin-top: 0 !important;
+                padding-bottom: 0 !important;
+                }
+                .mobile-header-padding {
+                  padding: 0 5px;
+                  }
+                  .search-style{
+                    padding: 8px;
+                    background: white;
+                    border: 1px solid #36454F;
+                    border-radius: 30px;
+                    }
+                    .drawer-icon{
+                      color: $primary;
+                      font-size: 1.35em;
+                      }
+                      .mobile-search-padding {
+                        padding: 0 3px;
+                        }
+                        .mobile-scroll-header {
+                          border-bottom: 1px solid #E0E0E0 !important;
+                          }
+                        }
