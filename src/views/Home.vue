@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="q-mx-sm">
+    <div>
       <div class="row mobile-search-padding">
         <q-search
            @keydown.enter="oneResult"

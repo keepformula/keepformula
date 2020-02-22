@@ -66,7 +66,7 @@ a.router-link-active {
   border-bottom: 1px solid #E0E0E0;
   }
 .scroll-header {
-border-bottom: 1px solid #E0E0E0 !important;
+  border-bottom: 1px solid #E0E0E0 !important;
 }
 @media only screen and (max-width: 560px) {
   .card-image {
@@ -83,14 +83,14 @@ border-bottom: 1px solid #E0E0E0 !important;
         }
         .header-app-name {
           position: relative;
-          font-size: 2.35em;
+          font-size: 2.15em;
           }
           .mobile-scroll-header {
             border-bottom: 1px solid #E0E0E0 !important;
             }
             .icon {
-              width:40px;
-              height:40px;
+              width:36px;
+              height:36px;
               background-color: black;
               -webkit-mask: url(../assets/logo.svg) no-repeat center;
               }
@@ -102,6 +102,9 @@ border-bottom: 1px solid #E0E0E0 !important;
                   color: $primary;
                     font-size: 1.55em;
                       }
+                      .mobile-search-padding {
+                        padding: 0 4px;
+                        }
               }
       @media only screen and (max-width: 365px) {
         .header-app-name {
@@ -132,12 +135,24 @@ border-bottom: 1px solid #E0E0E0 !important;
                     }
                     .drawer-icon{
                       color: $primary;
-                      font-size: 1.35em;
+                      font-size: 1.36em;
                       }
                       .mobile-search-padding {
-                        padding: 0 3px;
+                        padding: 0 4px;
                         }
                         .mobile-scroll-header {
                           border-bottom: 1px solid #E0E0E0 !important;
                           }
                         }
+      @media only screen and (max-width: 309px) {
+        .header-app-name {
+          position: relative;
+          font-size: 1.5em;
+          }
+          .icon {
+            width:25px;
+            height:25px;
+            background-color: black;
+            -webkit-mask: url(../assets/logo.svg) no-repeat center;
+            }
+        }
