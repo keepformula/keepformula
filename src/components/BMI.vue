@@ -10,14 +10,12 @@
           <p class="q-display-1 mobile-size-component-header">
           {{ $t('body_mass_index') }}
           <a
-            class=""
-            href=https://en.wikipedia.org/wiki/Body_mass_index
+            href="https://en.wikipedia.org/wiki/Body_mass_index"
             target="_blank"
             :title="$t('bmi_wiki_icon')">
             <q-icon
               class="text-primary"
-              name="help"
-              />
+              name="help" />
           </a>
           </p>
         </div>

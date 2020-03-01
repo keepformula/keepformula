@@ -1,18 +1,26 @@
 <template>
   <q-page class="border-top">
-    <div class="row q-pa-md">
-      <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-9 col-lg-9 col-md-10">
-      <h4 class="q-mt-xs">{{ $t('data_storage_converter')}}
-        <a
-          href=https://en.wikipedia.org/wiki/Byte#Unit_symbol
-          target="_blank"
-          :title="$t('data_storage_wiki_icon')">
-          <q-icon
-          class="text-warning"
-          name="help"
-          />
-        </a>
-      </h4>
+    <div class="row q-pt-md mobile-header-padding">
+      <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
+        <div class="row">
+          <div class="mobile-size-component-header q-mb-md q-mr-xs">
+            <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
+          </div>
+          <div class="">
+            <p class="q-display-1 mobile-size-component-header">
+            {{ $t('data_storage_converter') }}
+            <a
+              href="https://en.wikipedia.org/wiki/Byte#Unit_symbol"
+              target="_blank"
+              :title="$t('data_storage_wiki_icon')">
+              <q-icon
+                class="text-primary"
+                name="help"
+                />
+            </a>
+            </p>
+          </div>
+        </div>
       <div class="row">
         <div class="col-12 col-md-12 col-lg-6">
           <q-card>
@@ -22,7 +30,7 @@
                   <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
                     <q-input autofocus ref="input" type="text" v-model="value" :float-label="$t('value_label')"/>
                   </div>
-                    <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
+                      <div class="col-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 q-pr-md">
                       <q-select
                          v-model="inputUnit"
                          :float-label="$t('input_unit')"
@@ -31,9 +39,9 @@
                          radio
                          />
                     </div>
-                  <div class="col-8 col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
+                    <div class="col-8 col-md-8 col-sm-8 q-mb-md" >
                     </div>
-                    <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
+                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                       <q-select
                          v-model="outputUnit"
                          :float-label="$t('output_unit')"
@@ -79,6 +87,7 @@ export default {
     return {
       unit: Unit,
       value: null,
+      icon: 'dataStorageConverter',
       inputUnit: this.$config.defaultUnits.inputUnitDataStorageConverter,
       outputUnit: this.$config.defaultUnits.outputUnitDataStorageConverter
     }
