@@ -1,8 +1,8 @@
 <template>
   <q-layout view="lHr Lpr lFf">
     <q-layout-header
-      class="row mobile-scroll-header" :class="{ 'scroll-header': !showNavbar }"
-      >
+      class="row mobile-scroll-header"
+      :class="{ 'scroll-header': !showNavbar }">
       <div class="relative-position q-mx-auto q-mt-md col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10
         mobile-size-padding" >
         <q-toolbar
@@ -12,9 +12,7 @@
           >
           <div class="">
             <router-link  to="/">
-              <img
-                class="icon"
-                >
+              <img class="icon">
             </router-link>
           </div>
           <div class="q-pa-xs">
@@ -26,7 +24,7 @@
             </router-link>
           </div>
             <q-btn
-              class="drawer-icon q-ml-auto absolute-right-center"
+              class="drawer-icon q-ml-auto"
               flat
               dense
               round

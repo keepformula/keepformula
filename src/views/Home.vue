@@ -4,7 +4,7 @@
       <div class="row mobile-search-padding">
         <q-search
            @keydown.enter="oneResult"
-           class="q-mb-sm q-mt-md q-mx-auto col-12 col-xl-4 col-lg-6 col-md-10 col-sm-10
+           class="q-mt-md q-mx-auto col-12 col-xl-4 col-lg-6 col-md-10 col-sm-10
            search-style"
            hide-underline
            autofocus
@@ -14,7 +14,7 @@
     </div>
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10">
-        <div class="row">
+        <div class="row q-pa-xs">
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"

@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-                              </q-page>
+  </q-page>
 </template>
 
 <script>
