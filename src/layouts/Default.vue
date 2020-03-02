@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHr Lpr lFf">
     <q-layout-header
-      class="row mobile-scroll-header"
+      class="row mobile-scroll-header q-px-sm"
       :class="{ 'scroll-header': !showNavbar }">
       <div class="relative-position q-mx-auto q-mt-md col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10
         mobile-size-padding" >
         <q-toolbar
-          color="primary mobile-header-padding"
+          color="primary q-pa-none"
           :glossy="$q.theme === 'mat'"
           :inverted="$q.theme === 'ios'"
           >
