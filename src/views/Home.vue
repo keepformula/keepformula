@@ -13,12 +13,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10">
-        <div class="row q-pa-xs">
+      <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
+        <div class="row ">
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
-             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
+             class="q-pa-xs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
              <router-link
              :key="index"
              :to="{ name: item.name }" >
