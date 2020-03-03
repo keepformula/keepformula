@@ -1,12 +1,13 @@
 <template>
-  <q-layout view="lHr Lpr lFf">
+  <q-layout view="lHr LpR lFf">
     <q-layout-header
       class="row mobile-scroll-header q-px-sm"
       :class="{ 'scroll-header': !showNavbar }">
       <div class="relative-position q-mx-auto q-mt-md col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10
         mobile-size-padding" >
         <q-toolbar
-          color="primary q-pa-none"
+          color="primary"
+          class="q-pa-none q-py-xs"
           :glossy="$q.theme === 'mat'"
           :inverted="$q.theme === 'ios'"
           >
@@ -24,7 +25,8 @@
             </router-link>
           </div>
             <q-btn
-              class="drawer-icon q-ml-auto"
+              class="drawer-icon"
+              size="xl"
               flat
               dense
               round
@@ -49,8 +51,8 @@
         link
         inset-delimiter >
         <q-list no-border link inset-delimiter>
-          <q-list-header color="primary">Menu</q-list-header>
-          <q-item-separator/>
+          <q-list-header class="text-weight-medium" color="primary">Menu</q-list-header>
+          <q-item-separator class="q-mt-none"/>
           <q-item to="/" exact>
             <q-item-side icon="home" color="primary"/>
               <q-item-main label="Home" />
@@ -61,6 +63,11 @@
         </q-item>
         </q-list>
       </q-list>
+      <q-layout-footer class="text-weight-medium fixed-bottom q-py-sm" color="primary">
+        <span class="text-love">
+          Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
+        </span>
+      </q-layout-footer>
     </q-layout-drawer>
     <q-page-container>
       <router-view />

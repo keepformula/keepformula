@@ -4,7 +4,7 @@
       <div class="row mobile-search-padding">
         <q-search
            @keydown.enter="oneResult"
-           class="q-mt-sm q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
+           class="q-my-xs q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
            search-style"
            hide-underline
            autofocus
@@ -18,7 +18,7 @@
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
-             class="q-pa-xs col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
+             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
              <router-link
              :key="index"
              :to="{ name: item.name }" >
@@ -26,7 +26,7 @@
              class="card-hover text-center calculator-cards w-100 cursor-pointer"
              inline>
                <q-card-media
-             class="q-py-lg q-pa-xs-none flex flex-center card-image">
+             class="q-py-lg flex flex-center card-image">
                  <img :src="`/icon/${item.icon}.svg`" style="width: 90px;" />
                </q-card-media>
                <q-card-title class="text-justisfy">
