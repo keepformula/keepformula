@@ -7,7 +7,7 @@
            class="q-my-xs q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
            search-style"
            hide-underline
-           autofocus
+           ref='focusMe'
            placeholder="Search (e.g., speed)"
            v-model="searchQuery" />
       </div>
@@ -222,6 +222,13 @@ export default {
           window.location.pathname = window.location.pathname + item.route
         }
       }
+    }
+  },
+  mounted () {
+    if (window.screen.width > 768) {
+      setTimeout(() => {
+        this.$refs.focusMe.focus()
+      }, 500)
     }
   }
 }

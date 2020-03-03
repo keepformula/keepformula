@@ -27,7 +27,7 @@
             <q-card-separator />
               <q-card-main>
                   <div class="col-12 q-mt-md">
-                    <q-input autofocus ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
+                    <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
                   <q-list-header class="q-mt-md">Result</q-list-header>
@@ -89,6 +89,13 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    }
+  },
+  mounted () {
+    if (window.screen.width > 768) {
+      setTimeout(() => {
+        this.$refs.input.focus()
+      }, 500)
     }
   }
 }

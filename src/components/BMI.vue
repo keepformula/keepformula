@@ -27,7 +27,7 @@
               <q-card-main>
                   <div class="row q-mt-md">
                   <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
-                    <q-input autofocus ref="input" type="text" v-model="height" :float-label="$t('height_label')"/>
+                    <q-input ref="input" type="text" v-model="height" :float-label="$t('height_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xs-4 col-sm-4 col-xs-6 q-pr-md">
                       <q-select
@@ -259,6 +259,13 @@ export default {
     },
     back () {
       this.$router.go(-1)
+    }
+  },
+  mounted () {
+    if (window.screen.width > 768) {
+      setTimeout(() => {
+        this.$refs.input.focus()
+      }, 500)
     }
   }
 }
