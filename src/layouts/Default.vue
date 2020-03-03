@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHr lpR lff">
+  <q-layout view="hHr lpR ffr">
     <q-layout-header
       class="row mobile-scroll-header border-bottom border-danger q-px-sm"
       :class="{ 'scroll-header': !showNavbar }">
@@ -63,11 +63,12 @@
         </q-item>
         </q-list>
       </q-list>
-      <q-layout-footer class="text-weight-medium q-py-md" color="primary">
+      <div class="text-weight-medium fixed-bottom q-pb-md" color="primary">
+          <q-item-separator class="q-mb-md" />
         <span class="text-love">
           Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
         </span>
-      </q-layout-footer>
+      </div>
     </q-layout-drawer>
     <q-page-container>
       <router-view />
