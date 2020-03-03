@@ -1,7 +1,7 @@
 <template>
-  <q-layout view="lHr LpR lFf">
+  <q-layout view="hHr lpR lff">
     <q-layout-header
-      class="row mobile-scroll-header q-px-sm"
+      class="row mobile-scroll-header border-bottom border-danger q-px-sm"
       :class="{ 'scroll-header': !showNavbar }">
       <div class="relative-position q-mx-auto q-mt-md col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10
         mobile-size-padding" >
@@ -63,7 +63,7 @@
         </q-item>
         </q-list>
       </q-list>
-      <q-layout-footer class="text-weight-medium fixed-bottom q-py-sm" color="primary">
+      <q-layout-footer class="text-weight-medium q-py-md" color="primary">
         <span class="text-love">
           Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
         </span>
