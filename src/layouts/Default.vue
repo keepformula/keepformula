@@ -51,7 +51,7 @@
         link
         inset-delimiter >
         <q-list no-border link inset-delimiter>
-          <q-list-header class="text-weight-medium" color="primary">Menu</q-list-header>
+          <q-list-header class="text-weight-light" color="primary">Menu</q-list-header>
           <q-item-separator class="q-mt-none"/>
           <q-item to="/" exact>
             <q-item-side icon="home" color="primary"/>
@@ -65,7 +65,7 @@
       </q-list>
       <div class="text-weight-medium fixed-bottom q-pb-md" color="primary">
           <q-item-separator class="q-mb-md" />
-        <span class="text-love">
+        <span class="text-love text-weight-light">
           Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
         </span>
       </div>
