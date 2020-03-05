@@ -71,6 +71,9 @@
                       </q-card-main>
                     </q-card>
           </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Time">Time</a></h4><p>Time is the indefinite continued progress of existence and events that occur in an apparently irreversible succession from the past, through the present, into the future. Time is a component quantity of various measurements used to sequence events, to compare the duration of events or the intervals between them, and to quantify rates of change of quantities in material reality or in the conscious experience.</p></blockquote>
+        </div>
         </div>
       </div>
     </div>

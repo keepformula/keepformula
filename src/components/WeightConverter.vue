@@ -71,6 +71,9 @@
                       </q-card-main>
                     </q-card>
           </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Weight">Weight</a></h4><p>In science and engineering, the weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place. Some standard textbooks define weight as a vector quantity, the gravitational force acting on the object.</p></blockquote>
+        </div>
         </div>
       </div>
     </div>

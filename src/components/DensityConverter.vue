@@ -71,6 +71,9 @@
               </q-card-main>
             </q-card>
           </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.m.wikipedia.org/wiki/Density">Density</a></h4><p>The density (more precisely, the volumetric mass density; also known as specific mass), of a substance is its mass per unit volume. The symbol most often used for density is ρ (the lower case Greek letter rho), although the Latin letter D can also be used.</p></blockquote>
+        </div>
         </div>
       </div>
     </div>

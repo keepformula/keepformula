@@ -49,6 +49,9 @@
               </q-card-main>
             </q-card>
         </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <blockquote class="embedly-card"><h4><a href="https://en.wikipedia.org/wiki/Golden_ratio">Golden ratio</a></h4><p>In mathematics, two quantities are in the golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities. The figure on the right illustrates the geometric relationship.</p></blockquote>
+        </div>
       </div>
     </div>
     </div>

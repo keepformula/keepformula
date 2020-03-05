@@ -71,6 +71,9 @@
               </q-card-main>
             </q-card>
           </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a v-bind:href="this.wiki">Angle</a></h4><p>In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.</p></blockquote>
+        </div>
         </div>
       </div>
     </div>
@@ -89,6 +92,7 @@ export default {
       unit: Unit,
       value: null,
       icon: 'areaConverter',
+      wiki: 'https://en.wikipedia.org/wiki/Area',
       inputUnit: this.$config.defaultUnits.inputUnitAreaConverter,
       outputUnit: this.$config.defaultUnits.outputUnitAreaConverter
     }
