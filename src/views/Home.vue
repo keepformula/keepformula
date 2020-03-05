@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div>
-      <div class="row mobile-search-padding">
+      <div class="row mobile-search-margin">
         <q-search
            @keydown.enter="oneResult"
            class="q-my-xs q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
