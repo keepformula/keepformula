@@ -133,5 +133,10 @@ export default new Router({
         }
       ]
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (window.location.pathname !== 'home') {
+      return { x: 0, y: 0 }
+    }
+  }
 })
