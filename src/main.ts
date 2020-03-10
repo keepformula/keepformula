@@ -14,11 +14,13 @@ import 'quasar-extras/ionicons'
 import 'quasar-extras/mdi'
 import Quasar from 'quasar'
 import Config from './config/config'
+import Clipboard from 'v-clipboard'
 Vue.prototype.$config = Config
 Vue.use(Quasar, {
   config: {}
 })
 
+Vue.use(Clipboard)
 Vue.config.productionTip = false
 
 new Vue({
