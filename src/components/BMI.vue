@@ -68,31 +68,51 @@
                     <q-list-header class="q-ma-sm q-pl-none">Result</q-list-header>
                   <div class="parent animate-scale q-pa-sm" key="text">
                     <div class="div1"> BMI : </div>
-                      <div class="div2"> {{ bmi}} </div>
+                    <div class="div2 relative-position"> {{ bmi}} 
+                      <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
+                             color="primary" icon="file_copy" v-clipboard="() => this.bmi">
+                      </q-btn>
+                    </div>
                       <div class="div3"> Status : </div>
                       <div class="div4"> {{ bmiMessageCalculate }} </div>
                       <div class="div5"> Normal weight : </div>
                       <div class="div6"> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}</div>
                       <div class="div7"> Robinson Formula : </div>
-                      <div class="div8"> {{ robinsonFormula }} </div>
+                      <div class="div8 relative-position"> {{ robinsonFormula }}
+                        <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
+                               color="primary" icon="file_copy" v-clipboard="() =>
+                          this.robinsonFormula">
+                        </q-btn>
+                      </div>
                       <div class="div9"> Miller Formula : </div>
-                      <div class="div10"> {{ millerFormula }} </div>
+                      <div class="div10 relative-position"> {{ millerFormula }}
+                        <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
+                               color="primary" icon="file_copy" v-clipboard="() => this.millerFormula">
+                        </q-btn>
+                      </div>
                       <div class="div11"> Hamwi Formula : </div>
-                      <div class="div12"> {{ hamwiFormula }} </div>
+                      <div class="div12 relative-position"> {{ hamwiFormula }}
+                        <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
+                               color="primary" icon="file_copy" v-clipboard="() => this.hamwiFormula">
+                        </q-btn>
+                      </div>
                       <div class="div13"> Devine Formula : </div>
-                      <div class="div14"> {{ devineFormula }} </div>
+                      <div class="div14 relative-position"> {{ devineFormula }}  
+                        <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
+                               color="primary" icon="file_copy" v-clipboard="() => this.devineFormula">
+                        </q-btn> </div>
                   </div>
                     </div>
                   </transition-group>
                   <!--<div class="animate-scale" v-if='this.height && this.weight'>-->
                   <!--<q-item tag="label">-->
-                      <!--<q-item-main>-->
-                        <!--<q-item-tile class="q-title" label>BMI is: {{ bmi }}</q-item-tile>-->
-                      <!--</q-item-main>-->
-                    <!--</q-item>-->
-                    <!--<q-item tag="label">-->
-                        <!--<q-item-main>-->
-                          <!--<q-item-tile class="q-title" label>{{ bmiMessageCalculate }}</q-item-tile>-->
+                  <!--<q-item-main>-->
+                  <!--<q-item-tile class="q-title" label>BMI is: {{ bmi }}</q-item-tile>-->
+                  <!--</q-item-main>-->
+                  <!--</q-item>-->
+                  <!--<q-item tag="label">-->
+                  <!--<q-item-main>-->
+                  <!--<q-item-tile class="q-title" label>{{ bmiMessageCalculate }}</q-item-tile>-->
                         <!--</q-item-main>-->
                       <!--</q-item>-->
                     <!--<q-item tag="label">-->
@@ -136,14 +156,14 @@
                         <!--</q-item-main>-->
                         <!--</q-item>-->
                   <!--</div>-->
-                  <div class="q-mt-md">
-                    <q-btn @click="reset" :label="$t('reset')"/>
-                      <q-btn @click="back" :label="$t('back')"/>
-                  </div>
+                  <div class="q-mt-xl">
+                      <q-btn @click="reset" class="" flat outline color="primary" :label="$t('reset')"/>
+                      <q-btn @click="back" class="" color="primary" outline :label="$t('back')"/>
+                    </div>
               </q-card-main>
            </q-card>
         </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>Body mass index ( BMI) is a value derived from the mass ( weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m 2, resulting from mass in kilograms and height in metres.</p></blockquote>
         </div>
         </div>
@@ -298,7 +318,7 @@ export default {
   },
   toggleVisibility () {
     this.visible = !this.visible
-  }
+  },
 }
 </script>
 
@@ -313,58 +333,58 @@ grid-template-rows: repeat(7, 1fr);
 grid-row-gap: 13px;
 }
 .div1 { grid-area: 1 / 1 / 2 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div2 { grid-area: 1 / 2 / 2 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div3 { grid-area: 2 / 1 / 3 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div4 { grid-area: 2 / 2 / 3 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div5 { grid-area: 3 / 1 / 4 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div6 { grid-area: 3 / 2 / 4 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div7 { grid-area: 4 / 1 / 5 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div8 { grid-area: 4 / 2 / 5 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div9 { grid-area: 5 / 1 / 6 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div10 { grid-area: 5 / 2 / 6 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div11 { grid-area: 6 / 1 / 7 / 2;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div12 { grid-area: 6 / 2 / 7 / 3;
-border-bottom: 1px solid black;
+border-bottom: 1px solid #E0E0E0;
 padding: 5px;
 }
 .div13 { grid-area: 7 / 1 / 8 / 2;
 padding: 5px;
 }
 .div14 { grid-area: 7 / 2 / 8 / 3;
-padding: 15px;
+padding: 5px;
 }
 
 .border {
