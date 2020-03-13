@@ -15,6 +15,11 @@
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
         <div class="row ">
+             <span v-model="noResult" 
+                   class="q-display-1 text-center full-width q-mt-md text-weight-light"
+                   v-if="handleSearchResult"> 
+               No Result!
+             </span>
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
@@ -196,7 +201,8 @@ export default {
         }
       ],
       searchQuery: null,
-      select: null
+      select: null,
+      noResult: false
     }
   },
   computed: {
@@ -208,20 +214,26 @@ export default {
             out.push(item)
           }
         })
-      } else {
+      }else {
         out = this.calculators
-      }
+      } 
       return out
+    },
+    handleSearchResult () {
+      if (this.searchResult.length == 0) {
+        return this.noResult == false
+      }
     }
   },
   methods: {
     oneResult () {
       let calci = this.searchResult.length
       if (calci === 1) {
-        for (item in searchResult.item) {
-          window.location.pathname = window.location.pathname + item.route
+          this.searchResult.forEach((item) => {
+          //window.location.pathname = window.location.pathname + item.route
+          this.$router.push(item.route)
         }
-      }
+      )}
     }
   },
   mounted () {
