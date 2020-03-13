@@ -16,8 +16,8 @@
       <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
         <div class="row ">
              <span v-model="noResult" 
-                   class="q-display-1 text-center full-width q-mt-md text-weight-light"
-                   v-if="handleSearchResult"> 
+                   class="q-display-1 text-center full-width q-mt-lg text-weight-light"
+                   v-if="handleSearchNoResult"> 
                No Result!
              </span>
           <div
@@ -32,7 +32,7 @@
              inline>
                <q-card-media
              class="q-py-lg flex flex-center card-image">
-                 <img :src="`/icon/${item.icon}.svg`" style="width: 90px;" />
+                 <img :src="`/icon/${item.icon}.svg`" style="width: 100px;" />
                </q-card-media>
                <q-card-title class="text-justisfy">
                  {{ item.name }}
@@ -219,7 +219,7 @@ export default {
       } 
       return out
     },
-    handleSearchResult () {
+    handleSearchNoResult () {
       if (this.searchResult.length == 0) {
         return this.noResult == false
       }
