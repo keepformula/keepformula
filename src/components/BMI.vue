@@ -163,7 +163,7 @@
               </q-card-main>
            </q-card>
         </div>
-        <div class="col-12 col-md-12 col-lg-5">
+        <div class="col-12 col-md-12 col-lg-5 on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>Body mass index ( BMI) is a value derived from the mass ( weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m 2, resulting from mass in kilograms and height in metres.</p></blockquote>
         </div>
         </div>
