@@ -156,7 +156,7 @@
                         <!--</q-item-main>-->
                         <!--</q-item>-->
                   <!--</div>-->
-                  <div class="q-py-lg q-mb-sm q-mr-sm relative-position">
+                  <div class="q-py-lg q-mb-sm relative-position">
                   <div class="reset-back-btn">
                     <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
                       <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
