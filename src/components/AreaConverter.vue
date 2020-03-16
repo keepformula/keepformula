@@ -39,7 +39,11 @@
                            radio
                            />
                       </div>
-                    <div class="col-8 col-md-8 col-sm-8 q-mb-md" >
+                            <div class="col-12 col-md-12 relative-position q-pa-xs">
+                              <q-btn @click="btnClick" icon="cached" dense round flat
+                                color="primary" class="absolute-right" />
+                            </div>
+                      <div class="col-8 col-md-8 col-sm-8 col-lg-8 col-xl-8 col-xs-12 q-mb-md q-pr-md" >
                       </div>
                       <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                           <q-select
@@ -49,9 +53,9 @@
                              :separator="true"
                              radio
                              />
-                            <div class="q-mt-md">
-                              <q-btn @click="btnClick" icon="cached" round color="primary" class="float-right" />
-                            </div>
+                            <!--<div class="q-mt-md">-->
+                              <!--<q-btn @click="btnClick" icon="cached" round outline color="primary" class="float-right" />-->
+                            <!--</div>-->
                         </div>
                   </div>
                   <div v-if='this.value'>
