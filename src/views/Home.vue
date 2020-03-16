@@ -14,7 +14,7 @@
     </div>
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
-        <!-- eslint-disable-next-line vue/valid-v-model -->`
+        <!-- eslint-disable-next-line vue/valid-v-model -->
         <div class="row" v-model="noResult">
              <p  class="q-display-1 text-center full-width q-mt-lg text-weight-light"
                  v-if="handleSearchNoResult">
