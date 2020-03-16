@@ -68,7 +68,7 @@
                     <q-list-header class="q-ma-sm q-pl-none">Result</q-list-header>
                   <div class="parent animate-scale q-pa-sm" key="text">
                     <div class="div1"> BMI : </div>
-                    <div class="div2 relative-position"> {{ bmi}} 
+                    <div class="div2 relative-position"> {{ bmi}}
                       <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
                              color="primary" icon="file_copy" v-clipboard="() => this.bmi">
                       </q-btn>
@@ -97,7 +97,7 @@
                         </q-btn>
                       </div>
                       <div class="div13"> Devine Formula : </div>
-                      <div class="div14 relative-position"> {{ devineFormula }}  
+                      <div class="div14 relative-position"> {{ devineFormula }}
                         <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
                                color="primary" icon="file_copy" v-clipboard="() => this.devineFormula">
                         </q-btn> </div>
@@ -156,11 +156,9 @@
                         <!--</q-item-main>-->
                         <!--</q-item>-->
                   <!--</div>-->
-                  <div class="q-py-lg q-mb-sm relative-position">
-                  <div class="reset-back-btn">
+                  <div class="q-pt-xl relative-position">
                     <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
                       <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
-                  </div>
                   </div>
               </q-card-main>
            </q-card>
@@ -320,7 +318,7 @@ export default {
   },
   toggleVisibility () {
     this.visible = !this.visible
-  },
+  }
 }
 </script>
 

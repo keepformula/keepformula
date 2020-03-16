@@ -64,9 +64,9 @@
                       </q-item-main>
                     </q-item>
                   </div>
-                  <div class="q-mt-lg">
-                    <q-btn @click="reset" :label="$t('reset')"/>
-                    <q-btn @click="back" :label="$t('back')"/>
+                  <div class="q-pt-lg">
+                    <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
+                      <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
                   </div>
               </q-card-main>
             </q-card>
