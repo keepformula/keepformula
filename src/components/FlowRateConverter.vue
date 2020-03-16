@@ -71,7 +71,7 @@
              </q-card-main>
             </q-card>
           </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Volumetric_flow_rate">Volumetric flow rate</a></h4><p>In physics and engineering, in particular fluid dynamics and hydrometry, the volumetric flow rate (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes per unit time; usually represented by the symbol Q (sometimes V̇). The SI unit is cubic metres per second (m 3/s).</p></blockquote>
         </div>
         </div>

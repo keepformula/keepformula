@@ -42,14 +42,14 @@
                         </q-item-main>
                       </q-item>
                   </div>
-                  <div class="q-pt-lg">
+                  <div class="q-pt-xl">
                     <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
                       <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
                   </div>
               </q-card-main>
             </q-card>
         </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card"><h4><a href="https://en.wikipedia.org/wiki/Golden_ratio">Golden ratio</a></h4><p>In mathematics, two quantities are in the golden ratio if their ratio is the same as the ratio of their sum to the larger of the two quantities. The figure on the right illustrates the geometric relationship.</p></blockquote>
         </div>
       </div>

@@ -71,7 +71,7 @@
                       </q-card-main>
                     </q-card>
           </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Unit_of_volume">Unit of volume</a></h4><p>A unit of volume is a unit of measurement for measuring volume or capacity, the extent of an object or space in three dimensions. Units of capacity may be used to specify the volume of fluids or bulk goods, for example water, rice, sugar, grain or flour.</p></blockquote>
         </div>
         </div>

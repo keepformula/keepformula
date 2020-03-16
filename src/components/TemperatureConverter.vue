@@ -71,7 +71,7 @@
                </q-card-main>
             </q-card>
           </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Temperature">Temperature</a></h4><p>Temperature Two thermometers showing temperature in Celsius and Fahrenheit. T SI unit K °C, °F, °R Intensive? yes Derivations fromother quantities , Dimension Θ Temperature is a measure of the average kinetic energy of the atoms or molecules in the system.</p></blockquote>
         </div>
         </div>

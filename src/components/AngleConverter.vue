@@ -71,7 +71,7 @@
               </q-card-main>
             </q-card>
           </div>
-        <div class="col-12 col-md-12 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card"><h4><a v-bind:href= "wiki" >Angle</a></h4><p>In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.</p></blockquote>
         </div>
         </div>
