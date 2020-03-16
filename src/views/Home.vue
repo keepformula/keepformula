@@ -14,12 +14,12 @@
     </div>
     <div class="row">
       <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
-        <div class="row ">
-             <span v-model="noResult" 
-                   class="q-display-1 text-center full-width q-mt-lg text-weight-light"
-                   v-if="handleSearchNoResult"> 
+        <!-- eslint-disable-next-line vue/valid-v-model -->`
+        <div class="row" v-model="noResult">
+             <p  class="q-display-1 text-center full-width q-mt-lg text-weight-light"
+                 v-if="handleSearchNoResult">
                No Result!
-             </span>
+             </p>
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
@@ -214,33 +214,35 @@ export default {
             out.push(item)
           }
         })
-      }else {
+      } else {
         out = this.calculators
-      } 
+      }
       return out
     },
     handleSearchNoResult () {
-      if (this.searchResult.length == 0) {
-        return this.noResult == false
+      if (this.searchResult.length === 0) {
+        return this.noResult === false
       }
+      return this.noResult
     }
   },
   methods: {
     oneResult () {
       let calci = this.searchResult.length
       if (calci === 1) {
-          this.searchResult.forEach((item) => {
-          //window.location.pathname = window.location.pathname + item.route
+        this.searchResult.forEach((item) => {
+          // window.location.pathname = window.location.pathname + item.route
           this.$router.push(item.route)
         }
-      )}
+        )
+      }
     }
   },
   mounted () {
     if (window.screen.width > 768) {
       setTimeout(() => {
         this.$refs.focusMe.focus()
-      }, 500)
+      }, 0)
     }
   }
 }
