@@ -4,7 +4,7 @@
       <div class="row mobile-search-margin">
         <q-search
            @keydown.enter="oneResult"
-           class="q-my-xs q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
+           class="q-my-lg q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
            search-style"
            hide-underline
            ref='focusMe'
