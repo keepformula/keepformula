@@ -9,15 +9,6 @@
           <div class="">
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('base_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Positional_notation#Base_conversion"
-              target="_blank"
-              :title="$t('base_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

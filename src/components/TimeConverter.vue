@@ -9,15 +9,6 @@
           <div class="">
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('time_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Time"
-              target="_blank"
-              :title="$t('time_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

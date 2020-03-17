@@ -9,15 +9,6 @@
           <div class="">
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('temperature_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Temperature"
-              target="_blank"
-              :title="$t('temperature_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

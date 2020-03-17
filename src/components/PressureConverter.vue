@@ -9,15 +9,6 @@
           <div class="">
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('pressure_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Pressure"
-              target="_blank"
-              :title="$t('pressure_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

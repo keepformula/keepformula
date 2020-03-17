@@ -9,15 +9,6 @@
           <div>
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('speed_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Speed"
-              target="_blank"
-              :title="$t('speed_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

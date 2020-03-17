@@ -9,15 +9,6 @@
           <div class="">
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('data_storage_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Byte#Unit_symbol"
-              target="_blank"
-              :title="$t('data_storage_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>

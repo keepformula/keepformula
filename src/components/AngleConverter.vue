@@ -9,15 +9,6 @@
           <div>
             <p class="q-display-1 mobile-size-component-header">
             {{ $t('angle_converter') }}
-            <a
-              href="https://en.wikipedia.org/wiki/Angle"
-              target="_blank"
-              :title="$t('angle_converter_wiki_icon')">
-              <q-icon
-                class="text-primary"
-                name="help"
-                />
-            </a>
             </p>
           </div>
         </div>
