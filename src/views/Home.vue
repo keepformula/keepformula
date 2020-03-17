@@ -8,7 +8,7 @@
            search-style"
            hide-underline
            ref='focusMe'
-           placeholder="Search (e.g., speed)"
+           placeholder="Search (e.g., Speed, Volume , Time, Frequency)"
            v-model="searchQuery" />
       </div>
     </div>
