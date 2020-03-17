@@ -156,12 +156,12 @@
                         <!--</q-item-main>-->
                         <!--</q-item>-->
                   <!--</div>-->
-                  <div class="q-pt-xl relative-position">
-                    <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
-                      <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
-                  </div>
               </q-card-main>
            </q-card>
+            <div class="q-mt-sm">
+              <q-btn @click="back" icon="arrow_back_ios" class="back-reset-btn-style" color="secondary" outline :label="$t('back')"/>
+                <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
+            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>Body mass index ( BMI) is a value derived from the mass ( weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m 2, resulting from mass in kilograms and height in metres.</p></blockquote>

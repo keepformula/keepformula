@@ -45,7 +45,8 @@
                             </div>
                       <div class="col-8 col-md-8 col-sm-8 col-lg-8 col-xl-8 col-xs-12 q-mb-md q-pr-md" >
                       </div>
-                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
+                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md
+                        q-mb-xl">
                       <q-select
                          v-model="outputUnit"
                          :float-label="$t('output_unit')"
@@ -68,12 +69,12 @@
                             </q-item-main>
                           </q-item>
                         </div>
-                  <div class="q-pt-lg">
-                    <q-btn @click="reset" class="q-mr-xs back-reset-btn-style" outline color="primary" :label="$t('reset')"/>
-                      <q-btn @click="back" class="back-reset-btn-style" color="primary" outline :label="$t('back')"/>
-                  </div>
               </q-card-main>
            </q-card>
+            <div class="q-mt-sm">
+              <q-btn @click="back" icon="arrow_back_ios" class="back-reset-btn-style" color="secondary" outline :label="$t('back')"/>
+                <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
+            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Byte#Unit_symbol">Byte</a></h4><p>The byte is a unit of digital information that most commonly consists of eight bits. Historically, the byte was the number of bits used to encode a single character of text in a computer and for this reason it is the smallest addressable unit of memory in many computer architectures.</p></blockquote>
