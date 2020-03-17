@@ -73,7 +73,7 @@
                 <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
             </div>
           </div>
-        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Pressure">Pressure</a></h4><p>Pressure (symbol: p or P) is the force applied perpendicular to the surface of an object per unit area over which that force is distributed. Gauge pressure (also spelled gage pressure) is the pressure relative to the ambient pressure. Various units are used to express pressure.</p></blockquote>
         </div>
         </div>

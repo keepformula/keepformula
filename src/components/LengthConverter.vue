@@ -73,7 +73,7 @@
                 <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
             </div>
           </div>
-        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Unit_of_length">Unit of length</a></h4><p>A unit of length refers to any arbitrarily chosen and accepted reference standard for measurement of length. The most common units in modern use are U.S. customary units in the United States and metric units elsewhere. British Imperial units are still used for some purposes in the United Kingdom and some other countries.</p></blockquote>
         </div>
         </div>

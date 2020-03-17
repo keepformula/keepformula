@@ -76,7 +76,7 @@
                 <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
             </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Byte#Unit_symbol">Byte</a></h4><p>The byte is a unit of digital information that most commonly consists of eight bits. Historically, the byte was the number of bits used to encode a single character of text in a computer and for this reason it is the smallest addressable unit of memory in many computer architectures.</p></blockquote>
         </div>
       </div>

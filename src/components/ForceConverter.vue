@@ -73,7 +73,7 @@
                 <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
             </div>
           </div>
-        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/force">Force</a></h4><p>In physics, a force is any interaction that, when unopposed, will change the motion of an object. A force can cause an object with mass to change its velocity (which includes to begin moving from a state of rest), i.e., to accelerate. Force can also be described intuitively as a push or a pull.</p></blockquote>
         </div>
         </div>

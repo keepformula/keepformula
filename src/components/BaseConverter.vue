@@ -72,7 +72,7 @@
                 <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
             </div>
           </div>
-        <div class="col-12 col-md-12 col-lg-5 mobile-size-wiki-margin on-right">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Radix">Radix</a></h4><p>In digital numeral systems, the radix or base is the number of unique digits, including the digit zero, used to represent numbers in a positional numeral system. For example, for the decimal/denary system (the most common system in use today) the radix (base number) is ten, because it uses the ten digits from 0 through 9.</p></blockquote>
         </div>
         </div>
