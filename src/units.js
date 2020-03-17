@@ -23,6 +23,10 @@ export default {
       value: 'm'
     },
     {
+      label: 'Kilometre',
+      value: 'km'
+    },
+    {
       label: 'Foot',
       value: 'ft'
     },
