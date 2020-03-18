@@ -3,6 +3,7 @@
     <div class="row q-pt-md mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
         <div class="row">
+          <div class="row col-6 col-xs-12 col-lg-12 relative-position">
         <div class="mobile-size-component-header q-mb-md q-mr-xs">
           <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
         </div>
@@ -11,6 +12,9 @@
           {{ $t('body_mass_index') }}
           </p>
         </div>
+          <q-btn @click="back" icon="arrow_back_ios" class="q-mr-sm back-reset-btn-style absolute-right"
+            color="secondary" outline :label="$t('back')"/>
+          </div>
         </div>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-6">
@@ -47,7 +51,7 @@
                 </div>
                 <q-btn-toggle
                        v-model="gender"
-                       class="q-mt-md"
+                       class="q-mt-md q-mb-md"
                        text-color="primary"
                        :options="unit.gender"
                        />
@@ -56,17 +60,17 @@
                     enter-active-class="animated fadeIn"
                     v-if="this.height && this.weight"
                     >
-                    <div class="border q-mt-md" key="head">
+                    <div class="q-mt-md" key="head">
                     <q-list-header class="q-ma-sm q-pl-none">Result</q-list-header>
                   <div class="parent animate-scale q-pa-sm" key="text">
-                    <div class="div1"> BMI : </div>
-                    <div class="div2 relative-position"> {{ bmi}}
+                      <div class="div1"> Status : </div>
+                      <div class="div2"> {{ bmiMessageCalculate }} </div>
+                    <div class="div3"> BMI : </div>
+                    <div class="div4 relative-position"> {{ bmi}}
                       <q-btn class="absolute-top-right" size="md" dense flat outline float-placeholder="Copy"
                              color="primary" icon="file_copy" v-clipboard="() => this.bmi">
                       </q-btn>
                     </div>
-                      <div class="div3"> Status : </div>
-                      <div class="div4"> {{ bmiMessageCalculate }} </div>
                       <div class="div5"> Normal weight : </div>
                       <div class="div6"> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}</div>
                       <div class="div7"> Robinson Formula : </div>
@@ -151,8 +155,8 @@
               </q-card-main>
            </q-card>
             <div class="q-mt-sm">
-              <q-btn @click="back" icon="arrow_back_ios" class="back-reset-btn-style" color="secondary" outline :label="$t('back')"/>
-                <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
+                <q-btn @click="reset" icon="refresh" class="back-reset-btn-style" flat outline
+                  color="secondary" :label="$t('reset')" />
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
