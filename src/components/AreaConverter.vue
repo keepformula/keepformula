@@ -3,8 +3,12 @@
     <div class="row q-pt-md mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
           <div class="row col-6 col-xs-12 col-lg-6 relative-position">
-          <q-btn @click="back" icon="arrow_back_ios" class="back-reset-btn-style"
-            color="secondary" outline :label="$t('back')"/>
+          <q-btn @click="back"
+                 icon="arrow_back_ios"
+                 class="back-btn-style q-mb-sm"
+                 color="secondary"
+                 outline
+                 :label="$t('back')"/>
         </div>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-6">
@@ -75,7 +79,7 @@
               </q-card-main>
             </q-card>
                   <div class="q-mt-sm">
-                    <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" :label="$t('reset')" />
+                    <q-btn @click="reset" icon="refresh" class="reset-btn-style" outline color="secondary" :label="$t('reset')" />
                   </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
