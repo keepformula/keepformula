@@ -38,8 +38,13 @@
                            />
                       </div>
                             <div class="col-12 col-md-12 relative-position q-pa-xs">
-                              <q-btn @click="btnClick" icon="cached" dense round flat
-                                color="primary" class="absolute-right" />
+                              <q-btn @click="btnClick"
+                                 icon="cached"
+                                 dense
+                                 round
+                                 flat
+                                 color="primary"
+                                 class="unit-changer-button absolute-right" />
                             </div>
                       <div class="col-8 col-md-8 col-sm-8 col-lg-8 col-xl-8 col-xs-12 q-mb-md q-pr-md" >
                       </div>
