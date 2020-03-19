@@ -29,9 +29,29 @@
                       <q-item-main>
                         <div class="parent">
                           <div class="div1"> Shorter Section </div>
-                          <div class="div2"> {{ shorterSection }} </div>
+                          <div class="div2 relative-position"> {{ shorterSection }}
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   flat
+                                   outline
+                                   color="grey"
+                                   icon="file_copy"
+                                   v-clipboard="() => this.shorterSection">
+                            </q-btn>
+                          </div>
                           <div class="div3"> Longer Section </div>
-                          <div class="div4"> {{ longerSection }} </div>
+                          <div class="div4 relative-position"> {{ longerSection }}
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   flat
+                                   outline
+                                   color="grey"
+                                   icon="file_copy"
+                                   v-clipboard="() => this.longerSection">
+                            </q-btn>
+                          </div>
                           <div class="div5"> </div>
                         </div>
                         </q-item-main>

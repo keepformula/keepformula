@@ -58,15 +58,15 @@
                         <div class="parent">
                           <div class="div1"> {{ value }} {{ inputUnit }} </div>
                           <div class="div2 relative-position"> {{ angleConvert }} {{ outputUnit }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.angleConvert">
-                      </q-btn>
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   flat
+                                   outline
+                                   color="grey"
+                                   icon="file_copy"
+                                   v-clipboard="() => this.angleConvert">
+                            </q-btn>
                           </div>
                         </div>
                         </q-item-tile>
