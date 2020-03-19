@@ -26,16 +26,15 @@
                   </div>
                   <div v-if='this.value'>
                   <q-list-header class="q-mt-md">Result</q-list-header>
-                  <q-item tag="label">
                       <q-item-main>
-                        <q-item-tile label>Shorter section is: {{ shorterSection }}</q-item-tile>
-                      </q-item-main>
-                    </q-item>
-                    <q-item tag="label">
-                        <q-item-main>
-                        <q-item-tile label>Longer section is: {{ longerSection }}</q-item-tile>
+                        <div class="parent">
+                          <div class="div1"> Shorter Section </div>
+                          <div class="div2"> {{ shorterSection }} </div>
+                          <div class="div3"> Longer Section </div>
+                          <div class="div4"> {{ longerSection }} </div>
+                          <div class="div5"> </div>
+                        </div>
                         </q-item-main>
-                      </q-item>
                   </div>
               </q-card-main>
             </q-card>
@@ -98,3 +97,38 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.parent {
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.div5 { grid-area: 1 / 1 / 3 / 3; }
+
+</style>

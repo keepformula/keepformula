@@ -52,14 +52,25 @@
                         </div>
                   </div>
                   <div v-if='this.value'>
-                    <q-list-header class="q-mt-md">Result</q-list-header>
-                    <q-item tag="label">
+                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                       <q-item-main>
                         <q-item-tile label>
-                          {{ value }} {{ inputUnit }} =  {{ densityConvert }} {{ outputUnit }}
+                          <div class="parent">
+                            <div class="div1"> {{ value }} {{ inputUnit }} </div>
+                            <div class="div2 relative-position"> {{ densityConvert }} {{ outputUnit }}
+                              <q-btn class="absolute-right q-my-md q-mr-sm"
+                                     id="copy-btn"
+                                     size="md"
+                                     flat
+                                     outline
+                                     color="grey"
+                                     icon="file_copy"
+                                     v-clipboard="() => this.densityConvert">
+                              </q-btn>
+                            </div>
+                          </div>
                         </q-item-tile>
                       </q-item-main>
-                    </q-item>
                   </div>
               </q-card-main>
             </q-card>
@@ -126,3 +137,24 @@ export default {
   }
 }
 </script>
+<style scoped>
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 16px;
+}
+.div1 { grid-area: 1 / 1 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div2 { grid-area: 1 / 2 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div3 { grid-area: 1 / 1 / 2 / 3; }
+</style>

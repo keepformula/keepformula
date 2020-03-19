@@ -23,7 +23,7 @@
                 <q-card-main>
                   <div class="row q-mt-md">
                     <div class="col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                      <q-input ref="input" type="text" v-model="inputValue" :float-label="$t('value_label')" />
+                      <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                     </div>
                        <div class="col-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 q-pr-md">
                         <q-select
@@ -45,21 +45,32 @@
                              :float-label="$t('output_unit')"
                              :options="unit.numericalBases"
                              />
-                            <!--<div class="q-mt-md">-->
-                              <!--<q-btn @click="btnClick" icon="cached" round outline color="primary" class="float-right" />-->
-                            <!--</div>-->
-                        </div>
-                        <div v-if='this.inputValue'>
-                          <q-list-header class="q-mt-md">Result</q-list-header>
-                          <q-item tag="label">
-                            <q-item-main>
-                              <q-item-tile label>
-                                {{ this.inputValue }}<sub>{{ this.inputUnit }}</sub> = {{ toBase }}<sub>{{ this.outputUnit }}</sub>
-                              </q-item-tile>
-                            </q-item-main>
-                          </q-item>
                         </div>
                   </div>
+                  <transition-group
+                    enter-active-class="animated fadeIn"
+                    v-if='this.value'
+                    >
+                    <div class="q-mt-md" key="head">
+                          <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                            <q-item-main>
+                                <div class="parent animate-scale" key="text">
+                                  <div class="div1"> {{ value }} <sub> {{ inputUnit }} </sub> </div>
+                                  <div class="div2 relative-position"> {{ toBase }} <sub> {{ outputUnit }} </sub>
+                                    <q-btn class="absolute-right q-my-md q-mr-sm"
+                                           size="md"
+                                           id="copy-btn"
+                                           outline
+                                           flat
+                                           color="grey"
+                                           icon="file_copy"
+                                           v-clipboard="() => this.toBase">
+                                    </q-btn>
+                                  </div>
+                                </div>
+                            </q-item-main>
+                        </div>
+                  </transition-group>
               </q-card-main>
             </q-card>
             <div class="q-mt-sm">
@@ -85,7 +96,7 @@ export default {
   data () {
     return {
       unit: Unit,
-      inputValue: null,
+      value: null,
       icon: 'baseConverter',
       wiki: 'https://en.wikipedia.org/wiki/Positional_notation#Base_conversion',
       inputUnit: this.$config.defaultUnits.inputUnitBaseConverter,
@@ -95,15 +106,15 @@ export default {
   computed: {
     toBase () {
       let out = null
-      if (this.inputValue) {
-        out = Knowledge.baseConverter(this.inputValue, this.inputUnit, this.outputUnit)
+      if (this.value) {
+        out = Knowledge.baseConverter(this.value, this.inputUnit, this.outputUnit)
       }
       return out
     }
   },
   methods: {
     reset () {
-      this.inputValue = null
+      this.value = null
       this.$refs.input.focus()
     },
     back () {
@@ -125,3 +136,25 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 16px;
+}
+.div1 { grid-area: 1 / 1 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div2 { grid-area: 1 / 2 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div3 { grid-area: 1 / 1 / 2 / 3; }
+</style>

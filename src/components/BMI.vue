@@ -61,40 +61,40 @@
                     v-if="this.height && this.weight"
                     >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-ma-sm q-mr-none q-pl-none">Result</q-list-header>
+                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                   <div class="parent animate-scale" key="text">
                       <div class="div1"> Status : </div>
                       <div class="div2"> {{ bmiMessageCalculate }} </div>
                     <div class="div3"> BMI : </div>
                     <div class="div4 relative-position"> {{ bmi}}
-                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" dense flat outline float-placeholder="Copy"
-                             color="grey" flat outline icon="file_copy" v-clipboard="() => this.bmi">
+                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" flat outline float-placeholder="Copy"
+                             color="grey" icon="file_copy" v-clipboard="() => this.bmi">
                       </q-btn>
                     </div>
                       <div class="div5"> Normal weight : </div>
                       <div class="div6"> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}</div>
                       <div class="div7"> Robinson Formula : </div>
                       <div class="div8 relative-position"> {{ robinsonFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" dense flat outline float-placeholder="Copy"
+                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" flat outline float-placeholder="Copy"
                                color="grey" icon="file_copy" v-clipboard="() =>
                           this.robinsonFormula">
                         </q-btn>
                       </div>
                       <div class="div9"> Miller Formula : </div>
                       <div class="div10 relative-position"> {{ millerFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" dense flat outline float-placeholder="Copy"
+                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" flat outline float-placeholder="Copy"
                                color="grey" icon="file_copy" v-clipboard="() => this.millerFormula">
                         </q-btn>
                       </div>
                       <div class="div11"> Hamwi Formula : </div>
                       <div class="div12 relative-position"> {{ hamwiFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" dense flat outline float-placeholder="Copy"
+                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" flat outline float-placeholder="Copy"
                                color="grey" icon="file_copy" v-clipboard="() => this.hamwiFormula">
                         </q-btn>
                       </div>
                       <div class="div13"> Devine Formula : </div>
                       <div class="div14 relative-position"> {{ devineFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" dense flat outline float-placeholder="Copy"
+                        <q-btn class="absolute-right q-my-md q-mr-sm" id="copy-btn" size="md" flat outline float-placeholder="Copy"
                                color="grey" icon="file_copy" v-clipboard="() => this.devineFormula">
                         </q-btn> </div>
                   </div>
@@ -318,10 +318,7 @@ export default {
 }
 </script>
 
-<style>
-a {
-  text-decoration : none;
-}
+<style scoped>
 .parent {
 display: grid;
 grid-template-columns: 4fr 5fr;
@@ -331,10 +328,12 @@ font-size: 16px;
 .div1 { grid-area: 1 / 1 / 2 / 2;
 padding: 25px 10px;
 border-bottom: 1px solid #E0E0E0;
+border-top: 1px solid #E0E0E0;
 }
 .div2 { grid-area: 1 / 2 / 2 / 3;
 padding: 25px 10px;
 border-bottom: 1px solid #E0E0E0;
+border-top: 1px solid #E0E0E0;
 }
 .div3 { grid-area: 2 / 1 / 3 / 2;
 border-bottom: 1px solid #E0E0E0;
@@ -381,16 +380,5 @@ padding: 25px 10px;
 }
 .div14 { grid-area: 7 / 2 / 8 / 3;
 padding: 25px 10px;
-}
-
-.border {
-border: 2px solid rgba(105,102,105,0.09);
--webkit-box-shadow: inset 4px 10px 76px -2px rgba(105,102,105,0.05);
--moz-box-shadow: inset 4px 10px 76px -2px rgba(105,102,105,0.05);
-box-shadow: inset 4px 10px 76px -2px rgba(105,102,105,0.05);
-}
-#copy-btn:hover {
-   color: #555 !important;
-
 }
 </style>
