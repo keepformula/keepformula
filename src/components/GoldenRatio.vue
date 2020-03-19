@@ -30,7 +30,7 @@
                     <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
-                  <q-list-header class="q-mt-md">Result</q-list-header>
+                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                       <q-item-main>
                         <div class="parent">
                           <div class="div1"> Shorter Section </div>
