@@ -26,7 +26,7 @@
           <q-card>
             <q-card-separator />
               <q-card-main>
-                  <div class="col-12 q-mt-md q-mb-xl">
+                  <div class="col-12 q-mt-md q-mb-xl q-pr-md">
                     <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
@@ -146,12 +146,10 @@ grid-row-gap: 0px;
 .div3 {
   grid-area: 2 / 1 / 3 / 2;
   padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
 }
 .div4 {
   grid-area: 2 / 2 / 3 / 3;
   padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
 }
 .div5 { grid-area: 1 / 1 / 3 / 3; }
 
