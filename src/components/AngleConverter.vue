@@ -158,12 +158,10 @@ export default {
 }
 .div1 { grid-area: 1 / 1 / 2 / 3;
   padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
   border-top: 1px solid #E0E0E0;
 }
 .div2 { grid-area: 1 / 2 / 2 / 3;
   padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
   border-top: 1px solid #E0E0E0;
 }
 .div3 { grid-area: 1 / 1 / 2 / 3; }

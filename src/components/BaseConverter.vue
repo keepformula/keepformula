@@ -145,25 +145,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.parent {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  font-size: 16px;
-}
-.div1 { grid-area: 1 / 1 / 2 / 3;
-  padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
-  border-top: 1px solid #E0E0E0;
-}
-.div2 { grid-area: 1 / 2 / 2 / 3;
-  padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
-  border-top: 1px solid #E0E0E0;
-}
-.div3 { grid-area: 1 / 1 / 2 / 3; }
-</style>
