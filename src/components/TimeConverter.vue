@@ -2,28 +2,27 @@
   <q-page class="border-top">
     <div class="row q-pt-md mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
-        <div class="row">
-          <div class="row col-6 col-xs-12 col-lg-6 relative-position">
-          <div class="mobile-size-component-header q-mb-md q-mr-xs">
-            <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
-          </div>
-          <div class="">
-            <p class="q-display-1 mobile-size-component-header">
-            {{ $t('time_converter') }}
-            </p>
-          </div>
+        <div class="row col-6 col-xs-12 col-lg-6 relative-position">
           <q-btn @click="back"
-                 icon="arrow_back_ios"
-                 class="back-btn-style absolute-right"
-                 color="secondary"
-                 outline
-                 dense
-                 :label="$t('back')"/>
-        </div>
+             icon="arrow_back_ios"
+             class="back-btn-style q-mb-sm"
+             color="secondary"
+             outline
+             :label="$t('back')"/>
         </div>
         <div class="row">
           <div class="col-12 col-md-12 col-lg-6">
             <q-card>
+              <div class="row q-pt-md">
+                <div class="q-ml-sm col-1 mobile-size-component-header q-mb-md q-mr-xs">
+                  <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
+                </div>
+                <div class="">
+                  <p class="q-display-1 mobile-size-component-header">
+                  {{ $t('time_converter') }}
+                  </p>
+                </div>
+              </div>
               <q-card-separator />
                 <q-card-main>
                   <div class="row q-mt-md">
@@ -85,7 +84,7 @@
                       </q-card-main>
                     </q-card>
             <div class="q-mt-sm">
-              <q-btn @click="reset" icon="refresh" class="reset-btn-style" dense outline color="secondary" :label="$t('reset')" />
+              <q-btn @click="reset" icon="refresh" class="reset-btn-style" outline color="secondary" :label="$t('reset')" />
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
