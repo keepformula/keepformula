@@ -27,12 +27,13 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
-        appId: 'com.example.app',
+        appId: 'com.example.keepformula',
         mac: {
           'icon': 'build/icons/icon.icns'
         },
         win: {
-          icon: 'build/icons/icon.ico'
+          icon: 'build/icons/icon.ico',
+          target: "portable"
         },
         linux: {
           'icon': 'build/icons'
