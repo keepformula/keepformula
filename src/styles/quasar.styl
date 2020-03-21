@@ -4,6 +4,9 @@
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
+a {
+  text-decoration : none;
+}
 .w-100 {
   width: 100%;
 }
@@ -70,6 +73,7 @@ border-bottom: 1px solid #E0E0E0;
   }
 .mobile-size-component-header {
   margin-right: 13px;
+  font-size: 2.5vh;
 }
 .text-love {
   font-size: 12px;
@@ -80,11 +84,32 @@ border-bottom: 1px solid #E0E0E0;
   position: absolute;
   right: 0;
 }
-.back-reset-btn-style {
+.back-btn-style {
   color: black !important;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  //font-size: 4vw;
   border: 1px solid $secondary;
+  max-height: 35px;
+  font-size: 14px;
   }
+.reset-btn-style {
+  color: black !important;
+  border: 1px solid $secondary;
+  font-size: 14px;
+  margin-top: 6px;
+  padding: 7px !important;
+  }
+//components result
+.q-card-main {
+  padding-right: 0;
+}
+.copy-btn:hover {
+   display: block !important;
+   color: #555 !important;
+}
+#copy-btn:hover {
+   color: #555 !important;
+}
 @media only screen and (max-width: 768px) {
   padding-top:0;
   border-bottom: 1px solid #E0E0E0;
@@ -125,7 +150,7 @@ border-bottom: 1px solid #E0E0E0;
             .icon {
               width:33px;
               height:33px;
-              background-color: black;
+              background-color: $primary;
               -webkit-mask: url(../assets/logo.svg) no-repeat center;
               }
               .mobile-size-padding {
@@ -152,6 +177,10 @@ border-bottom: 1px solid #E0E0E0;
                             .q-btn-dense.q-btn-round {
                               margin-right: -14px;
                               }
+                              .unit-changer-button {
+                                margin-right: 0px !important;
+                                margin-top: 12px !important;
+                              }
                             }
       @media only screen and (max-width: 365px) {
         .header-app-name {
@@ -161,7 +190,7 @@ border-bottom: 1px solid #E0E0E0;
           .icon {
             width:34px;
             height:34px;
-            background-color: black;
+            background-color: $primary;
             -webkit-mask: url(../assets/logo.svg) no-repeat center;
             }
             .scroll-header {
@@ -197,7 +226,14 @@ border-bottom: 1px solid #E0E0E0;
                             width: 22px !important;
                           }
                         }
-                      }
+                        .back-btn-style {
+                          color: black !important;
+                          margin-top: 7px;
+                          font-size: 4vw;
+                          border: 1px solid $secondary;
+                          max-height: 35px;
+                          }
+                        }
       @media only screen and (max-width: 309px) {
         .header-app-name {
           position: relative;
@@ -206,7 +242,7 @@ border-bottom: 1px solid #E0E0E0;
           .icon {
             width:25px;
             height:25px;
-            background-color: black;
+            background-color: $primary;
             -webkit-mask: url(../assets/logo.svg) no-repeat center;
             }
             .mobile-search-margin {

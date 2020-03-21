@@ -3,6 +3,7 @@
     <div class="row q-pt-md mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
         <div class="row">
+          <div class="row col-6 col-xs-12 col-lg-6 relative-position">
           <div class="mobile-size-component-header q-mb-md q-mr-xs">
             <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
           </div>
@@ -11,33 +12,59 @@
             {{ $t('golden_ratio') }}
             </p>
           </div>
+          <q-btn @click="back"
+                 icon="arrow_back_ios"
+                 class="back-btn-style absolute-right"
+                 color="secondary"
+                 outline
+                 dense
+                 :label="$t('back')"/>
+        </div>
         </div>
       <div class="row">
         <div class="col-12 col-md-12 col-lg-6">
           <q-card>
             <q-card-separator />
               <q-card-main>
-                  <div class="col-12 q-mt-md q-mb-xl">
+                  <div class="col-12 q-mt-md q-mb-xl q-pr-md">
                     <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <div v-if='this.value'>
-                  <q-list-header class="q-mt-md">Result</q-list-header>
-                  <q-item tag="label">
+                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                       <q-item-main>
-                        <q-item-tile label>Shorter section is: {{ shorterSection }}</q-item-tile>
-                      </q-item-main>
-                    </q-item>
-                    <q-item tag="label">
-                        <q-item-main>
-                        <q-item-tile label>Longer section is: {{ longerSection }}</q-item-tile>
+                        <div class="parent">
+                          <div class="div1"> Shorter Section </div>
+                          <div class="div2 relative-position"> {{ shorterSection }}
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   flat
+                                   outline
+                                   color="grey"
+                                   icon="file_copy"
+                                   v-clipboard="() => this.shorterSection">
+                            </q-btn>
+                          </div>
+                          <div class="div3"> Longer Section </div>
+                          <div class="div4 relative-position"> {{ longerSection }}
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   flat
+                                   outline
+                                   color="grey"
+                                   icon="file_copy"
+                                   v-clipboard="() => this.longerSection">
+                            </q-btn>
+                          </div>
+                          <div class="div5"> </div>
+                        </div>
                         </q-item-main>
-                      </q-item>
                   </div>
               </q-card-main>
             </q-card>
             <div class="q-mt-sm">
-              <q-btn @click="back" icon="arrow_back_ios" class="back-reset-btn-style" color="secondary" outline :label="$t('back')"/>
-                <q-btn @click="reset" icon="refresh" class="q-ml-xs back-reset-btn-style" outline color="secondary" />
+              <q-btn @click="reset" icon="refresh" class="reset-btn-style" dense outline color="secondary" :label="$t('reset')" />
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
@@ -94,3 +121,36 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.parent {
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 25px 10px;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 25px 10px;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+  padding: 25px 10px;
+}
+.div5 { grid-area: 1 / 1 / 3 / 3; }
+
+</style>
