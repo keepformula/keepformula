@@ -1,32 +1,22 @@
 <template>
   <q-page class="border-top">
-    <div class="row q-pt-md mobile-header-padding">
+    <div class="row mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
-        <div class="row">
-          <div class="row col-6 col-xs-12 col-lg-6 relative-position">
-        <div class="mobile-size-component-header q-mb-md q-mr-xs">
-          <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
-        </div>
-        <div class="">
-          <p class="q-display-1 mobile-size-component-header">
-          {{ $t('body_mass_index') }}
-          </p>
-        </div>
-          <q-btn @click="back"
-                 icon="arrow_back_ios"
-                 class="back-btn-style absolute-right"
-                 color="secondary"
-                 outline
-                 dense
-                 :label="$t('back')"/>
-          </div>
-        </div>
-        <div class="row">
+        <div class="row q-pt-xs">
           <div class="col-12 col-md-12 col-lg-6">
             <q-card>
-            <q-card-separator />
-              <q-card-main class="q-pr-none">
-                  <div class="row q-mt-md">
+              <div class="row q-pt-md">
+          <div class="q-ml-md col-1 mobile-size-component-header q-mb-md q-mr-xs">
+            <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
+          </div>
+          <div class="">
+            <p class="q-display-1 mobile-size-component-header">
+             {{ $t('body_mass_index') }}
+            </p>
+          </div>
+          </div>
+              <q-card-main>
+                  <div class="row">
                   <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
                     <q-input ref="input" type="text" v-model="height" :float-label="$t('height_label')"/>
                   </div>
@@ -61,83 +51,94 @@
                        :options="unit.gender"
                        />
                   <br>
-                  <transition-group
-                    enter-active-class="animated fadeIn"
-                    v-if="this.height && this.weight">
+                  <transition-group enter-active-class="animated fadeIn"
+                                    v-if="this.height && this.weight">
                     <div class="q-mt-md" key="head">
                       <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
-                  <div class="parent animate-scale" key="text">
-                    <div class="div1"> Status : </div>
-                    <div class="div2"> {{ bmiMessageCalculate }} </div>
-                    <div class="div3"> BMI : </div>
-                    <div class="div4 relative-position"> {{ bmi}}
-                      <q-btn class="absolute-right q-my-md q-mr-sm"
-                             id="copy-btn"
-                             size="md"
-                             flat
-                             outline
-                             color="grey"
-                             icon="file_copy"
-                             v-clipboard="() => this.bmi">
-                      </q-btn>
-                    </div>
-                      <div class="div5"> Normal weight : </div>
-                      <div class="div6"> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}</div>
-                      <div class="div7"> Robinson Formula : </div>
-                      <div class="div8 relative-position"> {{ robinsonFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.robinsonFormula">
-                        </q-btn>
+                      <div class="parent animate-scale" key="text">
+                        <div class="div1"> Status : </div>
+                        <div class="div2"> {{ bmiMessageCalculate }} </div>
+                        <div class="div3"> BMI : </div>
+                        <div class="div4 relative-position"> {{ bmi}}
+                          <q-btn class="absolute-right q-my-md q-mr-sm"
+                                 id="copy-btn"
+                                 size="md"
+                                 flat
+                                 outline
+                                 color="grey"
+                                 icon="file_copy"
+                                 v-clipboard="() => this.bmi">
+                          </q-btn>
+                        </div>
+                        <div class="div5"> Normal weight : </div>
+                        <div class="div6"> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }}</div>
+                        <div class="div7"> Robinson Formula : </div>
+                        <div class="div8 relative-position"> {{ robinsonFormula }}
+                          <q-btn class="absolute-right q-my-md q-mr-sm"
+                                 id="copy-btn"
+                                 size="md"
+                                 flat
+                                 outline
+                                 color="grey"
+                                 icon="file_copy"
+                                 v-clipboard="() => this.robinsonFormula">
+                          </q-btn>
+                        </div>
+                        <div class="div9"> Miller Formula : </div>
+                        <div class="div10 relative-position"> {{ millerFormula }}
+                          <q-btn class="absolute-right q-my-md q-mr-sm"
+                                 id="copy-btn"
+                                 size="md"
+                                 flat
+                                 outline
+                                 color="grey"
+                                 icon="file_copy"
+                                 v-clipboard="() => this.millerFormula">
+                          </q-btn>
+                        </div>
+                        <div class="div11"> Hamwi Formula : </div>
+                        <div class="div12 relative-position"> {{ hamwiFormula }}
+                          <q-btn class="absolute-right q-my-md q-mr-sm"
+                                 id="copy-btn"
+                                 size="md"
+                                 flat
+                                 outline
+                                 color="grey"
+                                 icon="file_copy"
+                                 v-clipboard="() => this.hamwiFormula">
+                          </q-btn>
+                        </div>
+                        <div class="div13"> Devine Formula : </div>
+                        <div class="div14 relative-position"> {{ devineFormula }}
+                          <q-btn class="absolute-right q-my-md q-mr-sm"
+                                 id="copy-btn"
+                                 size="md"
+                                 flat
+                                 outline
+                                 color="grey"
+                                 icon="file_copy"
+                                 v-clipboard="() => this.devineFormula">
+                          </q-btn> </div>
                       </div>
-                      <div class="div9"> Miller Formula : </div>
-                      <div class="div10 relative-position"> {{ millerFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.millerFormula">
-                        </q-btn>
-                      </div>
-                      <div class="div11"> Hamwi Formula : </div>
-                      <div class="div12 relative-position"> {{ hamwiFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.hamwiFormula">
-                        </q-btn>
-                      </div>
-                      <div class="div13"> Devine Formula : </div>
-                      <div class="div14 relative-position"> {{ devineFormula }}
-                        <q-btn class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.devineFormula">
-                        </q-btn> </div>
-                  </div>
                     </div>
                   </transition-group>
               </q-card-main>
            </q-card>
-            <div class="q-mt-sm">
-                    <q-btn @click="reset" icon="refresh" class="reset-btn-style" dense outline color="secondary" :label="$t('reset')" />
-            </div>
+           <div class="q-mt-sm">
+             <q-btn @click="back"
+                icon="arrow_back_ios"
+                class="back-btn-style q-mr-sm"
+                color="secondary"
+                outline
+                :label="$t('back')"/>
+
+               <q-btn @click="reset"
+                icon="refresh"
+                class="reset-btn-style"
+                outline
+                color="secondary"
+                :label="$t('reset')" />
+           </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
           <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>Body mass index ( BMI) is a value derived from the mass ( weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m 2, resulting from mass in kilograms and height in metres.</p></blockquote>
