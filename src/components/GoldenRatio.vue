@@ -1,16 +1,8 @@
 <template>
   <q-page class="border-top">
-    <div class="row q-pt-md mobile-header-padding">
+    <div class="row mobile-header-padding">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
-        <div class="row col-6 col-xs-12 col-lg-6 relative-position">
-          <q-btn @click="back"
-             icon="arrow_back_ios"
-             class="back-btn-style q-mb-sm"
-             color="secondary"
-             outline
-             :label="$t('back')"/>
-        </div>
-        <div class="row">
+        <div class="row q-pt-xs">
           <div class="col-12 col-md-12 col-lg-6">
             <q-card>
               <div class="row q-pt-md">
@@ -23,15 +15,17 @@
                   </p>
                 </div>
               </div>
-              <q-card-separator />
               <q-card-main>
-                  <div class="col-12 q-mt-md q-mb-xl q-pr-md">
+                  <div class="col-12 q-mb-xl q-pr-md">
                     <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
-                  <div v-if='this.value'>
-                  <q-list-header class="q-mt-md">Result</q-list-header>
+                  <transition-group
+                    enter-active-class="animated fadeIn"
+                    v-if='this.value' >
+                    <div class="q-mt-md" key="head">
+                      <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                       <q-item-main>
-                        <div class="parent">
+                        <div class="parent animate-scale" key="text">
                           <div class="div1"> Shorter Section </div>
                           <div class="div2 relative-position"> {{ shorterSection }}
                             <q-btn class="absolute-right q-my-md q-mr-sm"
@@ -60,10 +54,23 @@
                         </div>
                         </q-item-main>
                   </div>
+                  </transition-group>
               </q-card-main>
             </q-card>
             <div class="q-mt-sm">
-              <q-btn @click="reset" icon="refresh" class="reset-btn-style" outline color="secondary" :label="$t('reset')" />
+              <q-btn @click="back"
+                 icon="arrow_back_ios"
+                 class="back-btn-style q-mr-sm"
+                 color="secondary"
+                 outline
+                 :label="$t('back')"/>
+
+                <q-btn @click="reset"
+                 icon="refresh"
+                 class="reset-btn-style"
+                 outline
+                 color="secondary"
+                 :label="$t('reset')" />
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
