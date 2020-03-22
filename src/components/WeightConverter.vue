@@ -1,6 +1,6 @@
 <template>
   <q-page class="border-top">
-    <div class="row q-pt-md mobile-header-padding">
+    <div class="row mobile-header-padding q-pt-sm">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
         <div class="row q-pt-xs">
           <div class="col-12 col-md-12 col-lg-6">
@@ -55,21 +55,21 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
-                            <div class="div1"> {{ value }} {{ inputUnit }} </div>
-                            <div class="div2 relative-position"> {{ weightConvert }} {{ outputUnit }}
-                              <q-btn class="absolute-right q-my-md q-mr-sm"
-                                     id="copy-btn"
-                                     size="md"
-                                     color="grey"
-                                     flat
-                                     outline
-                                     icon="file_copy"
-                                     v-clipboard="() => this.weightConvert">
-                              </q-btn>
-                            </div>
+                          <div class="div1"> {{ value }} {{ inputUnit }} </div>
+                          <div class="div2 relative-position"> {{ weightConvert }} {{ outputUnit }}
+                            <q-btn class="absolute-right q-my-md q-mr-sm"
+                                   id="copy-btn"
+                                   size="md"
+                                   color="grey"
+                                   flat
+                                   outline
+                                   icon="file_copy"
+                                   v-clipboard="() => this.weightConvert">
+                            </q-btn>
+                          </div>
                         </div>
                       </q-item-main>
                     </div>

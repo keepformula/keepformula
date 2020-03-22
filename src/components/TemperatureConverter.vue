@@ -1,6 +1,6 @@
 <template>
   <q-page class="border-top">
-    <div class="row mobile-header-padding">
+    <div class="row mobile-header-padding q-pt-sm">
       <div class="q-pa-sm q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
         <div class="row q-pt-xs">
           <div class="col-12 col-md-12 col-lg-6">
