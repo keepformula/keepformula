@@ -31,8 +31,7 @@
                       </div>
                       <div class="col-8 col-md-8 col-sm-8 col-lg-8 col-xl-8 col-xs-12 q-mb-md q-pr-md" >
                       </div>
-                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md
-                        q-mb-lg">
+                      <div class="col-4 col-lg-4 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md q-mb-lg">
                           <q-select
                              v-model="outputUnit"
                              :float-label="$t('output_unit')"
