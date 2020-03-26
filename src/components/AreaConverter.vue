@@ -18,7 +18,7 @@
                 <q-card-main>
                   <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                      <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')"/>
+                      <q-input ref="input" type="text" v-model="value" @keydown="onKeydown" :float-label="$t('value_label')"/>
                     </div>
                        <div class="col-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 q-pr-md">
                         <q-select
@@ -137,6 +137,12 @@ export default {
       let y = this.outputUnit
       this.inputUnit = y
       this.outputUnit = x
+    },
+    onkeydown (event) {
+      const char = string.fromcharcode(event.keycode)
+      if (!/\d/.test(char) && event.key !== '.' && event.key !== 'backspace' && !(event.keycode >= 96 && event.keycode <= 105)) {
+        event.preventdefault()
+      }
     }
   },
   mounted () {
