@@ -138,10 +138,11 @@ export default {
       this.inputUnit = y
       this.outputUnit = x
     },
-    onkeydown (event) {
-      const char = string.fromcharcode(event.keycode)
-      if (!/\d/.test(char) && event.key !== '.' && event.key !== 'backspace' && !(event.keycode >= 96 && event.keycode <= 105)) {
-        event.preventdefault()
+    onKeydown (event) {
+      const char = String.fromCharCode(event.keyCode)
+      if (!/\d/.test(char) && event.key !== '.' && event.key !== 'Backspace' && !(event.keyCode >=
+        96 && event.keyCode <= 105)) {
+        event.preventDefault()
       }
     }
   },
