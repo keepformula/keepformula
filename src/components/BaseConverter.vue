@@ -104,9 +104,11 @@
 <script>
 import Knowledge from '@/knowledge'
 import Unit from '@/units'
+import { mixin } from '@/mixins/mixin'
 
 export default {
   name: 'BaseConvrter',
+  mixins: [mixin],
   data () {
     return {
       unit: Unit,
@@ -124,28 +126,6 @@ export default {
         out = Knowledge.baseConverter(this.value, this.inputUnit, this.outputUnit)
       }
       return out
-    }
-  },
-  methods: {
-    reset () {
-      this.value = null
-      this.$refs.input.focus()
-    },
-    back () {
-      this.$router.go(-1)
-    },
-    btnClick () {
-      let x = this.inputUnit
-      let y = this.outputUnit
-      this.inputUnit = y
-      this.outputUnit = x
-    }
-  },
-  mounted () {
-    if (window.screen.width > 768) {
-      setTimeout(() => {
-        this.$refs.input.focus()
-      }, 500)
     }
   }
 }

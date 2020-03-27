@@ -102,9 +102,11 @@
 import { openURL } from 'quasar'
 import Unit from '@/units'
 import Knowledge from '@/knowledge'
+import { mixin } from '@/mixins/mixin'
 
 export default {
   name: 'AreaConverter',
+  mixins: [mixin],
   data () {
     return {
       unit: Unit,
@@ -125,32 +127,12 @@ export default {
     }
   },
   methods: {
-    reset () {
-      this.value = null
-      this.$refs.input.focus()
-    },
-    back () {
-      this.$router.go(-1)
-    },
-    btnClick () {
-      let x = this.inputUnit
-      let y = this.outputUnit
-      this.inputUnit = y
-      this.outputUnit = x
-    },
     onKeydown (event) {
       const char = String.fromCharCode(event.keyCode)
       if (!/\d/.test(char) && event.key !== '.' && event.key !== 'Backspace' && !(event.keyCode >=
         96 && event.keyCode <= 105)) {
         event.preventDefault()
       }
-    }
-  },
-  mounted () {
-    if (window.screen.width > 768) {
-      setTimeout(() => {
-        this.$refs.input.focus()
-      }, 500)
     }
   }
 }

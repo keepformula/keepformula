@@ -84,9 +84,11 @@
 
 <script>
 import Knowledge from '@/knowledge'
+import { mixin } from '@/mixins/mixin'
 
 export default {
   name: 'GoldenRatio',
+  mixins: [mixin],
   data () {
     return {
       value: null,
@@ -107,22 +109,6 @@ export default {
         out = Knowledge.goldenRatioLonger(this.value)
       }
       return out
-    }
-  },
-  methods: {
-    reset () {
-      this.value = null
-      this.$refs.input.focus()
-    },
-    back () {
-      this.$router.go(-1)
-    }
-  },
-  mounted () {
-    if (window.screen.width > 768) {
-      setTimeout(() => {
-        this.$refs.input.focus()
-      }, 500)
     }
   }
 }

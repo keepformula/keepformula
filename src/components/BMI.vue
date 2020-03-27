@@ -153,9 +153,11 @@
 import { openURL } from 'quasar'
 import Unit from '@/units'
 import Knowledge from '@/knowledge'
+import { mixin } from '@/mixins/mixin'
 
 export default {
   name: 'BMI',
+  mixins: [mixin],
   data () {
     return {
       unit: Unit,
@@ -166,7 +168,6 @@ export default {
       heightUnit: this.$config.defaultUnits.height,
       seen: false,
       icon: 'bmi',
-      visible: false,
       bmiMessage: {
         underWeight: this.$t('bmi_underWeight'), // 'You are Under weight',
         normal: this.$t('bmi_normal'), // 'You are Normal',
@@ -281,20 +282,7 @@ export default {
       this.weight = null
       this.height = null
       this.$refs.input.focus()
-    },
-    back () {
-      this.$router.go(-1)
     }
-  },
-  mounted () {
-    if (window.screen.width > 768) {
-      setTimeout(() => {
-        this.$refs.input.focus()
-      }, 500)
-    }
-  },
-  toggleVisibility () {
-    this.visible = !this.visible
   }
 }
 </script>
