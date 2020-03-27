@@ -2,10 +2,10 @@
   <q-page class="border-top">
     <div class="row mobile-header-padding q-pt-sm">
       <div class="q-pa-xs q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
-        <div class="row q-pt-xs">
+        <div class="row">
           <div class="col-12 col-md-12 col-lg-6">
             <q-card>
-              <div class="row q-pt-md">
+              <div class="row q-pt-md q-mt-md mobile-size-no-margin">
           <div class="q-ml-md col-1 mobile-size-component-header q-mb-md q-mr-xs">
             <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
           </div>

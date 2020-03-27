@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-12 col-md-12 col-lg-6">
             <q-card>
-              <div class="row q-pt-md">
+              <div class="row q-pt-md q-mt-md mobile-size-no-margin">
                 <div class="q-ml-md col-1 mobile-size-component-header q-mb-md q-mr-xs">
                   <img :src="`/icon/${icon}.svg`" style="width: 35px; height: 100%;"/>
                 </div>
