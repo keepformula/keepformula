@@ -18,7 +18,7 @@
               <q-card-main>
                   <div class="row">
                   <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
-                    <q-input ref="input" type="text" v-model="height" :float-label="$t('height_label')"/>
+                    <q-input ref="input" type="text" v-model="height" @keydown="isNumber" :float-label="$t('height_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xs-4 col-sm-4 col-xs-6 q-pr-md">
                       <q-select
@@ -32,7 +32,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
-                    <q-input type="text" v-model="weight" :float-label="$t('weight_label')"/>
+                    <q-input type="text" v-model="weight" @keydown="onKeydown" :float-label="$t('weight_label')"/>
                   </div>
                     <div class="col-4 col-lg-4 col-md-4 col-xs-4 col-sm-4 col-xs-6 q-pr-md">
                     <q-select

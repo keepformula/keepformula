@@ -18,7 +18,7 @@
                 <q-card-main>
                   <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12 q-mb-md q-pr-md" >
-                      <q-input ref="input" type="text" v-model="value" @keydown="onKeydown" :float-label="$t('value_label')"/>
+                      <q-input ref="input" type="text" v-model="value" @keydown="isNumber" :float-label="$t('value_label')"/>
                     </div>
                        <div class="col-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 q-pr-md">
                         <q-select
@@ -124,15 +124,6 @@ export default {
         out = Knowledge.convert(this.value, this.inputUnit, this.outputUnit)
       }
       return out
-    }
-  },
-  methods: {
-    onKeydown (event) {
-      const char = String.fromCharCode(event.keyCode)
-      if (!/\d/.test(char) && event.key !== '.' && event.key !== 'Backspace' && !(event.keyCode >=
-        96 && event.keyCode <= 105)) {
-        event.preventDefault()
-      }
     }
   }
 }
