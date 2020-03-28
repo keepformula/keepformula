@@ -42,7 +42,7 @@
                              />
                         </div>
                         <div class="col-12 col-md-12 relative-position q-pa-md">
-                          <q-btn @click="btnClick"
+                          <q-btn @click="changeUnits"
                              icon="cached"
                              dense
                              round

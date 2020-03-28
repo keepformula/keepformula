@@ -7,7 +7,7 @@ export const mixin = {
       this.value = null
       this.$refs.input.focus()
     },
-    btnClick () {
+    changeUnits () {
       let x = this.inputUnit
       let y = this.outputUnit
       this.inputUnit = y
