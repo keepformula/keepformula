@@ -13,15 +13,9 @@
           >
           <div class="">
             <router-link  to="/">
-              <img class="icon">
-            </router-link>
-          </div>
-          <div class="q-pa-xs">
-            <router-link  to="/">
-                <span class="header-app-name">
-                  {{ $t('app_name') }}
-                  <!--<div slot="subtitle">Version {{ $q.version }}</div>-->
-                </span>
+              <img 
+               width="220"
+              src="/logo.svg">
             </router-link>
           </div>
             <q-btn
