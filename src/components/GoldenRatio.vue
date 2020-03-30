@@ -17,7 +17,7 @@
               </div>
               <q-card-main>
                   <div class="col-12 q-mb-xl q-pr-md">
-                    <q-input ref="input" type="text" v-model="value" @keydown="isNumber" :float-label="$t('value_label')" />
+                    <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')" />
                   </div>
                   <transition-group
                     enter-active-class="animated fadeIn"

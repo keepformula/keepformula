@@ -18,7 +18,7 @@
                 <q-card-main>
                   <div class="row">
                     <div class="col-8 col-md-8 col-sm-8 col-lg-6 col-xl-7 col-xs-12 q-mb-md q-pr-md" >
-                      <q-input ref="input" type="text" v-model="value" @keydown="isNumber" :float-label="$t('value_label')"/>
+                      <q-input ref="input" type="text" v-model="value" :float-label="$t('value_label')"/>
                     </div>
                       <div class="col-4 col-lg-6 col-xl-5 col-md-4 col-xm-4 col-sm-4 col-xs-12 q-pr-md">
                         <q-select
