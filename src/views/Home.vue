@@ -23,7 +23,7 @@
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
-             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
+             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 main-card" >
              <router-link
              :key="index"
              :to="{ name: item.name }" >
@@ -32,7 +32,7 @@
              inline>
                <q-card-media
              class="q-py-lg flex flex-center card-image">
-                 <img :src="`/icon/${item.icon}.svg`" style="width: 100px;" />
+                 <img :src="`/icon/${item.icon}.svg`" style="width: 80px;" />
                </q-card-media>
                <q-card-title class="text-justisfy">
                  {{ item.name }}
