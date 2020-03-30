@@ -12,13 +12,6 @@ export const mixin = {
       let y = this.outputUnit
       this.inputUnit = y
       this.outputUnit = x
-    },
-    isNumber (event) {
-      const char = String.fromCharCode(event.keyCode)
-      if (!/\d/.test(char) && event.key !== '.' && event.key !== 'Backspace' && !(event.keyCode >=
-        96 && event.keyCode <= 105)) {
-        event.preventDefault()
-      }
     }
   },
   created () {
