@@ -18,7 +18,7 @@
         <div class="row" v-model="noResult">
              <p  class="q-display-1 text-center full-width q-mt-lg text-weight-light"
                  v-if="handleSearchNoResult">
-               No Result!
+             {{ $t('noResult') }}
              </p>
           <div
              v-for="(item, index) in searchResult"

@@ -53,6 +53,7 @@ export default {
     temperature_converter_wiki_icon: 'About Temperature',
     stepperMotor: 'Stepper Motor For 3D Printing Calculation',
     stepperMotor_wiki_icon: 'What\'s Stepper Motor?',
-    stepperMotor_label: 'StepperMotor'
+    stepperMotor_label: 'StepperMotor',
+    noResult: 'No Result!'
   }
 }
