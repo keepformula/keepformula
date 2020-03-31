@@ -232,7 +232,8 @@ export default {
       if (calci === 1) {
         this.searchResult.forEach((item) => {
           // window.location.pathname = window.location.pathname + item.route
-          this.$router.push(item.route)
+          
+          this.$router.push({ name: item.route})
         }
         )
       }
