@@ -54,7 +54,7 @@
                   <transition-group enter-active-class="animated fadeIn"
                                     v-if="this.height && this.weight">
                     <div class="q-mt-md" key="head">
-                      <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <div class="parent animate-scale" key="text">
                         <div class="div1"> Status : </div>
                         <div class="div2"> {{ bmiMessageCalculate }} </div>
@@ -141,7 +141,7 @@
            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>Body mass index ( BMI) is a value derived from the mass ( weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m 2, resulting from mass in kilograms and height in metres.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>{{ $t('bmi_wiki') }} </p></blockquote>
         </div>
         </div>
       </div>

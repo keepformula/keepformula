@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
                             <div class="div1"> {{ value }} {{ inputUnit }} </div>
@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Energy">Energy</a></h4><p>In physics, energy is the quantitative property that must be transferred to an object in order to perform work on, or to heat, the object. Energy is a conserved quantity; the law of conservation of energy states that energy can be converted in form, but not created or destroyed.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Energy">Energy</a></h4><p> {{ $t('energy_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>

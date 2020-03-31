@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
                           <div class="div1"> {{ value }} {{ inputUnit }} </div>
@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Unit_of_volume">Unit of volume</a></h4><p>A unit of volume is a unit of measurement for measuring volume or capacity, the extent of an object or space in three dimensions. Units of capacity may be used to specify the volume of fluids or bulk goods, for example water, rice, sugar, grain or flour.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Unit_of_volume">Unit of volume</a></h4><p>{{ $t('volume_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>

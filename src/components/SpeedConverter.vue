@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                     <q-item class="q-pr-none" tag="label">
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
@@ -95,7 +95,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Speed">Speed</a></h4><p>Speed Speed can be thought of as the rate at which an object covers distance. A fast-moving object has a high speed and covers a relatively large distance in a given amount of time, while a slow-moving object covers a relatively small amount of distance in the same amount of time.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Speed">Speed</a></h4><p>{{ $t('speed_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>

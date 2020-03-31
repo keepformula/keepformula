@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                    <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
                             <div class="div1"> {{ value }} {{ inputUnit }} </div>
@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Time">Time</a></h4><p>Time is the indefinite continued progress of existence and events that occur in an apparently irreversible succession from the past, through the present, into the future. Time is a component quantity of various measurements used to sequence events, to compare the duration of events or the intervals between them, and to quantify rates of change of quantities in material reality or in the conscious experience.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Time">Time</a></h4><p>{{ $t('time_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>

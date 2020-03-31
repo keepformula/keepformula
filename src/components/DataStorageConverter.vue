@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                          <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                             <q-item-main>
                                 <div class="parent animate-scale" key="text">
                                   <div class="div1"> {{ value }} {{ inputUnit }} </div>
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Byte#Unit_symbol">Byte</a></h4><p>The byte is a unit of digital information that most commonly consists of eight bits. Historically, the byte was the number of bits used to encode a single character of text in a computer and for this reason it is the smallest addressable unit of memory in many computer architectures.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Byte</a></h4><p> {{ $t('data_storage_wiki') }}</p></blockquote>
         </div>
       </div>
     </div>
@@ -114,6 +114,7 @@ export default {
       unit: Unit,
       value: null,
       icon: 'dataStorageConverter',
+      wiki: 'https://en.wikipedia.org/wiki/Byte#Unit_symbol',
       inputUnit: this.$config.defaultUnits.inputUnitDataStorageConverter,
       outputUnit: this.$config.defaultUnits.outputUnitDataStorageConverter
     }

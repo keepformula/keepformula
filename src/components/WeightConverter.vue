@@ -55,7 +55,7 @@
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
                     <div class="q-mt-md" key="head">
-                      <q-list-header class="q-body-1 q-mt-md">Result</q-list-header>
+                      <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
                           <div class="div1"> {{ value }} {{ inputUnit }} </div>
@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Weight">Weight</a></h4><p>In science and engineering, the weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place. Some standard textbooks define weight as a vector quantity, the gravitational force acting on the object.</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Weight">Weight</a></h4><p> {{ $t('weight_wiki') }} </p></blockquote>
         </div>
         </div>
       </div>
