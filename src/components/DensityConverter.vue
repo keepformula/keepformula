@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Density</a></h4><p> {{ $t('density_wiki') }}</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a v-bind:href=this.wiki>Density</a></h4><p> {{ $t('density_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>

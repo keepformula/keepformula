@@ -92,7 +92,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card"><h4><a v-bind:href="this.wiki" >Angle</a></h4><p> {{ $t('angle_wiki') }}</p></blockquote>
+          <blockquote class="embedly-card"><h4><a v-bind:href=this.wiki >Angle</a></h4><p> {{ $t('angle_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>
