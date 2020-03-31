@@ -37,8 +37,8 @@ export default new Router({
           component: Home
         },
         {
-          path: '/Golden.Ratio',
-          name: 'Golden Ratio',
+          path: '/GoldenRatio',
+          name: 'GoldenRatio',
           component: GoldenRatio
         },
         {
@@ -47,88 +47,88 @@ export default new Router({
           component: BMI
         },
         {
-          path: '/Base.Converter',
-          name: 'Base Converter',
+          path: '/Base',
+          name: 'BaseConverter',
           component: BaseConverter
         },
         {
-          path: 'Data.Storage.Converter',
-          name: 'Data Storage Converter',
+          path: 'DataStorage',
+          name: 'DataStorageConverter',
           component: DataStorageConverter
         },
         {
-          path: '/Length.Converter',
-          name: 'Length Converter',
+          path: '/Length',
+          name: 'LengthConverter',
           component: LengthConverter
         },
         {
-          path: '/Weight.Converter',
-          name: 'Weight Converter',
+          path: '/Weight',
+          name: 'WeightConverter',
           component: WeightConverter
         },
         {
-          path: '/Area.Converter',
-          name: 'Area Converter',
+          path: '/Area',
+          name: 'AreaConverter',
           component: AreaConverter
         },
         {
-          path: '/Volume.Converter',
-          name: 'Volume Converter',
+          path: '/Volume',
+          name: 'VolumeConverter',
           component: VolumeConverter
         },
         {
-          path: '/Pressure.Converter',
-          name: 'Pressure Converter',
+          path: '/Pressure',
+          name: 'PressureConverter',
           component: PressureConverter
         },
         {
-          path: '/Speed.Converter',
-          name: 'Speed Converter',
+          path: '/Speed',
+          name: 'SpeedConverter',
           component: SpeedConverter
         },
         {
-          path: '/Time.Converter',
-          name: 'Time Converter',
+          path: '/Time',
+          name: 'TimeConverter',
           component: TimeConverter
         },
         {
-          path: '/Angle.Converter',
-          name: 'Angle Converter',
+          path: '/Angle',
+          name: 'AngleConverter',
           component: AngleConverter
         },
         {
-          path: '/Energy.Converter',
-          name: 'Energy Converter',
+          path: '/Energy',
+          name: 'EnergyConverter',
           component: EnergyConverter
         },
         {
-          path: '/Frequency.Converter',
-          name: 'Frequency Converter',
+          path: '/Frequency',
+          name: 'FrequencyConverter',
           component: FrequencyConverter
         },
         {
-          path: '/Density.Converter',
-          name: 'Density Converter',
+          path: '/Density',
+          name: 'DensityConverter',
           component: DensityConverter
         },
         {
-          path: '/Force.Converter',
-          name: 'Force Converter',
+          path: '/Force',
+          name: 'ForceConverter',
           component: ForceConverter
         },
         {
-          path: '/Flow.Rate.Converter',
-          name: 'Flow Rate Converter',
+          path: '/FlowRate',
+          name: 'FlowRateConverter',
           component: FlowRateConverter
         },
         {
-          path: '/Temperature.Converter',
-          name: 'Temperature Converter',
+          path: '/Temperature',
+          name: 'TemperatureConverter',
           component: TemperatureConverter
         },
         {
-          path: '/Stepper.Motor',
-          name: 'Stepper Motor',
+          path: '/StepperMotor',
+          name: 'StepperMotor',
           component: StepperMotor
         }
       ]

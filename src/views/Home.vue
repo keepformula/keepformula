@@ -26,7 +26,7 @@
              class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 main-card" >
              <router-link
              :key="index"
-             :to="{ name: item.name }" >
+             :to="{ name: item.route }" >
              <q-card
              class="card-hover text-center calculator-cards w-100 cursor-pointer"
              inline>
@@ -65,7 +65,7 @@ export default {
         },
         {
           name: 'Golden Ratio',
-          route: 'Golden.Ratio',
+          route: 'GoldenRatio',
           description: 'Calculate Golden Ratio',
           icon: 'goldenRatio',
           tag: 'math , rectangle , ratio',
@@ -73,7 +73,7 @@ export default {
         },
         {
           name: 'Radix',
-          route: 'Radix.Converter',
+          route: 'RadixConverter',
           description: 'Number base conversion calculator',
           icon: 'baseConverter',
           tag: 'number , numerical convertion , convert',
@@ -81,7 +81,7 @@ export default {
         },
         {
           name: 'Data Storage',
-          route: 'Data.Storage.Converter',
+          route: 'DataStorageConverter',
           description: 'Conversion units for the Data Storage',
           icon: 'dataStorageConverter',
           tag: 'storage , kilobyte , megabyte , gigabye ,terabyte',
@@ -89,7 +89,7 @@ export default {
         },
         {
           name: 'Length',
-          route: 'Length.Converter',
+          route: 'LengthConverter',
           description: 'Length conversion calculator',
           icon: 'lengthConverter',
           tag: 'number , length convertion , convert',
@@ -97,7 +97,7 @@ export default {
         },
         {
           name: 'Weight',
-          route: 'Weight.Converter',
+          route: 'WeightConverter',
           description: 'Weight conversion calculator',
           icon: 'weightConverter',
           tag: 'weight , mass convertion , convert',
@@ -105,7 +105,7 @@ export default {
         },
         {
           name: 'Area',
-          route: 'Area.Converter',
+          route: 'AreaConverter',
           description: 'Area conversion calculator',
           icon: 'areaConverter',
           tag: 'area , area convertion , convert , hectare , squad',
@@ -113,7 +113,7 @@ export default {
         },
         {
           name: 'Volume',
-          route: 'Volume.Converter',
+          route: 'VolumeConverter',
           description: 'Volume conversion calculator',
           icon: 'volumeConverter',
           tag: 'volume , volume convertion , convert , liquid , cubic',
@@ -121,7 +121,7 @@ export default {
         },
         {
           name: 'Pressure',
-          route: 'Pressure.Converter',
+          route: 'PressureConverter',
           description: 'Pressure conversion calculator',
           icon: 'pressureConverter',
           tag: 'pressure , pressure convertion , convert , atmosphere , pascal',
@@ -129,7 +129,7 @@ export default {
         },
         {
           name: 'Speed',
-          route: 'Speed.Converter',
+          route: 'SpeedConverter',
           description: 'Speed conversion calculator',
           icon: 'speedConverter',
           tag: 'speed , speed convertion , convert , metre per hour , knot',
@@ -137,7 +137,7 @@ export default {
         },
         {
           name: 'Time',
-          route: 'Time.Converter',
+          route: 'TimeConverter',
           description: 'Time conversion calculator',
           icon: 'timeConverter',
           tag: 'time , time convertion , convert , second , minute , hour ',
@@ -145,7 +145,7 @@ export default {
         },
         {
           name: 'Angle',
-          route: 'Angle.Converter',
+          route: 'AngleConverter',
           description: 'Angle conversion calculator',
           icon: 'angleConverter',
           tag: 'angle , angle convertion , convert , degrees , radian , gradian ',
@@ -153,7 +153,7 @@ export default {
         },
         {
           name: 'Energy',
-          route: 'Energy.Converter',
+          route: 'EnergyConverter',
           description: 'Energy conversion calculator',
           icon: 'energyConverter',
           tag: 'energy , energy convertion , convert , watt , joule ',
@@ -161,7 +161,7 @@ export default {
         },
         {
           name: 'Frequency',
-          route: 'Frequency.Converter',
+          route: 'FrequencyConverter',
           description: 'Frequency conversion calculator',
           icon: 'frequencyConverter',
           tag: 'frequency , frequency convertion , convert , rpm , hz , mhz',
@@ -169,7 +169,7 @@ export default {
         },
         {
           name: 'Density',
-          route: 'Density.Converter',
+          route: 'DensityConverter',
           description: 'Density conversion calculator',
           icon: 'densityConverter',
           tag: 'density , density convertion , convert',
@@ -177,7 +177,7 @@ export default {
         },
         {
           name: 'Force',
-          route: 'Force.Converter',
+          route: 'ForceConverter',
           description: 'Force conversion calculator',
           icon: 'forceConverter',
           tag: 'force , force convertion , convert , newton',
@@ -185,7 +185,7 @@ export default {
         },
         {
           name: 'Flow Rate',
-          route: 'Flow.Rate.Converter',
+          route: 'FlowRateConverter',
           description: 'Flow rate conversion calculator',
           icon: 'flowRateConverter',
           tag: 'flow , flow rate convertion , volume , convertion',
@@ -193,7 +193,7 @@ export default {
         },
         {
           name: 'Temperature',
-          route: 'Temperature.Converter',
+          route: 'TemperatureConverter',
           description: 'Temperature conversion calculator',
           icon: 'temperatureConverter',
           tag: 'temperature , temp convertion , centigrade , celsius , kelvin , convertion',
