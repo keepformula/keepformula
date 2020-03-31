@@ -72,15 +72,15 @@ export default {
           category: 'Math'
         },
         {
-          name: 'Base Converter',
-          route: 'Base.Converter',
+          name: 'Radix',
+          route: 'Radix.Converter',
           description: 'Number base conversion calculator',
           icon: 'baseConverter',
           tag: 'number , numerical convertion , convert',
           category: 'Convertion'
         },
         {
-          name: 'Data Storage Converter',
+          name: 'Data Storage',
           route: 'Data.Storage.Converter',
           description: 'Conversion units for the Data Storage',
           icon: 'dataStorageConverter',
@@ -88,7 +88,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Length Converter',
+          name: 'Length',
           route: 'Length.Converter',
           description: 'Length conversion calculator',
           icon: 'lengthConverter',
@@ -96,7 +96,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Weight Converter',
+          name: 'Weight',
           route: 'Weight.Converter',
           description: 'Weight conversion calculator',
           icon: 'weightConverter',
@@ -104,7 +104,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Area Converter',
+          name: 'Area',
           route: 'Area.Converter',
           description: 'Area conversion calculator',
           icon: 'areaConverter',
@@ -112,7 +112,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Volume Converter',
+          name: 'Volume',
           route: 'Volume.Converter',
           description: 'Volume conversion calculator',
           icon: 'volumeConverter',
@@ -120,7 +120,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Pressure Converter',
+          name: 'Pressure',
           route: 'Pressure.Converter',
           description: 'Pressure conversion calculator',
           icon: 'pressureConverter',
@@ -128,7 +128,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Speed Converter',
+          name: 'Speed',
           route: 'Speed.Converter',
           description: 'Speed conversion calculator',
           icon: 'speedConverter',
@@ -136,7 +136,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Time Converter',
+          name: 'Time',
           route: 'Time.Converter',
           description: 'Time conversion calculator',
           icon: 'timeConverter',
@@ -144,7 +144,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Angle Converter',
+          name: 'Angle',
           route: 'Angle.Converter',
           description: 'Angle conversion calculator',
           icon: 'angleConverter',
@@ -152,7 +152,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Energy Converter',
+          name: 'Energy',
           route: 'Energy.Converter',
           description: 'Energy conversion calculator',
           icon: 'energyConverter',
@@ -160,7 +160,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Frequency Converter',
+          name: 'Frequency',
           route: 'Frequency.Converter',
           description: 'Frequency conversion calculator',
           icon: 'frequencyConverter',
@@ -168,7 +168,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Density Converter',
+          name: 'Density',
           route: 'Density.Converter',
           description: 'Density conversion calculator',
           icon: 'densityConverter',
@@ -176,7 +176,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Force Converter',
+          name: 'Force',
           route: 'Force.Converter',
           description: 'Force conversion calculator',
           icon: 'forceConverter',
@@ -184,7 +184,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Flow Rate Converter',
+          name: 'Flow Rate',
           route: 'Flow.Rate.Converter',
           description: 'Flow rate conversion calculator',
           icon: 'flowRateConverter',
@@ -192,7 +192,7 @@ export default {
           category: 'Convertion'
         },
         {
-          name: 'Temperature Converter',
+          name: 'Temperature',
           route: 'Temperature.Converter',
           description: 'Temperature conversion calculator',
           icon: 'temperatureConverter',
