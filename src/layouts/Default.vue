@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHr lpR ffr">
     <q-layout-header
-      class="row mobile-scroll-header border-bottom border-danger q-px-sm"
+      class="row mobile-scroll-header border-bottom q-px-sm"
       :class="{ 'scroll-header': !showNavbar }">
       <div class="relative-position q-mx-auto q-mt-md col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10
         mobile-size-padding" >
@@ -13,7 +13,7 @@
           >
           <div class="">
             <router-link  to="/">
-              <img 
+              <img
                width="220"
               src="/logo.svg">
             </router-link>

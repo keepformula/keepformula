@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="mobile-size-right-left-padding">
     <div>
       <div class="row mobile-search-margin">
         <q-search
