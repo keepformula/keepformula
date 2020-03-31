@@ -25,7 +25,7 @@ import StepperMotor from './components/StepperMotor.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode : 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -47,8 +47,8 @@ export default new Router({
           component: BMI
         },
         {
-          path: '/Base',
-          name: 'BaseConverter',
+          path: '/Radix',
+          name: 'RadixConverter',
           component: BaseConverter
         },
         {
