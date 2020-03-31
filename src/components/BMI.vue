@@ -141,7 +141,7 @@
            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Body_mass_index">Body mass index</a></h4><p>{{ $t('bmi_wiki') }} </p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Body mass index</a></h4><p>{{ $t('bmi_wiki') }} </p></blockquote>
         </div>
         </div>
       </div>
@@ -168,6 +168,7 @@ export default {
       heightUnit: this.$config.defaultUnits.height,
       seen: false,
       icon: 'bmi',
+      wiki: 'https://en.wikipedia.org/wiki/Body_mass_index',
       bmiMessage: {
         underWeight: this.$t('bmi_underWeight'), // 'You are Under weight',
         normal: this.$t('bmi_normal'), // 'You are Normal',

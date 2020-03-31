@@ -95,7 +95,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Pressure">Pressure</a></h4><p>{{ $t('pressure_wiki') }}</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Pressure</a></h4><p>{{ $t('pressure_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>
@@ -117,6 +117,7 @@ export default {
       unit: Unit,
       value: null,
       icon: 'pressureConverter',
+      wiki: 'https://en.wikipedia.org/wiki/Pressure',
       inputUnit: this.$config.defaultUnits.inputUnitPressureConverter,
       outputUnit: this.$config.defaultUnits.outputUnitPressureConverter
     }

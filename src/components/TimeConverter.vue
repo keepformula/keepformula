@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Time">Time</a></h4><p>{{ $t('time_wiki') }}</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Time</a></h4><p>{{ $t('time_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>
@@ -115,6 +115,7 @@ export default {
       unit: Unit,
       value: null,
       icon: 'timeConverter',
+      wiki: 'https://en.wikipedia.org/wiki/Time',
       inputUnit: this.$config.defaultUnits.inputUnitTimeConverter,
       outputUnit: this.$config.defaultUnits.outputUnitTimeConverter
     }

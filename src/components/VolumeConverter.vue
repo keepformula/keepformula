@@ -93,7 +93,7 @@
             </div>
           </div>
         <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
-          <blockquote class="embedly-card" data-card-controls="0"><h4><a href="https://en.wikipedia.org/wiki/Unit_of_volume">Unit of volume</a></h4><p>{{ $t('volume_wiki') }}</p></blockquote>
+          <blockquote class="embedly-card" data-card-controls="0"><h4><a href=this.wiki>Unit of volume</a></h4><p>{{ $t('volume_wiki') }}</p></blockquote>
         </div>
         </div>
       </div>
@@ -115,6 +115,7 @@ export default {
       unit: Unit,
       value: null,
       icon: 'volumeConverter',
+      wiki: 'https://en.wikipedia.org/wiki/Unit_of_volume',
       inputUnit: this.$config.defaultUnits.inputUnitVolumeConverter,
       outputUnit: this.$config.defaultUnits.outputUnitVolumeConverter
     }
