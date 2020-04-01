@@ -134,11 +134,11 @@ background: $primary !important;
             .mobile-size-padding {
               padding: 0px 1px;
             }
-.calculator-cards {
-  padding: 20px;
-  height: 270px;
-  border: 1px solid #E0E0E0;
-}
+            .calculator-cards {
+              padding: 20px;
+              height: 260px;
+              border: 1px solid #E0E0E0;
+              }
     }
 @media only screen and (max-width: 575px) {
   .card-image {
@@ -251,23 +251,28 @@ background: $primary !important;
                           border: 1px solid $secondary;
                           max-height: 35px;
                           }
-                        }
-      @media only screen and (max-width: 309px) {
-        .header-app-name {
-          position: relative;
-          font-size: 1.5em;
-          }
-          .icon {
-            width:25px;
-            height:25px;
-            background-color: $primary;
-            -webkit-mask: url(../assets/logo.svg) no-repeat center;
-            }
-            .mobile-search-margin {
-              margin: 0px 9px;
-                }
-            .mobile-size-component-header {
-              font-size: 4.7vw;
+                          .q-card-title { 
+                            color: $primary;
+                            font-weight:bold;
+                            font-size: 17px;
+                            }
+                          }
+                          @media only screen and (max-width: 309px) {
+                            .header-app-name {
+                              position: relative;
+                              font-size: 1.5em;
+                              }
+                              .icon {
+                                width:25px;
+                                height:25px;
+                                background-color: $primary;
+                                -webkit-mask: url(../assets/logo.svg) no-repeat center;
+                                }
+                                .mobile-search-margin {
+                                  margin: 0px 9px;
+                                  }
+                                  .mobile-size-component-header {
+                                    font-size: 4.7vw;
                 img {
                   width: 24px !important;
                     }
