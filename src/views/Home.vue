@@ -7,7 +7,7 @@
            class="q-my-lg q-mx-auto col-12 col-xl-4 col-lg-6 col-md-7 col-sm-8
            search-style"
            hide-underline
-           ref='focusMe'
+           ref="input"
            placeholder="Search (e.g., Speed, Volume , Time, Frequency)"
            v-model="searchQuery" />
       </div>
@@ -50,8 +50,11 @@
 </template>
 
 <script>
+import { mixin } from '@/mixins/mixin'
+
 export default {
   name: 'PageHome',
+  mixins: [mixin],
   data () {
     return {
       calculators: [
@@ -232,18 +235,11 @@ export default {
       if (calci === 1) {
         this.searchResult.forEach((item) => {
           // window.location.pathname = window.location.pathname + item.route
-          
-          this.$router.push({ name: item.route})
+
+          this.$router.push({ name: item.route })
         }
         )
       }
-    }
-  },
-  mounted () {
-    if (window.screen.width > 768) {
-      setTimeout(() => {
-        this.$refs.focusMe.focus()
-      }, 0)
     }
   }
 }
