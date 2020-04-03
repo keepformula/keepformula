@@ -6,7 +6,7 @@ export default {
     download: 'Download',
     app_name: 'Keep Formula',
     threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.',
-    threed_printer_steppers_calibration: '3d Printer Steppers Motor Calibration',
+    threed_printer_steppers_calibration: '3d Printer Stepper Motors Calibration',
     current_m92_value: 'Current M92 Value',
     desired_movement: 'Desired Movement',
     acctual_movement: 'Acctual Movement',
