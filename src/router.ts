@@ -21,6 +21,7 @@ import ForceConverter from './components/ForceConverter.vue'
 import FlowRateConverter from './components/FlowRateConverter.vue'
 import TemperatureConverter from './components/TemperatureConverter.vue'
 import StepperMotor from './components/StepperMotor.vue'
+import QRCode from './components/QRCode.vue'
 
 Vue.use(Router)
 
@@ -130,6 +131,11 @@ export default new Router({
           path: '/StepperMotor',
           name: 'StepperMotor',
           component: StepperMotor
+        },
+        {
+          path: '/QRCode',
+          name: 'QRCode',
+          component: QRCode
         }
       ]
     }

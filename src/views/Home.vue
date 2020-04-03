@@ -201,6 +201,14 @@ export default {
           icon: 'temperatureConverter',
           tag: 'temperature , temp convertion , centigrade , celsius , kelvin , convertion',
           category: 'Convertion'
+        },
+        {
+          name: 'QRCode',
+          route: 'QRCode',
+          description: 'Generate QR code from text',
+          icon: 'qrCode',
+          tag: 'qr-code',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

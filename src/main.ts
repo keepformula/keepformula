@@ -15,6 +15,8 @@ import 'quasar-extras/mdi'
 import Quasar from 'quasar'
 import Config from './config/config'
 import Clipboard from 'v-clipboard'
+import VueQrcode from '@chenfengyuan/vue-qrcode'
+Vue.component(VueQrcode.name, VueQrcode)
 Vue.prototype.$config = Config
 Vue.use(Quasar, {
   config: {}
