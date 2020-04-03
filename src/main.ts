@@ -15,6 +15,7 @@ import 'quasar-extras/mdi'
 import Quasar from 'quasar'
 import Config from './config/config'
 import Clipboard from 'v-clipboard'
+// @ts-ignore: Unreachable code error
 import VueQrcode from '@chenfengyuan/vue-qrcode'
 Vue.component(VueQrcode.name, VueQrcode)
 Vue.prototype.$config = Config
