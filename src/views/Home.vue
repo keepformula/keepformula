@@ -209,6 +209,14 @@ export default {
           icon: 'qrCode',
           tag: 'qr-code',
           category: 'Convertion'
+        },
+        {
+          name: '3D Print Stepper Calibration',
+          route: '3dPrintStepperCalibration',
+          description: '3d print stepper motors calibration',
+          icon: '3dPrintCalibration',
+          tag: '3D Print, calibration, stepper motors',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,

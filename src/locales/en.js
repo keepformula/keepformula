@@ -4,6 +4,11 @@ export default {
       png: 'PNG'
     },
     app_name: 'Keep Formula',
+    threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.',
+    threed_printer_steppers_calibration: '3d Printer Steppers Motor Calibration',
+    current_m92_value: 'Current M92 Value',
+    desired_movement: 'Desired Movement',
+    acctual_movement: 'Acctual Movement',
     qr_code: 'QR Code',
     qr_code_generator: 'QR Code Generator',
     golden_ratio: 'Golden Ratio',
