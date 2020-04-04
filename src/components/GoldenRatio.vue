@@ -31,8 +31,10 @@
                               <q-item-side color="black" left>
                                 <span> Shorter Section </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ shorterSection }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -42,15 +44,17 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.shorterSection">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                             <q-item-separator />
                             <q-item>
                               <q-item-side color="black" left>
                                 <span> Longer Section </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ longerSection }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -60,7 +64,7 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.longerSection">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                           </q-list>
                         </div>

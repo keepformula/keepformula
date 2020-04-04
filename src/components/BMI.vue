@@ -63,7 +63,7 @@
                               <q-item-side color="black" left>
                                 <span> Status </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ bmiMessageCalculate }} </span>
                               </q-item-main>
                             </q-item>
@@ -72,8 +72,10 @@
                               <q-item-side color="black" left>
                                 <span> BMI </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ bmi}} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -83,14 +85,14 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.bmi">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                             <q-item-separator />
                             <q-item>
                               <q-item-side color="black" left>
                                 <span> Normal weight  </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ minNormalWeight }} {{ weightUnit }} to {{ maxNormalWeight }} {{ weightUnit }} </span>
                               </q-item-main>
                             </q-item>
@@ -99,8 +101,10 @@
                               <q-item-side color="black" left>
                                 <span> Robinson Formula </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ robinsonFormula }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -110,15 +114,17 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.robinsonFormula">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                             <q-item-separator />
                             <q-item>
                               <q-item-side color="black" left>
                                 <span> Miller Formula </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ millerFormula }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -128,15 +134,17 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.millerFormula">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                             <q-item-separator />
                             <q-item>
                               <q-item-side color="black" left>
                                 <span> Hamwi Formula </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ hamwiFormula }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -146,15 +154,17 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.hamwiFormula">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                             <q-item-separator />
                             <q-item>
                               <q-item-side color="black" left>
                                 <span> Devine Formula </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ devineFormula }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -164,7 +174,7 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.devineFormula">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                           </q-list>
                         </div>

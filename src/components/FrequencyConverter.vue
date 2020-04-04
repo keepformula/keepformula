@@ -63,8 +63,10 @@
                               <q-item-side color="black" left>
                                 <span> {{ value }} {{ inputUnit }} </span>
                               </q-item-side>
-                              <q-item-main color="" class="q-pl-xl">
+                              <q-item-main color="">
                                 <span> {{ frequencyConvert }} {{ outputUnit }} </span>
+                              </q-item-main>
+                              <q-item-side right>
                                 <q-btn class="absolute-right q-mr-sm"
                                        id="copy-btn"
                                        size="md"
@@ -74,7 +76,7 @@
                                        icon="file_copy"
                                        v-clipboard="() => this.frequencyConvert">
                                 </q-btn>
-                              </q-item-main>
+                              </q-item-side>
                             </q-item>
                           </q-list>
                         </div>
