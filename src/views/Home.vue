@@ -23,7 +23,7 @@
           <div
              v-for="(item, index) in searchResult"
              v-bind:key="index"
-             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2 main-card" >
+             class="q-pa-sm col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 main-card" >
              <router-link
              :key="index"
              :to="{ name: item.route }" >
@@ -70,6 +70,14 @@ export default {
           icon: 'bmi',
           tag: 'health , weight , height , mass , body',
           category: 'Health'
+        },
+        {
+          name: 'Aspect Ratio',
+          route: 'AspectRatio',
+          description: 'Calculate Body Mass Index',
+          icon: 'AspectRatio',
+          tag: 'math , rectangle , ratio',
+          category: 'Math'
         },
         {
           name: 'Golden Ratio',

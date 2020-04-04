@@ -90,10 +90,10 @@ export default {
   },
   methods: {
     download () {
-      var link = document.createElement('a');
-      link.download = 'qr.png';
+      var link = document.createElement('a')
+      link.download = 'qr.png'
       link.href = document.getElementsByTagName('canvas')[0].toDataURL()
-      link.click();
+      link.click()
     }
   }
 }
