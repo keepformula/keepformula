@@ -22,38 +22,50 @@
                   <transition-group
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
-                    <div class="q-mt-md" key="head">
+                    <div class="q-mt-md q-mb-md" key="head">
                       <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
-                          <div class="div1"> Shorter Section </div>
-                          <div class="div2 relative-position"> {{ shorterSection }}
-                            <q-btn class="absolute-right q-my-md q-mr-sm"
-                                   id="copy-btn"
-                                   size="md"
-                                   flat
-                                   outline
-                                   color="grey"
-                                   icon="file_copy"
-                                   v-clipboard="() => this.shorterSection">
-                            </q-btn>
-                          </div>
-                          <div class="div3"> Longer Section </div>
-                          <div class="div4 relative-position"> {{ longerSection }}
-                            <q-btn class="absolute-right q-my-md q-mr-sm"
-                                   id="copy-btn"
-                                   size="md"
-                                   flat
-                                   outline
-                                   color="grey"
-                                   icon="file_copy"
-                                   v-clipboard="() => this.longerSection">
-                            </q-btn>
-                          </div>
-                          <div class="div5"> </div>
+                          <q-list inset-separator class="q-mt-xs no-border-left-right">
+                            <q-item>
+                              <q-item-side color="black" left>
+                                <span> Shorter Section </span>
+                              </q-item-side>
+                              <q-item-main color="" class="q-pl-xl">
+                                <span> {{ shorterSection }} </span>
+                                <q-btn class="absolute-right q-mr-sm"
+                                       id="copy-btn"
+                                       size="md"
+                                       flat
+                                       outline
+                                       color="grey"
+                                       icon="file_copy"
+                                       v-clipboard="() => this.shorterSection">
+                                </q-btn>
+                              </q-item-main>
+                            </q-item>
+                            <q-item-separator />
+                            <q-item>
+                              <q-item-side color="black" left>
+                                <span> Longer Section </span>
+                              </q-item-side>
+                              <q-item-main color="" class="q-pl-xl">
+                                <span> {{ longerSection }} </span>
+                                <q-btn class="absolute-right q-mr-sm"
+                                       id="copy-btn"
+                                       size="md"
+                                       flat
+                                       outline
+                                       color="grey"
+                                       icon="file_copy"
+                                       v-clipboard="() => this.longerSection">
+                                </q-btn>
+                              </q-item-main>
+                            </q-item>
+                          </q-list>
                         </div>
-                        </q-item-main>
-                  </div>
+                      </q-item-main>
+                    </div>
                   </transition-group>
               </q-card-main>
             </q-card>
@@ -114,36 +126,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.parent {
-display: grid;
-grid-template-columns: 1fr 2fr;
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-
-.div1 {
-  grid-area: 1 / 1 / 2 / 2;
-  padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
-  border-top: 1px solid #E0E0E0;
-}
-.div2 {
-  grid-area: 1 / 2 / 2 / 3;
-  padding: 25px 10px;
-  border-bottom: 1px solid #E0E0E0;
-  border-top: 1px solid #E0E0E0;
-}
-.div3 {
-  grid-area: 2 / 1 / 3 / 2;
-  padding: 25px 10px;
-}
-.div4 {
-  grid-area: 2 / 2 / 3 / 3;
-  padding: 25px 10px;
-}
-.div5 { grid-area: 1 / 1 / 3 / 3; }
-
-</style>

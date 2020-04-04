@@ -54,25 +54,32 @@
                   <transition-group
                     enter-active-class="animated fadeIn"
                     v-if='this.value' >
-                    <div class="q-mt-md" key="head">
+                    <div class="q-mt-md q-mb-md" key="head">
                       <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
-                            <q-item-main>
-                                <div class="parent animate-scale" key="text">
-                                  <div class="div1"> {{ value }} {{ inputUnit }} </div>
-                                  <div class="div2 relative-position"> {{ dataStorageConvert }} {{ outputUnit }}
-                                    <q-btn class="absolute-right q-my-md q-mr-sm"
-                                           id="copy-btn"
-                                           size="md"
-                                           flat
-                                           outline
-                                           color="grey"
-                                           icon="file_copy"
-                                           v-clipboard="() => this.dataStorageConvert">
-                                    </q-btn>
-                                  </div>
-                                </div>
-                            </q-item-main>
+                      <q-item-main>
+                        <div class="parent animate-scale" key="text">
+                          <q-list inset-separator class="q-mt-xs no-border-left-right">
+                            <q-item>
+                              <q-item-side color="black" left>
+                                <span> {{ value }} {{ inputUnit }} </span>
+                              </q-item-side>
+                              <q-item-main color="" class="q-pl-xl">
+                                <span> {{ dataStorageConvert }} {{ outputUnit }} </span>
+                                <q-btn class="absolute-right q-mr-sm"
+                                       id="copy-btn"
+                                       size="md"
+                                       flat
+                                       outline
+                                       color="grey"
+                                       icon="file_copy"
+                                       v-clipboard="() => this.dataStorageConvert">
+                                </q-btn>
+                              </q-item-main>
+                            </q-item>
+                          </q-list>
                         </div>
+                      </q-item-main>
+                    </div>
                   </transition-group>
               </q-card-main>
            </q-card>

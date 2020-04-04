@@ -51,13 +51,17 @@
                   </div>
                   <transition-group enter-active-class="animated fadeIn"
                                     v-if='this.value' >
-                    <div class="q-mt-md" key="head">
+                    <div class="q-mt-md q-mb-md" key="head">
                       <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
                       <q-item-main>
                         <div class="parent animate-scale" key="text">
-                            <div class="div1"> {{ value }} {{ inputUnit }} </div>
-                            <div class="div2 relative-position"> {{ areaConvert }} {{ outputUnit }}
-                               <q-btn class="absolute-right q-my-md q-mr-sm"
+                          <q-list inset-separator class="no-border-left-right">
+                            <q-item>
+                              <q-item-side color="black" left> <span> {{ value }} {{ inputUnit }}
+                                </span> </q-item-side>
+                                <q-item-main color="" class="q-pl-xl">
+                                  <span> {{ areaConvert }} {{ outputUnit }} </span>
+                                  <q-btn class="absolute-right q-mr-sm"
                                      id="copy-btn"
                                      size="md"
                                      flat
@@ -65,8 +69,10 @@
                                      color="grey"
                                      icon="file_copy"
                                      v-clipboard="() => this.areaConvert">
-                              </q-btn>
-                            </div>
+                                  </q-btn>
+                              </q-item-main>
+                            </q-item>
+                          </q-list>
                           </div>
                       </q-item-main>
                     </div>
