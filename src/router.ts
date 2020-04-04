@@ -22,7 +22,8 @@ import FlowRateConverter from './components/FlowRateConverter.vue'
 import TemperatureConverter from './components/TemperatureConverter.vue'
 import StepperMotor from './components/StepperMotor.vue'
 import AspectRatio from './components/AspectRatio.vue'
-
+import QRCode from './components/QRCode.vue'
+import threeDPrintStepperCalibration from './components/3dPrintStepperCalibration.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -136,6 +137,16 @@ export default new Router({
           path: '/AspectRatio',
           name: 'AspectRatio',
           component: AspectRatio
+        },
+        {
+          path: '/QRCode',
+          name: 'QRCode',
+          component: QRCode
+        },
+        {
+          path: '/3d_print_stepper_calibration',
+          name: '3dPrintStepperCalibration',
+          component: threeDPrintStepperCalibration
         }
       ]
     }

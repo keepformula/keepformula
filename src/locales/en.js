@@ -1,6 +1,17 @@
 export default {
   en: {
+    file_format: {
+      png: 'PNG'
+    },
+    download: 'Download',
     app_name: 'Keep Formula',
+    threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.',
+    threed_printer_steppers_calibration: '3d Printer Stepper Motors Calibration',
+    current_m92_value: 'Current M92 Value',
+    desired_movement: 'Desired Movement',
+    acctual_movement: 'Acctual Movement',
+    qr_code: 'QR Code',
+    qr_code_generator: 'QR Code Generator',
     golden_ratio: 'Golden Ratio',
     value_label: 'Enter value',
     body_mass_index: 'Body Mass Index',
@@ -79,6 +90,7 @@ export default {
     temperature_wiki: 'Temperature Two thermometers showing temperature in Celsius and Fahrenheit. T SI unit K °C, °F, °R Intensive? yes Derivations fromother quantities , Dimension Θ Temperature is a measure of the average kinetic energy of the atoms or molecules in the system.',
     time_wiki: 'Time is the indefinite continued progress of existence and events that occur in an apparently irreversible succession from the past, through the present, into the future. Time is a component quantity of various measurements used to sequence events, to compare the duration of events or the intervals between them, and to quantify rates of change of quantities in material reality or in the conscious experience.',
     volume_wiki: 'A unit of volume is a unit of measurement for measuring volume or capacity, the extent of an object or space in three dimensions. Units of capacity may be used to specify the volume of fluids or bulk goods, for example water, rice, sugar, grain or flour.',
-    weight_wiki: 'In science and engineering, the weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place. Some standard textbooks define weight as a vector quantity, the gravitational force acting on the object.'
+    weight_wiki: 'In science and engineering, the weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place. Some standard textbooks define weight as a vector quantity, the gravitational force acting on the object.',
+    qr_code_wiki: 'QR code (abbreviated from Quick Response code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that contains information about the item to which it is attached.'
   }
 }
