@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
+      <div class="q-mb-lg q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
         <!-- eslint-disable-next-line vue/valid-v-model -->
         <div class="row" v-model="noResult">
              <p class="q-display-1 text-center full-width q-mt-lg text-weight-light"
@@ -45,6 +45,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="text-love" >
+      <span>
+        Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
+      </span>
     </div>
   </q-page>
 </template>

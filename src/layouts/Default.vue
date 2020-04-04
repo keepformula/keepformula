@@ -57,12 +57,6 @@
         </q-item>
         </q-list>
       </q-list>
-      <div class="text-weight-medium fixed-bottom q-pb-md" color="primary">
-          <q-item-separator class="q-mb-md" />
-        <span class="text-love text-weight-light">
-          Made for you with <img width="10" src="/img/heart.svg"> by Open Source community
-        </span>
-      </div>
     </q-layout-drawer>
     <q-page-container>
       <router-view />
