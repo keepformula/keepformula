@@ -684,5 +684,31 @@ export default {
       label: 'Rankine scale',
       value: 'R'
     }
+  ],
+  aspectRatio: [
+    {
+      label: 'SVGA / XGA (4:3)',
+      value: '4:3'
+    },
+    {
+      label: '4K / HD / FHD (16:9)',
+      value: '16:9'
+    },
+    {
+      label: 'WXGA (5:3)',
+      value: '5:3'
+    },
+    {
+      label: 'SXGA (5:4)',
+      value: '5:4'
+    },
+    {
+      label: 'WXGA+ / WSXGA+ (16:10)',
+      value: '16:10'
+    },
+    {
+      label: 'WSVGA (~17:10)',
+      value: '17:10'
+    }
   ]
 }

@@ -67,6 +67,14 @@ export default {
           category: 'Health'
         },
         {
+          name: 'Aspect Ratio',
+          route: 'AspectRatio',
+          description: 'Calculate Body Mass Index',
+          icon: 'AspectRatio',
+          tag: 'math , rectangle , ratio',
+          category: 'Math'
+        },
+        {
           name: 'Golden Ratio',
           route: 'GoldenRatio',
           description: 'Calculate Golden Ratio',
