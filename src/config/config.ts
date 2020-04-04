@@ -35,6 +35,8 @@ export default {
     outputUnitTemperatureConverter: 'F',
     inputUnitDensityConverter: 'kg/m3',
     outputUnitDensityConverter: 'lb/cu-ft',
-    inputUnitAspectRatioConverter: '4:3'
+    inputUnitAspectRatioConverter: '4:3',
+    inputUnitPowerConverter: 'W',
+    outputUnitPowerConverter: 'hp'
   }
 }

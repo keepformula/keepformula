@@ -710,5 +710,31 @@ export default {
       label: 'WSVGA (~17:10)',
       value: '17:10'
     }
+  ],
+  power: [
+    {
+      label: 'Watt',
+      value: 'W'
+    },
+    {
+      label: 'Milli watt',
+      value: 'mW'
+    },
+    {
+      label: 'Kilo watt',
+      value: 'kW'
+    },
+    {
+      label: 'Mega watt',
+      value: 'MW'
+    },
+    {
+      label: 'Giga watt',
+      value: 'GW'
+    },
+    {
+      label: 'Horse power',
+      value: 'hp'
+    }
   ]
 }

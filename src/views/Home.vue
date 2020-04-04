@@ -230,6 +230,14 @@ export default {
           icon: '3dPrintCalibration',
           tag: '3D Print, calibration, stepper motors',
           category: 'Convertion'
+        },
+        {
+          name: 'Power',
+          route: 'PowerConverter',
+          description: 'Power conversion calculator',
+          icon: 'power',
+          tag: 'power , convert , hp , watt , horsepower',
+          category: 'Convertion'
         }
       ],
       searchQuery: null,
