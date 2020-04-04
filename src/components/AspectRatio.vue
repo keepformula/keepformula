@@ -38,35 +38,39 @@
                   <transition-group
                      enter-active-class="animated fadeIn"
                      v-if="this.inputUnit && this.value">
-                    <div
-                      class="q-mt-md"
-                      key="head">
+                    <div class="q-mt-md q-mr-md" key="head">
                       <q-list-header
                         class="q-body-1 q-mt-md">
                         {{ $t('result') }}
                       </q-list-header>
-                      <q-item-main>
-                        <div
-                          class="parent animate-scale"
-                          key="text">
-                          <div class="div1">
-                            {{ $t('height') }}
-                          </div>
-                          <div class="div2 relative-position">
-                            {{  aspectRatioUnit }}
-                            <q-btn
-                               class="absolute-right q-my-md q-mr-sm"
-                               id="copy-btn"
-                               size="md"
-                               flat
-                               outline
-                               color="grey"
-                               icon="file_copy"
-                               v-clipboard="() => this.aspectRatioUnit">
+                      <q-list
+                        dense
+                        bordered
+                        padding
+                        class="rounded-borders">
+                        <q-item
+                          class="q-my-sm cursor-pointer"
+                          clickable
+                          v-clipboard="() => this.calculatedValue"
+                          v-ripple>
+                          <q-item-section side top>
+                            <q-btn class="q-my-md q-mr-sm"
+                                   size="md"
+                                   id="copy-btn"
+                                   outline
+                                   flat
+                                   color="grey"
+                                   icon="file_copy">
                             </q-btn>
-                          </div>
-                        </div>
-                      </q-item-main>
+                          </q-item-section>
+                          <q-item-section>
+                            {{ $t('height') }}
+                          </q-item-section>
+                          <q-item-section class="q-pl-lg">
+                            {{  calculatedValue }}
+                          </q-item-section>
+                        </q-item>
+                      </q-list>
                     </div>
                   </transition-group>
               </q-card-main>
@@ -79,7 +83,6 @@
                 color="secondary"
                 outline
                 :label="$t('back')"/>
-
                <q-btn
                 @click="reset"
                 icon="refresh"
@@ -99,7 +102,7 @@
               </a>
             </h4>
             <p>
-            {{ $t('aspect_ratio_wiki') }}
+             {{ $t('aspect_ratio_wiki') }}
             </p>
           </blockquote>
         </div>
@@ -125,11 +128,11 @@ export default {
       height: null,
       icon: 'AspectRatio',
       wiki: 'https://en.wikipedia.org/wiki/Aspect_ratio',
-      inputUnit: this.$config.defaultUnits.inputUnitAspectRatioConverter
+      inputUnit: this.$config.defaultUnits.inputUnit
     }
   },
   computed: {
-    aspectRatioUnit () {
+    calculatedValue () {
       let out = this.value
       if (this.inputUnit === `4:3`) {
         out = Math.round(out * 3 / 4)
