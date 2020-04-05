@@ -733,8 +733,8 @@ export default {
       value: 'GW'
     },
     {
-      label: 'Horse power',
-      value: 'hp'
+      label: 'Horsepower',
+      value: 'HP'
     }
   ]
 }

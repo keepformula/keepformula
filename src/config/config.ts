@@ -37,6 +37,6 @@ export default {
     outputUnitDensityConverter: 'lb/cu-ft',
     inputUnitAspectRatioConverter: '4:3',
     inputUnitPowerConverter: 'W',
-    outputUnitPowerConverter: 'hp'
+    outputUnitPowerConverter: 'MW'
   }
 }

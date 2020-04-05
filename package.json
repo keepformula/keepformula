@@ -29,7 +29,7 @@
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "^1.0.2",
     "bases": "^0.2.1",
-    "convert-units": "git+https://github.com/keepformula/convert-units.git",
+    "chromedriver": "^80.0.2",
     "core-js": "^2.6.5",
     "lodash": "^4.17.15",
     "quasar": "^1.0.0-beta.15",
@@ -59,6 +59,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-imports": "1.5.0",
+    "convert-units": "git+https://github.com/keepformula/convert-units.git#master",
     "electron": "^4.0.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
