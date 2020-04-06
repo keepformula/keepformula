@@ -3,6 +3,13 @@ export default {
     file_format: {
       png: 'PNG'
     },
+    categories: {
+      math: 'Math',
+      health: 'Health',
+      conversion: 'Unit Conversion',
+      design: 'Design',
+      threedPrinter: '3D Printer'
+    },
     download: 'Download',
     app_name: 'Keep Formula',
     threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.',
