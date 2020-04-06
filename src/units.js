@@ -333,7 +333,7 @@ export default {
       value: 'km/h'
     },
     {
-      label: 'Metre per hour',
+      label: 'Mile per hour',
       value: 'm/h'
     },
     {
