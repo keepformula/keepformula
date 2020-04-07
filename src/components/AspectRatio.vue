@@ -1,115 +1,63 @@
 <template>
-  <q-page class="border-top q-mb-md">
-    <div class="row mobile-header-padding q-pt-sm">
-      <div class="q-pa-xs q-mx-auto col-12 col-sm-10 col-xl-8 col-lg-8 col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-6">
-            <q-card>
-              <div class="row q-pt-md q-mt-md mobile-size-no-margin">
-          <div class="q-ml-md col-1 mobile-size-component-header q-mb-md q-mr-xs">
-            <img
-            :src="`/icon/${icon}.svg`"
-            style="width: 35px; height: 100%;"/>
-          </div>
-            <p class="q-display-1 mobile-size-component-header">
-             {{ $t('aspect_ratio') }}
-            </p>
-          </div>
-              <q-card-main>
-                  <div class="row">
-                  <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
-                    <q-input
-                      ref="input"
-                      type="text"
-                      v-model="value"
-                      :float-label="$t('width_label')"/>
-                  </div>
-                    <div class="col-4 col-lg-4 col-md-4 col-xs-4 col-sm-4 col-xs-6 q-pr-md">
-                      <q-select
-                         v-model="inputUnit"
-                         :float-label="$t('aspect_ratio_unit')"
-                         :options="unit.aspectRatio"
-                         :separator="true"
-                         radio
-                         />
-                    </div>
-                </div>
-                  <br>
-                  <transition-group
-                     enter-active-class="animated fadeIn"
-                     v-if="this.inputUnit && this.value">
-                    <div class="q-mt-md q-mr-md" key="head">
-                      <q-list-header
-                        class="q-body-1 q-mt-md">
-                        {{ $t('result') }}
-                      </q-list-header>
-                      <q-list
-                        dense
-                        bordered
-                        padding
-                        class="rounded-borders">
-                        <q-item
-                          class="q-my-sm cursor-pointer"
-                          clickable
-                          v-clipboard="() => this.calculatedValue"
-                          v-ripple>
-                          <q-item-section side top>
-                            <q-btn class="q-my-md q-mr-sm"
-                                   size="md"
-                                   id="copy-btn"
-                                   outline
-                                   flat
-                                   color="grey"
-                                   icon="file_copy">
-                            </q-btn>
-                          </q-item-section>
-                          <q-item-section>
-                            {{ $t('height') }}
-                          </q-item-section>
-                          <q-item-section class="q-pl-lg">
-                            {{  calculatedValue }}
-                          </q-item-section>
-                        </q-item>
-                      </q-list>
-                    </div>
-                  </transition-group>
-              </q-card-main>
-           </q-card>
-           <div class="q-mt-sm">
-             <q-btn
-                @click="back"
-                icon="arrow_back_ios"
-                class="back-btn-style q-mr-sm"
-                color="secondary"
-                outline
-                :label="$t('back')"/>
-               <q-btn
-                @click="reset"
-                icon="refresh"
-                class="reset-btn-style"
-                outline
-                color="secondary"
-                :label="$t('reset')" />
-           </div>
-        </div>
-        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg desktop-only">
-          <blockquote
-            class="embedly-card"
-            data-card-controls="0">
-            <h4>
-              <a v-bind:href=this.wiki>
-                {{ $t('aspect_ratio') }}
-              </a>
-            </h4>
-            <p>
-             {{ $t('aspect_ratio_wiki') }}
-            </p>
-          </blockquote>
-        </div>
-        </div>
+  <div>
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-6 q-mb-md q-pr-md" >
+        <q-input
+          ref="input"
+          type="text"
+          v-model="value"
+          :float-label="$t('width_label')"/>
       </div>
+        <div class="col-4 col-lg-4 col-md-4 col-xs-4 col-sm-4 col-xs-6 q-pr-md">
+          <q-select
+            v-model="inputUnit"
+            :float-label="$t('aspect_ratio_unit')"
+            :options="unit.aspectRatio"
+            :separator="true"
+            radio
+            />
+        </div>
     </div>
-  </q-page>
+    <br>
+    <transition-group
+      enter-active-class="animated fadeIn"
+      v-if="this.inputUnit && this.value">
+      <div class="q-mt-md q-mr-md" key="head">
+        <q-list-header
+          class="q-body-1 q-mt-md">
+          {{ $t('result') }}
+        </q-list-header>
+        <q-list
+          dense
+          bordered
+          padding
+          class="rounded-borders">
+          <q-item
+            class="q-my-sm cursor-pointer"
+            clickable
+            v-clipboard="() => this.calculatedValue"
+            v-ripple>
+            <q-item-section side top>
+              <q-btn class="q-my-md q-mr-sm"
+                     size="md"
+                     id="copy-btn"
+                     outline
+                     flat
+                     color="grey"
+                     icon="file_copy">
+              </q-btn>
+            </q-item-section>
+            <q-item-section>
+              {{ $t('height') }}
+            </q-item-section>
+            <q-item-section class="q-pl-lg">
+              {{  calculatedValue }}
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+    </transition-group>
+  </div>
 </template>
 
 <script>
@@ -126,7 +74,6 @@ export default {
       unit: Unit,
       value: null,
       height: null,
-      icon: 'AspectRatio',
       wiki: 'https://en.wikipedia.org/wiki/Aspect_ratio',
       inputUnit: this.$config.defaultUnits.inputUnit
     }

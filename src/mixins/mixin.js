@@ -1,11 +1,17 @@
+import WikiBox from '@/components/WikiBox.vue'
 export const mixin = {
+  components: {
+    WikiBox
+  },
   methods: {
     back () {
       this.$router.go(-1)
     },
     reset () {
       this.value = null
-      this.$refs.input.focus()
+      if (this.$refs.input) {
+        this.$refs.input.focus()
+      }
     },
     changeUnits () {
       let x = this.inputUnit
@@ -17,7 +23,9 @@ export const mixin = {
   created () {
     if (window.screen.width > 768) {
       setTimeout(() => {
-        this.$refs.input.focus()
+        if (this.$refs.input) {
+          this.$refs.input.focus()
+        }
       }, 500)
     }
   }

@@ -14,8 +14,9 @@
     </div>
     <div class="row">
       <div class="q-mb-lg q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
-        <q-chip 
-          v-for="cat in categories" 
+        <q-chip
+          v-for="cat in categories"
+          :key="cat"
           @click="setCurrentCategory(cat)"
           @hide="setCurrentCategory(cat)"
           :closable="currentCategories.includes(cat)"
@@ -64,6 +65,7 @@
 </template>
 
 <script>
+import Widgets from '@/widgets'
 import { mixin } from '@/mixins/mixin'
 
 export default {
@@ -72,177 +74,8 @@ export default {
   data () {
     return {
       currentCategories: [],
-      categories: ['threedPrinter', 'design', 'math', 'health', 'conversion' ],
-      calculators: [
-        {
-          name: 'BMI',
-          route: 'BMI',
-          description: 'Calculate Body Mass Index',
-          icon: 'bmi',
-          tag: 'health , weight , height , mass , body',
-          category: 'health'
-        },
-        {
-          name: 'Aspect Ratio',
-          route: 'AspectRatio',
-          description: 'Calculate Body Mass Index',
-          icon: 'AspectRatio',
-          tag: 'math , rectangle , ratio',
-          category: 'design'
-        },
-        {
-          name: 'Golden Ratio',
-          route: 'GoldenRatio',
-          description: 'Calculate Golden Ratio',
-          icon: 'goldenRatio',
-          tag: 'math , rectangle , ratio',
-          category: 'design'
-        },
-        {
-          name: 'Radix',
-          route: 'RadixConverter',
-          description: 'Number base conversion',
-          icon: 'baseConverter',
-          tag: 'number , numerical conversion , convert',
-          category: 'conversion'
-        },
-        {
-          name: 'Data Storage',
-          route: 'DataStorageConverter',
-          description: 'Conversion units for the Data Storage',
-          icon: 'dataStorageConverter',
-          tag: 'storage , kilobyte , megabyte , gigabyte ,terabyte',
-          category: 'conversion'
-        },
-        {
-          name: 'Length',
-          route: 'LengthConverter',
-          description: 'Length conversion',
-          icon: 'lengthConverter',
-          tag: 'number , length conversion , convert',
-          category: 'conversion'
-        },
-        {
-          name: 'Weight',
-          route: 'WeightConverter',
-          description: 'Weight conversion',
-          icon: 'weightConverter',
-          tag: 'weight , mass conversion , convert',
-          category: 'conversion'
-        },
-        {
-          name: 'Area',
-          route: 'AreaConverter',
-          description: 'Area conversion',
-          icon: 'areaConverter',
-          tag: 'area , area conversion , convert , hectare , squad',
-          category: 'conversion'
-        },
-        {
-          name: 'Volume',
-          route: 'VolumeConverter',
-          description: 'Volume conversion',
-          icon: 'volumeConverter',
-          tag: 'volume , volume conversion , convert , liquid , cubic',
-          category: 'conversion'
-        },
-        {
-          name: 'Pressure',
-          route: 'PressureConverter',
-          description: 'Pressure conversion',
-          icon: 'pressureConverter',
-          tag: 'pressure , pressure conversion , convert , atmosphere , pascal',
-          category: 'conversion'
-        },
-        {
-          name: 'Speed',
-          route: 'SpeedConverter',
-          description: 'Speed conversion',
-          icon: 'speedConverter',
-          tag: 'speed , speed conversion , convert , metre per hour , knot',
-          category: 'conversion'
-        },
-        {
-          name: 'Time',
-          route: 'TimeConverter',
-          description: 'Time conversion',
-          icon: 'timeConverter',
-          tag: 'time , time conversion , convert , second , minute , hour ',
-          category: 'conversion'
-        },
-        {
-          name: 'Angle',
-          route: 'AngleConverter',
-          description: 'Angle conversion',
-          icon: 'angleConverter',
-          tag: 'angle , angle conversion , convert , degrees , radian , gradient ',
-          category: 'conversion'
-        },
-        {
-          name: 'Energy',
-          route: 'EnergyConverter',
-          description: 'Energy conversion',
-          icon: 'energyConverter',
-          tag: 'energy , energy conversion , convert , watt , joule ',
-          category: 'conversion'
-        },
-        {
-          name: 'Frequency',
-          route: 'FrequencyConverter',
-          description: 'Frequency conversion',
-          icon: 'frequencyConverter',
-          tag: 'frequency , frequency conversion , convert , rpm , hz , mhz',
-          category: 'conversion'
-        },
-        {
-          name: 'Density',
-          route: 'DensityConverter',
-          description: 'Density conversion',
-          icon: 'densityConverter',
-          tag: 'density , density conversion , convert',
-          category: 'conversion'
-        },
-        {
-          name: 'Force',
-          route: 'ForceConverter',
-          description: 'Force conversion',
-          icon: 'forceConverter',
-          tag: 'force , force conversion , convert , newton',
-          category: 'conversion'
-        },
-        {
-          name: 'Flow Rate',
-          route: 'FlowRateConverter',
-          description: 'Flow rate conversion',
-          icon: 'flowRateConverter',
-          tag: 'flow , flow rate conversion , volume , conversion',
-          category: 'conversion'
-        },
-        {
-          name: 'Temperature',
-          route: 'TemperatureConverter',
-          description: 'Temperature conversion',
-          icon: 'temperatureConverter',
-          tag: 'temperature , temp conversion , centigrade , celsius , kelvin , conversion',
-          category: 'conversion'
-        },
-        {
-          name: 'QRCode',
-          route: 'QRCode',
-          description: 'Generate QR code from text',
-          icon: 'qrCode',
-          tag: 'qr-code',
-          category: 'utility'
-        },
-        {
-          name: '3D Print Stepper Calibration',
-          route: '3dPrintStepperCalibration',
-          description: '3d print stepper motors calibration',
-          icon: '3dPrintCalibration',
-          tag: '3D Print, calibration, stepper motors',
-          category: 'threedPrinter'
-        }
-      ],
+      categories: [ 'design', 'health', 'conversion', 'threedPrinter' ],
+      calculators: Widgets,
       searchQuery: null,
       select: null,
       noResult: false
@@ -274,9 +107,9 @@ export default {
   },
   methods: {
     setCurrentCategory (cat) {
-      const index = this.currentCategories.indexOf(cat);
+      const index = this.currentCategories.indexOf(cat)
       if (index > -1) {
-        this.currentCategories.splice(index, 1);
+        this.currentCategories.splice(index, 1)
       } else {
         this.currentCategories = []
         this.currentCategories.push(cat)
@@ -288,7 +121,6 @@ export default {
       if (calci === 1) {
         this.searchResult.forEach((item) => {
           // window.location.pathname = window.location.pathname + item.route
-
           this.$router.push({ name: item.route })
         }
         )
