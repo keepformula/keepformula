@@ -92,7 +92,7 @@
                  :label="$t('reset')" />
             </div>
           </div>
-        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
+        <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg desktop-only">
           <blockquote class="embedly-card">
             <h4>
               <a href="https://en.wikipedia.org/wiki/QR_code">

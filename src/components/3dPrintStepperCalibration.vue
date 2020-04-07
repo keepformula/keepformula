@@ -90,7 +90,7 @@
                  :label="$t('reset')" />
             </div>
           </div>
-          <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg">
+          <div class="col-12 col-md-12 col-lg-6 mobile-size-wiki-margin q-pl-lg desktop-only">
             <blockquote class="embedly-card">
               <h4>
                 <a href="https://reprap.org/wiki/Calibration#Motor_Calibration">
@@ -99,7 +99,6 @@
               </h4>
               <p>
               {{ $t('threed_print_calibration_wiki') }}
-              This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid's Guide.This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid's Guide.
               </p>
             </blockquote>
           </div>
