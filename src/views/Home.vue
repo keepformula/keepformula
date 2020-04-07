@@ -14,16 +14,22 @@
     </div>
     <div class="row">
       <div class="q-mb-lg q-mx-auto col-12 col-xl-8 col-lg-8 col-md-10 col-sm-10 q-pa-xs">
-        <q-chip
-          v-for="cat in categories"
-          :key="cat"
-          @click="setCurrentCategory(cat)"
-          @hide="setCurrentCategory(cat)"
-          :closable="currentCategories.includes(cat)"
-          class="q-mr-sm q-ml-sm cursor-pointer"
-          :color="(currentCategories.length === 0 || currentCategories.includes(cat)) ? 'primary' : 'light'">
-          {{ $t(`categories.${cat}`) }}
-        </q-chip>
+        <q-scroll-area
+          horizontal
+          style="height: 46px; width: 100%;">
+          <div class="row no-wrap">
+              <q-chip
+                v-for="cat in categories"
+                :key="cat"
+                @click="setCurrentCategory(cat)"
+                @hide="setCurrentCategory(cat)"
+                :closable="currentCategories.includes(cat)"
+                class="q-mr-xs q-ml-xs cursor-pointer"
+                :color="(currentCategories.length === 0 || currentCategories.includes(cat)) ? 'primary' : 'light'">
+                {{ $t(`categories.${cat}`) }}
+              </q-chip>
+          </div>
+        </q-scroll-area>
         <!-- eslint-disable-next-line vue/valid-v-model -->
         <div class="row q-pt-sm" v-model="noResult">
              <p class="q-display-1 text-center full-width q-mt-lg text-weight-light"
