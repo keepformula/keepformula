@@ -12,7 +12,7 @@ export default [
   {
     name: 'Aspect Ratio',
     route: 'AspectRatio',
-    description: 'Calculate Body Mass Index',
+    description: 'Calculate Aspect Ratio',
     icon: 'AspectRatio',
     tag: 'math , rectangle , ratio',
     category: 'design',

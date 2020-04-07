@@ -18,7 +18,7 @@
                 </div>
                 <q-card-main >
                   <div class="widget-area">
-                <router-view v-if="flag" />
+                    <router-view v-if="flag" />
                   </div>
                 </q-card-main>
               </q-card>
@@ -38,9 +38,9 @@
               </div>
             </div>
             <WikiBox
-                   :wiki="meta.wikiText"
-                   :name="meta.name"
-                   :url="meta.wikiUrl"/>
+              :wiki="meta.wikiText"
+              :name="meta.name"
+              :url="meta.wikiUrl"/>
           </div>
         </div>
       </div>
@@ -61,6 +61,37 @@ export default {
       meta: this.$route.meta
     }
   },
+  metaInfo () {
+    return {
+      title: `Keep Formula | ${this.$route.meta.name}`,
+      meta: [
+        {
+          name: 'description',
+          content: this.$route.meta.description
+        },
+        {
+          vmid: 'twitter-title',
+          name: 'twitter:title',
+          content: `Keep Formula | ${this.$route.meta.name}`
+        },
+        {
+          vmid: 'og-title',
+          property: 'og:title',
+          content: `Keep Formula | ${this.$route.meta.name}`
+        },
+        {
+          vmid: 'twitter-description',
+          name: 'twitter:description',
+          content: this.$route.meta.description
+        },
+        {
+          vmid: 'og-description',
+          property: 'og:description',
+          content: this.$route.meta.description
+        }
+      ]
+    }
+  },
   methods: {
     reset () {
       this.flag = false
@@ -72,7 +103,7 @@ export default {
 }
 </script>
 <style>
- .widget-area {
-   min-height: 300px;
- }
+.widget-area {
+  min-height: 300px;
+}
 </style>

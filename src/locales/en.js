@@ -10,6 +10,7 @@ export default {
       design: 'Design',
       threedPrinter: '3D Printer'
     },
+    more: 'More',
     download: 'Download',
     app_name: 'Keep Formula',
     threed_printer_steppers_calibration: '3d Printer Stepper Motors Calibration',

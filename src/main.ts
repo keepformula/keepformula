@@ -17,12 +17,15 @@ import Config from './config/config'
 import Clipboard from 'v-clipboard'
 // @ts-ignore: Unreachable code error
 import VueQrcode from '@chenfengyuan/vue-qrcode'
+import VueMeta from 'vue-meta'
 Vue.component(VueQrcode.name, VueQrcode)
 Vue.prototype.$config = Config
 Vue.use(Quasar, {
   config: {}
 })
-
+Vue.use(VueMeta, {
+  refreshOnceOnNavigation: true
+})
 Vue.use(Clipboard)
 Vue.config.productionTip = false
 
