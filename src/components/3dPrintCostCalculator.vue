@@ -13,22 +13,46 @@
             />
         </q-field>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="mm" v-model="diameter" :float-label="$t('filament_diameter')"/>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+        <div class="col-3 col-lg-3 col-md-3 col-xm-3 col-sm-3 col-xs-12 q-pr-md q-mb-lg">
+          <q-select
+            v-model="diameterUnit"
+            :float-label="$t('output_unit')"
+            :options="unit.length"
+            :separator="true"
+            />
+        </div>
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="cm" v-model="length" :float-label="$t('filament_length')"/>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+        <div class="col-3 col-lg-3 col-md-3 col-xm-3 col-sm-3 col-xs-12 q-pr-md q-mb-lg">
+          <q-select
+            v-model="lengthUnit"
+            :float-label="$t('output_unit')"
+            :options="unit.length"
+            :separator="true"
+            />
+        </div>
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="$ / kg" v-model="price" :float-label="$t('filament_price')"/>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="hrs" v-model="time" :float-label="$t('prining_time')"/>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+        <div class="col-3 col-lg-3 col-md-3 col-xm-3 col-sm-3 col-xs-12 q-pr-md q-mb-lg">
+          <q-select
+            v-model="timeUnit"
+            :float-label="$t('output_unit')"
+            :options="unit.time"
+            :separator="true"
+            />
+        </div>
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="$/h" v-model="cost" :float-label="$t('cost_per_hour')"/>
       </div>
-      <div class="col-md-12 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
+      <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
         <q-input type="text" ref="input" suffix="%" v-model="markup" :float-label="$t('markup')"/>
       </div>
     </div>
@@ -85,6 +109,9 @@ export default {
       price: '',
       time: '',
       cost: '',
+      diameterUnit: 'mm',
+      lengthUnit: 'cm',
+      timeUnit: 'h',
       select: 1.05,
       markup: 10,
       listOptions: [
@@ -116,11 +143,21 @@ export default {
     }
   },
   computed: {
+    diameterToMM () {
+      return Knowledge.convert(this.diameter, this.diameterUnit, 'mm')
+    },
+    lengthToCm () {
+      return Knowledge.convert(this.length, this.lengthUnit, 'cm')
+    },
+    timeInHour () {
+      return Knowledge.convert(this.time, this.timeUnit, 'h')
+    },
     materialCost () {
-      return this.select * 3.14159265359 * Math.pow(this.diameter / 100 / 2, 2) * this.length / 1000 * this.price
+      return this.select * 3.14159265359 * Math.pow(this.diameterToMM / 100 / 2, 2) *
+        this.lengthToCm / 1000 * this.price
     },
     laborCost () {
-      return this.time * this.cost
+      return this.timeInHour * this.cost
     },
     finalPrice () {
       return (this.materialCost + this.laborCost) * ((this.markup + 100) / 100)
