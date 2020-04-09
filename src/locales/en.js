@@ -79,6 +79,12 @@ export default {
     stepperMotor_label: 'StepperMotor',
     noResult: 'No Result!',
     result: 'RESULT',
+    filament_diameter: 'Filament diameter',
+    filament_length: 'Filament lenght',
+    filament_price: 'Filament price',
+    prining_time: 'Printing time',
+    cost_per_hour: 'Cost per hour',
+    markup: 'Markup',
     aspect_ratio_wiki: 'The aspect ratio of a geometric shape is the ratio of its sizes in different dimensions. For example, the aspect ratio of a rectangle is the ratio of its longer side to its shorter side – the ratio of width to height,when the rectangle is oriented as a "landscape".',
     angle_wiki: 'In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.',
     area_wiki: 'In plane geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.',
@@ -99,6 +105,7 @@ export default {
     volume_wiki: 'A unit of volume is a unit of measurement for measuring volume or capacity, the extent of an object or space in three dimensions. Units of capacity may be used to specify the volume of fluids or bulk goods, for example water, rice, sugar, grain or flour.',
     weight_wiki: 'In science and engineering, the weight of an object is related to the force acting on the object, either due to gravity or to a reaction force that holds it in place. Some standard textbooks define weight as a vector quantity, the gravitational force acting on the object.',
     qr_code_wiki: 'QR code (abbreviated from Quick Response code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that contains information about the item to which it is attached.',
-    threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.'
+    threed_print_calibration_wiki: 'This page has been flagged as containing duplicate material that RepRapSoftwareTweakingManual also attempts to cover.These pages should be merged such that both pages do not attempt to cover the duplicate topics. ANNOUNCEMENT: If you search for the latest up-to-date guide please take a look at Triffid\'s Guide.',
+    threed_print_cost_calculator: 'The 3D printing process builds a three-dimensional object from a computer-aided design (CAD) model, usually by successively adding material layer by layer, which is why it is also called additive manufacturing.'
   }
 }
