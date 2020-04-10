@@ -1,9 +1,12 @@
 import Converter from 'convert-units'
 import Bases from 'bases'
+import Convert from 'color-convert'
 
 export default {
   convert (value, fromUnit, toUnit) {
     return Converter(value).from(fromUnit).to(toUnit)
+  },
+  colorConvert (value, fromUnit, toUnit) {
   },
   bmi (weight, height) {
     return weight / Math.pow(height, 2)

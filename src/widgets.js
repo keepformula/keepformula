@@ -218,5 +218,15 @@ export default [
     category: 'threedPrinter',
     wikiText: 'threed_print_cost_calculator',
     wikiUrl: 'https://en.wikipedia.org/wiki/3D_printing'
+  },
+  {
+    name: 'Color Converter',
+    route: 'ColorConverter',
+    description: 'Canversion for colors',
+    icon: 'colorConverter',
+    tag: 'color , rgb  , hsv , hex , cmyk',
+    category: 'conversion',
+    wikiText: '',
+    wikiUrl: ''
   }
 ]

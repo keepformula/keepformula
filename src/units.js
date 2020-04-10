@@ -710,5 +710,31 @@ export default {
       label: 'WSVGA (~17:10)',
       value: '17:10'
     }
+  ],
+  color: [
+    {
+      label: 'RGB',
+      value: 'rgb'
+    },
+    {
+      label: 'HEX',
+      value: 'hex'
+    },
+    {
+      label: 'CMYK',
+      value: 'cmyk'
+    },
+    {
+      label: 'HSV',
+      value: 'hsv'
+    },
+    {
+      label: 'HWB',
+      value: 'hwb'
+    },
+    {
+      label: 'ANCI',
+      value: 'ansi'
+    }
   ]
 }

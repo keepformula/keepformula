@@ -29,6 +29,7 @@
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "^1.0.2",
     "bases": "^0.2.1",
+    "color-convert": "^2.0.1",
     "convert-units": "git+https://github.com/keepformula/convert-units.git",
     "core-js": "^2.6.5",
     "lodash": "^4.17.15",
