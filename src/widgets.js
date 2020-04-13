@@ -208,15 +208,15 @@ export default [
     category: 'threedPrinter',
     wikiText: 'threed_print_calibration_wiki',
     wikiUrl: 'https://reprap.org/wiki/Calibration#Motor_Calibration'
-  },
-  {
-    name: '3D Print Cost',
-    route: '3dPrintCostCalculator',
-    description: 'Calculate cost of 3D Print',
-    icon: '3dPrintCost',
-    tag: '3D print, cost , calculate , filament',
-    category: 'threedPrinter',
-    wikiText: 'threed_print_cost_calculator',
-    wikiUrl: 'https://en.wikipedia.org/wiki/3D_printing'
   }
+  // {
+  // name: '3D Print Cost',
+  // route: '3dPrintCostCalculator',
+  // description: 'Calculate cost of 3D Print',
+  // icon: '3dPrintCost',
+  // tag: '3D print, cost , calculate , filament',
+  // category: 'threedPrinter',
+  // wikiText: 'threed_print_cost_calculator',
+  // wikiUrl: 'https://en.wikipedia.org/wiki/3D_printing'
+  // }
 ]

@@ -80,7 +80,7 @@ export default {
   data () {
     return {
       currentCategories: [],
-      categories: [ 'design', 'health', 'conversion', 'threedPrinter' ],
+      categories: [ 'conversion', 'design', 'health', 'threedPrinter' ],
       calculators: Widgets,
       searchQuery: null,
       select: null,
