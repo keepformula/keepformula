@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row">
-      <div class="col-12 col-md-12 col-sm-12 col-xs-12 q-mb-md q-pr-md " >
+      <div class="col-12 col-md-12 col-sm-12 col-xs-12 q-mb-md q-pr-md" >
         <q-field
           label="Select your Material type"
           >
@@ -14,7 +14,7 @@
         </q-field>
       </div>
       <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
-        <q-input type="text" ref="input" suffix="mm" v-model="diameter" :float-label="$t('filament_diameter')"/>
+        <q-input type="text" ref="input" v-model="diameter" :float-label="$t('filament_diameter')"/>
       </div>
         <div class="col-3 col-lg-3 col-md-3 col-xm-3 col-sm-3 col-xs-12 q-pr-md q-mb-lg">
           <q-select
@@ -25,7 +25,7 @@
             />
         </div>
       <div class="col-md-9 col-sm-9 col-xs-12 q-mb-md q-pr-md" >
-        <q-input type="text" ref="input" suffix="cm" v-model="length" :float-label="$t('filament_length')"/>
+        <q-input type="text" ref="input"  v-model="length" :float-label="$t('filament_length')"/>
       </div>
         <div class="col-3 col-lg-3 col-md-3 col-xm-3 col-sm-3 col-xs-12 q-pr-md q-mb-lg">
           <q-select
