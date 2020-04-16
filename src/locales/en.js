@@ -21,6 +21,7 @@ export default {
     qr_code_generator: 'QR Code Generator',
     golden_ratio: 'Golden Ratio',
     value_label: 'Enter value',
+    age_label: 'Your age',
     body_mass_index: 'Body Mass Index',
     height_label: 'Your height',
     weight_label: 'Your weight',

@@ -224,7 +224,7 @@ export default [
     //route: 'BMR',
     //description: 'Calculate Basal Metabolic Rate',
     //icon: 'bmr',
-    //tag: 'health , weight , height , mass , body',
+    //tag: 'health , weight , height , mass , body , age , metabolic',
     //category: 'health',
     //wikiText: 'bmr_wiki',
     //wikiUrl: ''

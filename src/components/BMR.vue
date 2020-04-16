@@ -55,7 +55,7 @@
                       <span> BMR </span>
                     </q-item-side>
                     <q-item-main color="">
-                      <span> {{ bmr}} kcal/day </span>
+                      <span> {{ bmr }} kcal/day </span>
                     </q-item-main>
                     <q-item-side right>
                       <q-btn class="absolute-right q-mr-sm"
@@ -109,25 +109,19 @@ export default {
       return Knowledge.convert(this.height, this.heightUnit, 'cm')
     },
     bmr () {
+      // Main Formula
+      // NOTE: calculate based on KG, Centimeter
       let out = null
-        // Main Formula
-        // NOTE: calculate based on KG, Centimeter
       if (this.weight && this.height && this.age && this.gender === 'male') {
-          out = 10 * this.weightInKg + 6.25 * this.heightInCentimeter - 5 * this.age  + 5
-        }
-        else if (this.weight && this.height && this.age && this.gender === 'female') {
-          out = 10 * this.weightInKg + 6.25 * this.heightInCentimeter - 5 * this.age  - 161
+          out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age + 5
+      }
+      else if (this.weight && this.height && this.age && this.gender === 'female') {
+          out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age - 161
       }
       return out
     },
   },
   methods: {
-    openURL,
-    reset () {
-      this.weight = null
-      this.height = null
-      this.$refs.input.focus()
-    }
   }
 }
 </script>
