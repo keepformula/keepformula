@@ -44,7 +44,7 @@
       <br>
       <transition-group
         enter-active-class="animated fadeIn"
-        v-if="this.height && this.weight">
+        v-if="this.height && this.weight && this.age">
         <div class="q-mt-md q-mb-md" key="head">
           <q-list-header class="q-body-1 q-mt-md"> {{ $t('result') }}</q-list-header>
           <q-item-main>
@@ -95,7 +95,7 @@ export default {
       weight: null,
       age: null,
       weightUnit: this.$config.defaultUnits.weight,
-      heightUnit: this.$config.defaultUnits.height,
+      heightUnit: this.$config.defaultUnits.height
     }
   },
   computed: {
@@ -113,13 +113,12 @@ export default {
       // NOTE: calculate based on KG, Centimeter
       let out = null
       if (this.weight && this.height && this.age && this.gender === 'male') {
-          out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age + 5
-      }
-      else if (this.weight && this.height && this.age && this.gender === 'female') {
-          out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age - 161
+        out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age + 5
+      } else if (this.weight && this.height && this.age && this.gender === 'female') {
+        out = 10 * this.weightInKG + 6.25 * this.heightInCentimeter - 5 * this.age - 161
       }
       return out
-    },
+    }
   },
   methods: {
   }
