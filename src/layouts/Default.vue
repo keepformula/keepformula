@@ -80,7 +80,7 @@ export default {
   methods: {
     openURL,
     onScroll () {
-      if (Math.abs(window.pageYOffset) < 820) {
+      if (Math.abs(window.pageYOffset) < 120) {
         this.showNavbar = window.pageYOffset < this.lastScrollPosition
         this.lastScrollPosition = window.pageYOffset
       }

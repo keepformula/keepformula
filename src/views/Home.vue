@@ -123,10 +123,9 @@ export default {
       this.$forceUpdate()
     },
     oneResult () {
-      let calci = this.searchResult.length
-      if (calci === 1) {
+      let result = this.searchResult.length
+      if (result === 1) {
         this.searchResult.forEach((item) => {
-          // window.location.pathname = window.location.pathname + item.route
           this.$router.push({ name: item.route })
         }
         )
