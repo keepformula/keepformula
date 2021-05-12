@@ -208,6 +208,16 @@ export default [
     category: 'threedPrinter',
     wikiText: 'threed_print_calibration_wiki',
     wikiUrl: 'https://reprap.org/wiki/Calibration#Motor_Calibration'
+  },
+  {
+    name: 'Proportionality',
+    route: 'ProportionCalculator',
+    description: 'Proportion Calculator',
+    icon: 'proportionality',
+    tag: 'proportion, proportionality, ',
+    category: 'conversion',
+    wikiText: 'proportionality_wiki',
+    wikiUrl: 'https://en.wikipedia.org/wiki/Proportionality_(mathematics)'
   }
   // {
   // name: '3D Print Cost',

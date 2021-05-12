@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12 q-mb-md q-pr-md" >
         <q-input
+          ref="input"
           type="text"
           v-model="currentValue"
           :float-label="$t('current_m92_value')" />
@@ -69,9 +70,9 @@ export default {
   mixins: [mixin],
   data () {
     return {
-      currentValue: 0,
-      desiredMovement: 0,
-      acctualMvement: 0
+      currentValue: null,
+      desiredMovement: null,
+      acctualMvement: null
     }
   },
   computed: {
